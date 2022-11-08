@@ -3,8 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/mustafa/Documents/NetBeansProjects/proLab2/src/prolab2/frame.java</file>
-            <file>file:/C:/Users/mustafa/Documents/NetBeansProjects/proLab2/src/prolab2/KullaniciJFrame.java</file>
+            <file>file:/C:/Users/mustafa/Documents/NetBeansProjects/proLab2/src/Oyun/Frame.java</file>
+            <file>file:/C:/Users/mustafa/Documents/NetBeansProjects/proLab2/src/Oyun/Karsilasma.java</file>
+            <file>file:/C:/Users/mustafa/Documents/NetBeansProjects/proLab2/src/Oyun/Oyun.java</file>
+            <file>file:/C:/Users/mustafa/Documents/NetBeansProjects/proLab2/src/Oyun/KullaniciJFrame.java</file>
+            <file>file:/C:/Users/mustafa/Documents/NetBeansProjects/proLab2/src/Oyun/Oyuncu.java</file>
         </group>
     </open-files>
 </project-private>
