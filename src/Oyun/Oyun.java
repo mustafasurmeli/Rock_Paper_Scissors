@@ -11,8 +11,13 @@ package Oyun;
 public class Oyun {
         
     public static void main(String[] args){
-        Frame frame = new Frame();
-        
+       Frame frame = new Frame();
+      Kullanici kullanici = new Kullanici();
+       kullanici.Goster();
+       Bilgisayar bilgisayar = new Bilgisayar();
+       bilgisayar.Goster();
+       ///bilgisayar.Goster();
+       
         
         //KullaniciJFrame kullaniciJFrame = new KullaniciJFrame();
         

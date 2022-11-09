@@ -15,6 +15,7 @@ import javax.swing.ImageIcon;
 public class KullaniciJFrame extends javax.swing.JFrame {
 static int sayac=0,tasSayac=0,kagitSayac=0,makasSayac=0;
 static String[] secimler = new String[5];
+static String[] iconlar = new String[5];
  
     /**
      * Creates new form KullaniciJFrame
@@ -143,7 +144,7 @@ static String[] secimler = new String[5];
         jLabel1.setText("             SEÇİM YAPINIZ");
 
         jButton1.setBackground(new java.awt.Color(153, 153, 153));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/rock1.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/tas.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -151,7 +152,7 @@ static String[] secimler = new String[5];
         });
 
         jButton2.setBackground(new java.awt.Color(153, 153, 153));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/paper1.png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/kagit.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -159,7 +160,7 @@ static String[] secimler = new String[5];
         });
 
         jButton3.setBackground(new java.awt.Color(153, 153, 153));
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/scissors1.png"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/makas.png"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -190,36 +191,36 @@ static String[] secimler = new String[5];
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(265, 265, 265)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(265, 265, 265)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(35, 35, 35)
+                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(26, 26, 26)
+                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(288, 288, 288)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 566, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(288, 288, 288)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 566, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -250,66 +251,84 @@ static String[] secimler = new String[5];
     switch(sayac){
             case 1:
                 if(tasSayac==1){
-                    jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/rock1.png")));
+                    jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/tas.png")));
                     secimler[0]="taş";
+                    iconlar[0]="tas";
                                  
                 }else if(kagitSayac==1){
-                    jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/paper1.png")));
+                    jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/kagit.png")));
                     secimler[0]="kağıt";
+                    iconlar[0]="kagit";
                 }else{
-                    jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/scissors1.png")));
+                    jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/makas.png")));
                     secimler[0]="makas";
+                    iconlar[0]="makas";
                 }
                 break;
             case 2:
                 if(tasSayac==1){
-                    jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/rock1.png")));
+                    jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/tas.png")));
                     secimler[1]="taş";
+                    iconlar[1]="tas";
                 }else if(kagitSayac==1){
-                    jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/paper1.png")));
+                    jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/kagit.png")));
                     secimler[1]="kağıt";
+                    iconlar[1]="kagit";
                 }else{
-                    jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/scissors1.png")));
+                    jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/makas.png")));
                      secimler[1]="makas";
+                     iconlar[1]="makas";
                 }
                 break;
             case 3:
                 if(tasSayac==1){
-                    jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/rock1.png")));
+                    jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/tas.png")));
                     secimler[2]="taş";
+                    iconlar[2]="tas";
                 }else if(kagitSayac==1){
-                    jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/paper1.png")));
+                    jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/kagit.png")));
                     secimler[2]="kağıt";
+                    iconlar[2]="kagit";
                 }else{
-                    jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/scissors1.png")));
+                    jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/makas.png")));
                      secimler[2]="makas";
+                     iconlar[2]="makas";
                 }
                 break;
             case 4:
                 if(tasSayac==1){
-                    jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/rock1.png")));
+                    jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/tas.png")));
                     secimler[3]="taş";
+                    iconlar[3]="tas";
                 }else if(kagitSayac==1){
-                    jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/paper1.png")));
+                    jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/kagit.png")));
                     secimler[3]="kağıt";
+                    iconlar[3]="kagit";
                 }else{
-                    jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/scissors1.png")));
+                    jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/makas.png")));
                      secimler[3]="makas";
+                     iconlar[3]="makas";
                 }
                 break;
             case 5:
                 if(tasSayac==1){
-                    jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/rock1.png")));
+                    jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/tas.png")));
                     secimler[4]="taş";
+                    iconlar[4]="tas";
                 }else if(kagitSayac==1){
-                    jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/paper1.png")));
+                    jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/kagit.png")));
                     secimler[4]="kağıt";
+                    iconlar[4]="kagit";
                 }else{
-                    jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/scissors1.png")));
+                    jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/makas.png")));
                      secimler[4]="makas";
+                     iconlar[4]="makas";
                 }
                 karsilasma.setVisible(true);
+               karsilasma.setIcon(iconlar);
                karsilasma.setSecim(secimler);
+               karsilasma.kullanıcıIcon();
+                
                 setVisible(false);
        
                
