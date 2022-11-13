@@ -139,17 +139,25 @@ public class Frame extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-    Oyuncu oyuncu = new Oyuncu();
+    
+    Oyun oyun = new Oyun();
     private void buttonkullaniciActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonkullaniciActionPerformed
       kullanicijframe.setVisible(true);
         setVisible(false);
     }//GEN-LAST:event_buttonkullaniciActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        jTextField1.getText();
-        oyuncu.setOyuncuAdi(jTextField1.getText());
-
-        //System.out.println(oyuncu.oyuncuAdi);
+        
+        if(jTextField1.getText().length()==0){
+        Kullanici kullanici = new Kullanici("user",4);
+        
+        }
+        else{
+            Kullanici kullanici = new Kullanici(jTextField1.getText(),4);
+        
+       
+        }
+        //System.out.println(kullanici.getOyuncuAdi());
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**

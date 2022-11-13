@@ -6,6 +6,7 @@ package Oyun;
 
 import java.awt.Color;
 import java.awt.Image;
+import java.util.ArrayList;
 import javax.swing.ImageIcon;
 
 /**
@@ -13,9 +14,17 @@ import javax.swing.ImageIcon;
  * @author mustafa
  */
 public class KullaniciJFrame extends javax.swing.JFrame {
-static int sayac=0,tasSayac=0,kagitSayac=0,makasSayac=0;
-static String[] secimler = new String[5];
-static String[] iconlar = new String[5];
+    
+    Nesneler nesneler = new Nesneler() {
+        @Override
+        public double etkiHesapla() {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        }
+    };
+    static int sayac=0,tasSayac=0,kagitSayac=0,makasSayac=0;
+    
+    static String[] secimler = new String[5];
+    static String[] iconlar = new String[5];
  
     /**
      * Creates new form KullaniciJFrame
@@ -245,6 +254,7 @@ static String[] iconlar = new String[5];
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+      Oyun oyun = new Oyun();
       Karsilasma karsilasma = new Karsilasma();
     private void kontrol(){
             
@@ -252,15 +262,18 @@ static String[] iconlar = new String[5];
             case 1:
                 if(tasSayac==1){
                     jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/tas.png")));
+                    oyun.objects.add(new Tas());
                     secimler[0]="taş";
                     iconlar[0]="tas";
                                  
                 }else if(kagitSayac==1){
                     jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/kagit.png")));
+                    oyun.objects.add(new Kagit());
                     secimler[0]="kağıt";
                     iconlar[0]="kagit";
                 }else{
                     jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/makas.png")));
+                    oyun.objects.add(new Makas());
                     secimler[0]="makas";
                     iconlar[0]="makas";
                 }
@@ -268,29 +281,35 @@ static String[] iconlar = new String[5];
             case 2:
                 if(tasSayac==1){
                     jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/tas.png")));
+                    oyun.objects.add(new Tas());
                     secimler[1]="taş";
                     iconlar[1]="tas";
                 }else if(kagitSayac==1){
                     jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/kagit.png")));
+                    oyun.objects.add(new Kagit());
                     secimler[1]="kağıt";
                     iconlar[1]="kagit";
                 }else{
                     jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/makas.png")));
-                     secimler[1]="makas";
+                      oyun.objects.add(new Makas());
+                      secimler[1]="makas";
                      iconlar[1]="makas";
                 }
                 break;
             case 3:
                 if(tasSayac==1){
                     jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/tas.png")));
+                    oyun.objects.add(new Tas());
                     secimler[2]="taş";
                     iconlar[2]="tas";
                 }else if(kagitSayac==1){
                     jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/kagit.png")));
+                    oyun.objects.add(new Kagit());
                     secimler[2]="kağıt";
                     iconlar[2]="kagit";
                 }else{
                     jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/makas.png")));
+                     oyun.objects.add(new Makas());
                      secimler[2]="makas";
                      iconlar[2]="makas";
                 }
@@ -298,14 +317,17 @@ static String[] iconlar = new String[5];
             case 4:
                 if(tasSayac==1){
                     jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/tas.png")));
+                    oyun.objects.add(new Tas());
                     secimler[3]="taş";
                     iconlar[3]="tas";
                 }else if(kagitSayac==1){
                     jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/kagit.png")));
+                     oyun.objects.add(new Kagit());
                     secimler[3]="kağıt";
-                    iconlar[3]="kagit";
+                     iconlar[3]="kagit";
                 }else{
                     jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/makas.png")));
+                     oyun.objects.add(new Makas());
                      secimler[3]="makas";
                      iconlar[3]="makas";
                 }
@@ -313,18 +335,23 @@ static String[] iconlar = new String[5];
             case 5:
                 if(tasSayac==1){
                     jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/tas.png")));
+                    oyun.objects.add(new Tas());
                     secimler[4]="taş";
                     iconlar[4]="tas";
                 }else if(kagitSayac==1){
                     jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/kagit.png")));
+                    oyun.objects.add(new Kagit());
                     secimler[4]="kağıt";
                     iconlar[4]="kagit";
                 }else{
                     jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/makas.png")));
+                     oyun.objects.add(new Makas());
                      secimler[4]="makas";
                      iconlar[4]="makas";
                 }
-                karsilasma.setVisible(true);
+               karsilasma.deneme=oyun.objects; 
+               System.out.println("wewqrqwrqwer"+oyun.objects);  
+               karsilasma.setVisible(true);
                karsilasma.setIcon(iconlar);
                karsilasma.setSecim(secimler);
                karsilasma.kullanıcıIcon();

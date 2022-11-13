@@ -4,11 +4,17 @@
  */
 package Oyun;
 
+import java.awt.Color;
+import java.util.ArrayList;
+
 /**
  *
  * @author mustafa
  */
 public class Karsilasma extends javax.swing.JFrame {
+    ArrayList<Nesneler>deneme = new ArrayList<>();
+    
+    String nesne;
 private  String[] icon = new String[5];
 
     public String[] getIcon() {
@@ -36,7 +42,8 @@ private String[] secim = new String[5];
      * Creates new form Karsilasma
      */
     public Karsilasma() {
-         
+        getContentPane().setBackground(Color.LIGHT_GRAY);
+        
         initComponents();
     }
      void kullanıcıIcon(){
@@ -64,6 +71,11 @@ private String[] secim = new String[5];
             case 5:
                 jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/"+icon[sayc2]+".png")));
                 sayc2++;
+                jButton1.setBackground(Color.LIGHT_GRAY);
+                jButton2.setBackground(Color.LIGHT_GRAY);
+                jButton3.setBackground(Color.LIGHT_GRAY);
+                jButton4.setBackground(Color.LIGHT_GRAY);
+                jButton5.setBackground(Color.LIGHT_GRAY);
                 break;
         }
          }
@@ -98,18 +110,64 @@ private String[] secim = new String[5];
         jProgressBar10 = new javax.swing.JProgressBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
+        jButton1.setBackground(java.awt.SystemColor.activeCaptionBorder);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setBackground(java.awt.SystemColor.activeCaptionBorder);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
 
+        jButton3.setBackground(java.awt.SystemColor.activeCaptionBorder);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        jButton4.setBackground(java.awt.SystemColor.activeCaptionBorder);
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        jButton5.setBackground(java.awt.SystemColor.activeCaptionBorder);
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
         jProgressBar1.setStringPainted(true);
 
+        jProgressBar2.setForeground(new java.awt.Color(204, 0, 0));
         jProgressBar2.setMaximum(20);
-        jProgressBar2.setString("%54");
         jProgressBar2.setStringPainted(true);
+
+        jProgressBar3.setStringPainted(true);
+
+        jProgressBar4.setStringPainted(true);
+
+        jProgressBar5.setStringPainted(true);
+
+        jProgressBar6.setStringPainted(true);
+
+        jProgressBar7.setStringPainted(true);
+
+        jProgressBar8.setStringPainted(true);
+
+        jProgressBar9.setStringPainted(true);
+
+        jProgressBar10.setStringPainted(true);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -160,7 +218,7 @@ private String[] secim = new String[5];
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -170,7 +228,7 @@ private String[] secim = new String[5];
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jProgressBar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jProgressBar4, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jProgressBar4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -202,15 +260,134 @@ private String[] secim = new String[5];
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    Oyun oyun = new Oyun();
+    Bilgisayar bilgisayar = new Bilgisayar();
+     int sayac=0;
+     
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        sayac++;
+        jButton2.setEnabled(false);
+        
+        if(sayac==5){
+           
+            yeniDuzen();
+        }
+        oyun.index=1;
+        oyun.nesne1=icon[1];
+        oyun.objects=deneme;
+        oyun.check();
+         oyun.kontrol();
+         System.out.println(oyun.objects);
+         System.out.println("////////////////////////////");
+        System.out.println(deneme);
+         System.out.println("---------------------");
+        System.out.println(bilgisayar.KarsilasmaNesnesi);
+        System.out.println("++++++++++++++++++++++");
+        System.out.println(bilgisayar.bilObjects);
+         System.out.println("++++++++++++++++++++++");
+         
+         
     }//GEN-LAST:event_jButton2ActionPerformed
+   
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        sayac++;
+        jButton1.setEnabled(false);
+        
+        if(sayac==5){
+            yeniDuzen();
+        }
+        oyun.index=0;
+        oyun.nesne1=icon[0];
+        oyun.objects=deneme;
+        oyun.check();
+         oyun.kontrol();
+         System.out.println(oyun.objects);
+         System.out.println("////////////////////////////");
+        System.out.println(deneme);
+         System.out.println("---------------------");
+        System.out.println(bilgisayar.KarsilasmaNesnesi);
+        System.out.println("++++++++++++++++++++++");
+        System.out.println(bilgisayar.bilObjects);
+         System.out.println("++++++++++++++++++++++");
+       
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        sayac++;
+        jButton3.setEnabled(false);
+        if(sayac==5){
+            yeniDuzen();
+        }
+        oyun.index=2; 
+        oyun.nesne1=icon[2];
+        oyun.objects=deneme;
+        oyun.check();
+         oyun.kontrol();
+         System.out.println(oyun.objects);
+         System.out.println("////////////////////////////");
+        System.out.println(deneme);
+         System.out.println("---------------------");
+        System.out.println(bilgisayar.KarsilasmaNesnesi);
+        System.out.println("++++++++++++++++++++++");
+        System.out.println(bilgisayar.bilObjects);
+         System.out.println("++++++++++++++++++++++");
+         
+          
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        sayac++;
+        jButton4.setEnabled(false);
+        if(sayac==5){
+            yeniDuzen();
+        }
+        oyun.index=3; 
+        oyun.nesne1=icon[3];
+        
+        oyun.objects=deneme;
+        oyun.check();
+         oyun.kontrol();
+         System.out.println(oyun.objects);
+         System.out.println("////////////////////////////");
+        System.out.println(deneme);
+         System.out.println("---------------------");
+        System.out.println(bilgisayar.KarsilasmaNesnesi);
+        System.out.println("++++++++++++++++++++++");
+        System.out.println(bilgisayar.bilObjects);
+         System.out.println("++++++++++++++++++++++");
+         
+          
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        sayac++;
+        jButton5.setEnabled(false);
+        if(sayac==5){
+            yeniDuzen();
+        }
+        oyun.index=4; 
+        oyun.nesne1=icon[4];
+        
+        
+        oyun.objects=deneme;
+        oyun.check();
+         oyun.kontrol();
+         System.out.println(oyun.objects);
+         System.out.println("////////////////////////////");
+        System.out.println(deneme);
+         System.out.println("---------------------");
+        System.out.println(bilgisayar.KarsilasmaNesnesi);
+        System.out.println("++++++++++++++++++++++");
+        System.out.println(bilgisayar.bilObjects);
+         System.out.println("++++++++++++++++++++++");
+              
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+       
         
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -243,6 +420,14 @@ private String[] secim = new String[5];
                 new Karsilasma().setVisible(true);
             }
         });
+    }
+    void yeniDuzen(){
+        sayac=0;
+        jButton1.setEnabled(true);
+        jButton2.setEnabled(true);
+        jButton3.setEnabled(true);
+        jButton4.setEnabled(true);
+        jButton5.setEnabled(true);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

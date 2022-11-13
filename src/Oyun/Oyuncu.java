@@ -38,13 +38,19 @@ public class Oyuncu {
     }
 
     public void setOyuncuAdi(String oyuncuAdi) {
-        System.out.println(oyuncuAdi);
+       // System.out.println(oyuncuAdi);
        // System.out.println(OyuncuID);
         this.oyuncuAdi = oyuncuAdi;
     }
-    
-    public void oyuncu(){
-        System.out.println(oyuncuAdi);
+
+    public Oyuncu(String oyuncuAdi, int skor) {
+        this.oyuncuAdi = oyuncuAdi;
+        this.skor = skor;
+         
+    }
+     Oyuncu(){
+        
     }
     
+   
 }
