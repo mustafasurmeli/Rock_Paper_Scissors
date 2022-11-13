@@ -9,13 +9,14 @@ package Oyun;
  * @author mustafa
  */
 public class OzelKagit extends Kagit {
-    
-    public OzelKagit(int dayaniklilik,int seviyePuani,int nufuz){
-         super(dayaniklilik, seviyePuani);
+
+    public OzelKagit(int dayaniklilik, int seviyePuani, int nufuz) {
+        super(dayaniklilik, seviyePuani);
     }
+
     public OzelKagit() {
     }
-    private int kalinlik=2;
+    private int kalinlik = 2;
 
     public int getKalinlik() {
         return kalinlik;
@@ -24,13 +25,16 @@ public class OzelKagit extends Kagit {
     public void setKalinlik(int kalinlik) {
         this.kalinlik = kalinlik;
     }
-    private int nesnePuaniGoster(){
+
+    private int nesnePuaniGoster() {
         return 0;
     }
-    public double etkiHesapla(){
-        return kalinlik*getNufuz();
+
+    public double etkiHesapla() {
+        return kalinlik * getNufuz();
     }
-    private int durumGuncelle(){
+
+    private int durumGuncelle() {
         return 0;
     }
 }

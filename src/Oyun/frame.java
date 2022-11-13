@@ -6,22 +6,19 @@ import java.awt.event.ActionEvent;
 import javax.swing.JOptionPane;
 import java.awt.event.ActionListener;
 
-
-
 /**
  *
  * @author mustafa
  */
 public class Frame extends javax.swing.JFrame {
-   
 
     /**
      * Creates new form frame
      */
     public Frame() {
-       
-        setLocation(100,100);
-        setSize(643,399);
+
+        setLocation(100, 100);
+        setSize(643, 399);
         setResizable(false);
         initComponents();
         setVisible(true);
@@ -139,23 +136,21 @@ public class Frame extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-    
+
     Oyun oyun = new Oyun();
     private void buttonkullaniciActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonkullaniciActionPerformed
-      kullanicijframe.setVisible(true);
+        kullanicijframe.setVisible(true);
         setVisible(false);
     }//GEN-LAST:event_buttonkullaniciActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        
-        if(jTextField1.getText().length()==0){
-        Kullanici kullanici = new Kullanici("user",4);
-        
-        }
-        else{
-            Kullanici kullanici = new Kullanici(jTextField1.getText(),4);
-        
-       
+
+        if (jTextField1.getText().length() == 0) {
+            Kullanici kullanici = new Kullanici("user", 4);
+
+        } else {
+            Kullanici kullanici = new Kullanici(jTextField1.getText(), 4);
+
         }
         //System.out.println(kullanici.getOyuncuAdi());
     }//GEN-LAST:event_jTextField1ActionPerformed
@@ -197,9 +192,9 @@ public class Frame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                 
+
                 new Frame().setVisible(true);
-                
+
             }
         });
     }

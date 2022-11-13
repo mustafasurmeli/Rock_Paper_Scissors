@@ -9,18 +9,20 @@ package Oyun;
  * @author mustafa
  */
 public class Tas extends Nesneler {
-    
+
     Kagit kagit = new Kagit();
     OzelKagit ozelKagit = new OzelKagit();
     Makas makas = new Makas();
     UstaMakas ustaMakas = new UstaMakas();
-    public Tas(int dayaniklilik,int seviyePuani){
-     //   super(dayaniklilik, seviyePuani);
-        
+
+    public Tas(int dayaniklilik, int seviyePuani) {
+        //   super(dayaniklilik, seviyePuani);
+
     }
+
     public Tas() {
     }
-    private  int katilik=2;
+    private int katilik = 2;
 
     public int getKatilik() {
         return katilik;
@@ -29,16 +31,19 @@ public class Tas extends Nesneler {
     public void setKatilik(int katilik) {
         this.katilik = katilik;
     }
-    private int nesnePuaniGoster(){
+
+    private int nesnePuaniGoster() {
         return 0;
     }
-    public double etkiHesapla(){
-       
-       return katilik;
+
+    public double etkiHesapla() {
+
+        return katilik;
     }
-    private int durumGuncelle(){
-        
+
+    private int durumGuncelle() {
+
         return 0;
     }
-    
+
 }

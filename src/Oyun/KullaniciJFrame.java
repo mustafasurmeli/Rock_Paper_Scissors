@@ -14,27 +14,24 @@ import javax.swing.ImageIcon;
  * @author mustafa
  */
 public class KullaniciJFrame extends javax.swing.JFrame {
-    
+
     Nesneler nesneler = new Nesneler() {
         @Override
         public double etkiHesapla() {
             throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
         }
     };
-    static int sayac=0,tasSayac=0,kagitSayac=0,makasSayac=0;
-    
+    static int sayac = 0, tasSayac = 0, kagitSayac = 0, makasSayac = 0;
+
     static String[] secimler = new String[5];
     static String[] iconlar = new String[5];
- 
+
     /**
      * Creates new form KullaniciJFrame
      */
     public KullaniciJFrame() {
-         
-        
-        
+
         //getContentPane().setBackground(Color.black);
-       
         setResizable(false);
         initComponents();
     }
@@ -255,134 +252,133 @@ public class KullaniciJFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
       Oyun oyun = new Oyun();
-      Karsilasma karsilasma = new Karsilasma();
-    private void kontrol(){
-            
-    switch(sayac){
+    Karsilasma karsilasma = new Karsilasma();
+
+    private void kontrol() {
+
+        switch (sayac) {
             case 1:
-                if(tasSayac==1){
+                if (tasSayac == 1) {
                     jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/tas.png")));
                     oyun.objects.add(new Tas());
-                    secimler[0]="taş";
-                    iconlar[0]="tas";
-                                 
-                }else if(kagitSayac==1){
+                    secimler[0] = "taş";
+                    iconlar[0] = "tas";
+
+                } else if (kagitSayac == 1) {
                     jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/kagit.png")));
                     oyun.objects.add(new Kagit());
-                    secimler[0]="kağıt";
-                    iconlar[0]="kagit";
-                }else{
+                    secimler[0] = "kağıt";
+                    iconlar[0] = "kagit";
+                } else {
                     jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/makas.png")));
                     oyun.objects.add(new Makas());
-                    secimler[0]="makas";
-                    iconlar[0]="makas";
+                    secimler[0] = "makas";
+                    iconlar[0] = "makas";
                 }
                 break;
             case 2:
-                if(tasSayac==1){
+                if (tasSayac == 1) {
                     jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/tas.png")));
                     oyun.objects.add(new Tas());
-                    secimler[1]="taş";
-                    iconlar[1]="tas";
-                }else if(kagitSayac==1){
+                    secimler[1] = "taş";
+                    iconlar[1] = "tas";
+                } else if (kagitSayac == 1) {
                     jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/kagit.png")));
                     oyun.objects.add(new Kagit());
-                    secimler[1]="kağıt";
-                    iconlar[1]="kagit";
-                }else{
+                    secimler[1] = "kağıt";
+                    iconlar[1] = "kagit";
+                } else {
                     jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/makas.png")));
-                      oyun.objects.add(new Makas());
-                      secimler[1]="makas";
-                     iconlar[1]="makas";
+                    oyun.objects.add(new Makas());
+                    secimler[1] = "makas";
+                    iconlar[1] = "makas";
                 }
                 break;
             case 3:
-                if(tasSayac==1){
+                if (tasSayac == 1) {
                     jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/tas.png")));
                     oyun.objects.add(new Tas());
-                    secimler[2]="taş";
-                    iconlar[2]="tas";
-                }else if(kagitSayac==1){
+                    secimler[2] = "taş";
+                    iconlar[2] = "tas";
+                } else if (kagitSayac == 1) {
                     jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/kagit.png")));
                     oyun.objects.add(new Kagit());
-                    secimler[2]="kağıt";
-                    iconlar[2]="kagit";
-                }else{
+                    secimler[2] = "kağıt";
+                    iconlar[2] = "kagit";
+                } else {
                     jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/makas.png")));
-                     oyun.objects.add(new Makas());
-                     secimler[2]="makas";
-                     iconlar[2]="makas";
+                    oyun.objects.add(new Makas());
+                    secimler[2] = "makas";
+                    iconlar[2] = "makas";
                 }
                 break;
             case 4:
-                if(tasSayac==1){
+                if (tasSayac == 1) {
                     jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/tas.png")));
                     oyun.objects.add(new Tas());
-                    secimler[3]="taş";
-                    iconlar[3]="tas";
-                }else if(kagitSayac==1){
+                    secimler[3] = "taş";
+                    iconlar[3] = "tas";
+                } else if (kagitSayac == 1) {
                     jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/kagit.png")));
-                     oyun.objects.add(new Kagit());
-                    secimler[3]="kağıt";
-                     iconlar[3]="kagit";
-                }else{
+                    oyun.objects.add(new Kagit());
+                    secimler[3] = "kağıt";
+                    iconlar[3] = "kagit";
+                } else {
                     jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/makas.png")));
-                     oyun.objects.add(new Makas());
-                     secimler[3]="makas";
-                     iconlar[3]="makas";
+                    oyun.objects.add(new Makas());
+                    secimler[3] = "makas";
+                    iconlar[3] = "makas";
                 }
                 break;
             case 5:
-                if(tasSayac==1){
+                if (tasSayac == 1) {
                     jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/tas.png")));
                     oyun.objects.add(new Tas());
-                    secimler[4]="taş";
-                    iconlar[4]="tas";
-                }else if(kagitSayac==1){
+                    secimler[4] = "taş";
+                    iconlar[4] = "tas";
+                } else if (kagitSayac == 1) {
                     jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/kagit.png")));
                     oyun.objects.add(new Kagit());
-                    secimler[4]="kağıt";
-                    iconlar[4]="kagit";
-                }else{
+                    secimler[4] = "kağıt";
+                    iconlar[4] = "kagit";
+                } else {
                     jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/makas.png")));
-                     oyun.objects.add(new Makas());
-                     secimler[4]="makas";
-                     iconlar[4]="makas";
+                    oyun.objects.add(new Makas());
+                    secimler[4] = "makas";
+                    iconlar[4] = "makas";
                 }
-               karsilasma.deneme=oyun.objects; 
-               System.out.println("wewqrqwrqwer"+oyun.objects);  
-               karsilasma.setVisible(true);
-               karsilasma.setIcon(iconlar);
-               karsilasma.setSecim(secimler);
-               karsilasma.kullanıcıIcon();
-                
+                karsilasma.deneme = oyun.objects;
+                System.out.println("wewqrqwrqwer" + oyun.objects);
+                karsilasma.setVisible(true);
+                karsilasma.setIcon(iconlar);
+                karsilasma.setSecim(secimler);
+                karsilasma.kullanıcıIcon();
+
                 setVisible(false);
-       
-               
+
         }
-    
-        
+
     }
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        kagitSayac=1;
-        tasSayac=0;
-        makasSayac=0;
+        kagitSayac = 1;
+        tasSayac = 0;
+        makasSayac = 0;
         sayac++;
         kontrol();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        tasSayac=1;
-        kagitSayac=0;
-        makasSayac=0;
+        tasSayac = 1;
+        kagitSayac = 0;
+        makasSayac = 0;
         sayac++;
         kontrol();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        makasSayac=1;
-        kagitSayac=0;
-        tasSayac=0;
+        makasSayac = 1;
+        kagitSayac = 0;
+        tasSayac = 0;
         sayac++;
         kontrol();
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -391,9 +387,7 @@ public class KullaniciJFrame extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        
-      
-       
+
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -420,9 +414,9 @@ public class KullaniciJFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                
+
                 new KullaniciJFrame().setVisible(true);
-               
+
             }
         });
     }

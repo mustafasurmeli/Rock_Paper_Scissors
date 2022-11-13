@@ -8,13 +8,15 @@ package Oyun;
  *
  * @author mustafa
  */
-public class Makas extends Nesneler{
-    public Makas(int dayaniklilik,int seviyePuani){
-         super(dayaniklilik, seviyePuani);
+public class Makas extends Nesneler {
+
+    public Makas(int dayaniklilik, int seviyePuani) {
+        super(dayaniklilik, seviyePuani);
     }
+
     public Makas() {
     }
-    private int keskinlik=2;
+    private int keskinlik = 2;
 
     public int getKeskinlik() {
         return keskinlik;
@@ -23,13 +25,16 @@ public class Makas extends Nesneler{
     public void setKeskinlik(int keskinlik) {
         this.keskinlik = keskinlik;
     }
-    private double nesnePuaniGoster(){
+
+    private double nesnePuaniGoster() {
         return 0;
     }
-    public double etkiHesapla(){
+
+    public double etkiHesapla() {
         return keskinlik;
     }
-    private int durumGuncelle(){
+
+    private int durumGuncelle() {
         return 0;
     }
 }

@@ -5,6 +5,7 @@
 package Oyun;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 
 /**
@@ -12,43 +13,42 @@ import java.util.Random;
  * @author mustafa
  */
 public class Oyun {
-     public static String ad; 
-      ArrayList<Nesneler>objects=new ArrayList<>();
-     static ArrayList<Nesneler>bilgisayarObjeleri=new ArrayList<>();
-        ArrayList<Integer>bindex = new ArrayList<Integer>();
-        static ArrayList<String>bilgisayarHamleler= new ArrayList<>();
-       int index;
-       int skor=8;
-       //Bilgisayar bilgisayar = new Bilgisayar("Bİlgisayar", skor);
-       Random random = new Random();
-       Tas tas = new Tas();
-        Bilgisayar bilgisayar = new Bilgisayar();
-       int sayac=0; 
-       AgirTas agirTas = new AgirTas();
-       Kagit kagit = new Kagit();
-       OzelKagit ozelKagit = new OzelKagit();
-       Makas makas = new Makas();
-       UstaMakas ustaMakas = new UstaMakas();
-       double a= 0.2; 
-        String nesne1="";
-       double nesne1Etki=1;
-       String nesne2="";
-       double nesne2Etki=1;
-      boolean c=false,d=false,e=false;
-       
-    public static void main(String[] args){
-      Bilgisayar bilgisayar1 = new Bilgisayar();  
-      Frame frame = new Frame();
-      bilgisayar1.Secim();
+
+    public static String ad;
+    ArrayList<Nesneler> objects = new ArrayList<>();
+    static ArrayList<Nesneler> bilgisayarObjeleri = new ArrayList<>();
+    ArrayList<Integer> bindex = new ArrayList<Integer>();
+    static ArrayList<String> bilgisayarHamleler = new ArrayList<>();
+    int index;
+    int skor = 8;
+    //Bilgisayar bilgisayar = new Bilgisayar("Bİlgisayar", skor);
+    Random random = new Random();
+    Tas tas = new Tas();
+    Bilgisayar bilgisayar = new Bilgisayar();
+    int sayac = 0;
+    AgirTas agirTas = new AgirTas();
+    Kagit kagit = new Kagit();
+    OzelKagit ozelKagit = new OzelKagit();
+    Makas makas = new Makas();
+    UstaMakas ustaMakas = new UstaMakas();
+    double a = 0.2;
+    String nesne1 = "";
+    double nesne1Etki = 1;
+    String nesne2 = "";
+    double nesne2Etki = 1;
+    boolean c = false, d = false, e = false;
+
+    public static void main(String[] args) {
+        Bilgisayar bilgisayar1 = new Bilgisayar();
+        Frame frame = new Frame();
+        bilgisayar1.Secim();
         System.out.println(bilgisayar1.bilObjects);
         bilgisayarObjeleri = bilgisayar1.bilObjects;
-       //Kullanici kullanici = new Kullanici(ad, skor);
-       bilgisayarHamleler = bilgisayar1.randomhamle;
-       
-       
-       
-       
-       /*   
+        //Kullanici kullanici = new Kullanici(ad, skor);
+        bilgisayarHamleler = bilgisayar1.randomhamle;
+        
+
+        /*   
             nesne1      nesne2
             Taş         Taş               berabere              a       a
             Taş         Kağıt       kaybeden     kazanan        a       1-a
@@ -60,13 +60,11 @@ public class Oyun {
             Makas       Kağıt       kazanan      kaybeden       1-a     a
             Makas       Makas             berabere              a       a
            
-       */
-       
-
-       
+         */
     }
-       void kontrol(){
-       /*int bNesne0=0,bNesne1=0,bNesne2=0,bNesne3=0,bNesne4=0,sayac=0;    
+
+    void kontrol() {
+        /*int bNesne0=0,bNesne1=0,bNesne2=0,bNesne3=0,bNesne4=0,sayac=0;    
       if(sayac==0||sayac==5){
        sayac=0;   
        bindex.add(0);
@@ -116,48 +114,46 @@ public class Oyun {
                bindex.remove(4);
                break;
        }*/
-       nesne2=bilgisayarHamleler.get(sayac);
-           System.out.println(bilgisayarObjeleri);
-           System.out.println("musti"+objects);
-           int ran=random.nextInt(4);
-       nesne2Etki=bilgisayarObjeleri.get(ran).etkiHesapla();
-       nesne1Etki=objects.get(index).etkiHesapla();
-           System.out.println(nesne1+nesne2);
-       double temp;
-       if((nesne1=="tas"&&nesne2=="makas")||(nesne1=="kagit"&&nesne2=="tas")||(nesne1=="makas"&&nesne2=="kagit")){
-           temp=nesne1Etki;
-           nesne1Etki /=((1-a)*nesne2Etki);
-           nesne2Etki /= (a*temp);
-       }else if((nesne1=="tas"&&nesne2=="kagit")||(nesne1=="kagit"&&nesne2=="makas")||(nesne1=="makas"&&nesne2=="tas")){
-           temp=nesne1Etki;
-           nesne1Etki /= (a*nesne2Etki);
-           nesne2Etki /=((1-a)*temp);
-       }else if((nesne1=="tas"&&nesne2=="tas")||(nesne1=="kagit"&&nesne2=="kagit")||(nesne1=="makas"&&nesne2=="makas")){
-           temp=nesne1Etki;
-           nesne1Etki /= (a*nesne2Etki);
-           nesne2Etki /= (a*temp);
-       }
-          
        
-       System.out.println("+++"+nesne1Etki);
-       System.out.println("1." +nesne1Etki + "--" +"2."+nesne2Etki);
-           
-       
-      
-      
-           
+        nesne2 = bilgisayarHamleler.get(sayac);
+        System.out.println(getBilObjectsToPrint());
+        System.out.println("musti" + objects);
+        int ran = random.nextInt(4);
+        nesne2Etki = bilgisayarObjeleri.get(ran).etkiHesapla();
+        nesne1Etki = objects.get(index).etkiHesapla();
+        System.out.println(nesne1 + nesne2);
+        double temp;
+        if ((nesne1 == "tas" && nesne2 == "makas") || (nesne1 == "kagit" && nesne2 == "tas") || (nesne1 == "makas" && nesne2 == "kagit")) {
+            temp = nesne1Etki;
+            nesne1Etki /= ((1 - a) * nesne2Etki);
+            nesne2Etki /= (a * temp);
+        } else if ((nesne1 == "tas" && nesne2 == "kagit") || (nesne1 == "kagit" && nesne2 == "makas") || (nesne1 == "makas" && nesne2 == "tas")) {
+            temp = nesne1Etki;
+            nesne1Etki /= (a * nesne2Etki);
+            nesne2Etki /= ((1 - a) * temp);
+        } else if ((nesne1 == "tas" && nesne2 == "tas") || (nesne1 == "kagit" && nesne2 == "kagit") || (nesne1 == "makas" && nesne2 == "makas")) {
+            temp = nesne1Etki;
+            nesne1Etki /= (a * nesne2Etki);
+            nesne2Etki /= (a * temp);
+        }
 
-        
-      
-       
-       ///bilgisayar.Goster();
-       
-        
+        System.out.println("+++" + nesne1Etki);
+        System.out.println("1." + nesne1Etki + "--" + "2." + nesne2Etki);
+
+        ///bilgisayar.Goster();
         //KullaniciJFrame kullaniciJFrame = new KullaniciJFrame();
-       sayac++; 
+        sayac++;
     }
-   void check(){
-       System.out.println(objects);
-   }
-}
 
+    void check() {
+        System.out.println(objects);
+    }
+    
+        public String getBilObjectsToPrint() {
+        String output="";
+        for (int i = 0; i < bilgisayarObjeleri.size(); i++) {
+            output+=bilgisayarObjeleri.get(i).getClass().getName() +" ";
+        }
+        return output;
+    }
+}

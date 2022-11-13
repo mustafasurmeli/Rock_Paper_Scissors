@@ -8,13 +8,15 @@ package Oyun;
  *
  * @author mustafa
  */
-public class UstaMakas extends Makas{
-    public UstaMakas(int dayaniklilik,int seviyePuani,int keskinlik){
-         super(dayaniklilik, seviyePuani);
+public class UstaMakas extends Makas {
+
+    public UstaMakas(int dayaniklilik, int seviyePuani, int keskinlik) {
+        super(dayaniklilik, seviyePuani);
     }
+
     public UstaMakas() {
     }
-    private int direnc=2;
+    private int direnc = 2;
 
     public int getDirenc() {
         return direnc;
@@ -23,13 +25,16 @@ public class UstaMakas extends Makas{
     public void setDirenc(int direnc) {
         this.direnc = direnc;
     }
-    private int nesnePuaniGoster(){
+
+    private int nesnePuaniGoster() {
         return 0;
     }
-    public double etkiHesapla(){
-        return getKeskinlik()*direnc;
+
+    public double etkiHesapla() {
+        return getKeskinlik() * direnc;
     }
-    private void durumGuncelle(double dayaniklilikGuncel,int seviyeGuncel){
-        
+
+    private void durumGuncelle(double dayaniklilikGuncel, int seviyeGuncel) {
+
     }
 }

@@ -8,14 +8,15 @@ package Oyun;
  *
  * @author mustafa
  */
-public class Kagit extends Nesneler{
-    
-    public Kagit(int dayaniklilik,int seviyePuani){
-         super(dayaniklilik, seviyePuani);
+public class Kagit extends Nesneler {
+
+    public Kagit(int dayaniklilik, int seviyePuani) {
+        super(dayaniklilik, seviyePuani);
     }
+
     public Kagit() {
     }
-    private int nufuz=2;
+    private int nufuz = 2;
 
     public int getNufuz() {
         return nufuz;
@@ -24,13 +25,16 @@ public class Kagit extends Nesneler{
     public void setNufuz(int nufuz) {
         this.nufuz = nufuz;
     }
-    private int nesnePuaniGoster(){
+
+    private int nesnePuaniGoster() {
         return 0;
     }
-    public double etkiHesapla(){
-       return nufuz;
+
+    public double etkiHesapla() {
+        return nufuz;
     }
-    private int durumGuncelle(){
+
+    private int durumGuncelle() {
         return 0;
     }
 }

@@ -4,18 +4,20 @@
  */
 package Oyun;
 
+import static Oyun.Oyun.bilgisayarObjeleri;
 import java.awt.Color;
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  *
  * @author mustafa
  */
 public class Karsilasma extends javax.swing.JFrame {
-    ArrayList<Nesneler>deneme = new ArrayList<>();
-    
-    String nesne;
-private  String[] icon = new String[5];
+
+    ArrayList<Nesneler> deneme = new ArrayList<>();
+
+    private String[] icon = new String[5];
 
     public String[] getIcon() {
         return icon;
@@ -24,61 +26,61 @@ private  String[] icon = new String[5];
     public void setIcon(String[] icon) {
         this.icon = icon;
     }
-private String[] secim = new String[5];
+    private String[] secim = new String[5];
 
     public String[] getSecim() {
         return secim;
     }
 
     public void setSecim(String[] secim) {
-         for (int j = 0; j < secim.length; j++) {
+        for (int j = 0; j < secim.length; j++) {
             System.out.println(secim[j]);
         }
-        
+
         this.secim = secim;
     }
-   
+
     /**
      * Creates new form Karsilasma
      */
     public Karsilasma() {
         getContentPane().setBackground(Color.LIGHT_GRAY);
-        
+
         initComponents();
     }
-     void kullanıcıIcon(){
-       int sayc2=0;
-         for (int sayac = 1; sayac < 6; sayac++) {
-             
-         
-        switch(sayac){
-            case 1:
-                jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/"+icon[sayc2]+".png")));
-                sayc2++;
-                break;
-            case 2:
-                jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/"+icon[sayc2]+".png")));
-                sayc2++;
-                break;
-            case 3:
-                jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/"+icon[sayc2]+".png")));
-                sayc2++;
-                break;
-            case 4:
-                jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/"+icon[sayc2]+".png")));
-                sayc2++;
-                break;
-            case 5:
-                jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/"+icon[sayc2]+".png")));
-                sayc2++;
-                jButton1.setBackground(Color.LIGHT_GRAY);
-                jButton2.setBackground(Color.LIGHT_GRAY);
-                jButton3.setBackground(Color.LIGHT_GRAY);
-                jButton4.setBackground(Color.LIGHT_GRAY);
-                jButton5.setBackground(Color.LIGHT_GRAY);
-                break;
+
+    void kullanıcıIcon() {
+        int sayc2 = 0;
+        for (int sayac = 1; sayac < 6; sayac++) {
+
+            switch (sayac) {
+                case 1:
+                    jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + icon[sayc2] + ".png")));
+                    sayc2++;
+                    break;
+                case 2:
+                    jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + icon[sayc2] + ".png")));
+                    sayc2++;
+                    break;
+                case 3:
+                    jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + icon[sayc2] + ".png")));
+                    sayc2++;
+                    break;
+                case 4:
+                    jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + icon[sayc2] + ".png")));
+                    sayc2++;
+                    break;
+                case 5:
+                    jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + icon[sayc2] + ".png")));
+                    sayc2++;
+                    jButton1.setBackground(Color.LIGHT_GRAY);
+                    jButton2.setBackground(Color.LIGHT_GRAY);
+                    jButton3.setBackground(Color.LIGHT_GRAY);
+                    jButton4.setBackground(Color.LIGHT_GRAY);
+                    jButton5.setBackground(Color.LIGHT_GRAY);
+                    break;
+            }
         }
-         }
     }
 
     /**
@@ -262,133 +264,128 @@ private String[] secim = new String[5];
     }// </editor-fold>//GEN-END:initComponents
     Oyun oyun = new Oyun();
     Bilgisayar bilgisayar = new Bilgisayar();
-     int sayac=0;
-     
+    int sayac = 0;
+
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         sayac++;
         jButton2.setEnabled(false);
-        
-        if(sayac==5){
-           
+
+        if (sayac == 5) {
+
             yeniDuzen();
         }
-        oyun.index=1;
-        oyun.nesne1=icon[1];
-        oyun.objects=deneme;
+        oyun.index = 1;
+        oyun.nesne1 = icon[1];
+        oyun.objects = deneme;
         oyun.check();
-         oyun.kontrol();
-         System.out.println(oyun.objects);
-         System.out.println("////////////////////////////");
+        oyun.kontrol();
+        System.out.println(oyun.objects);
+        System.out.println("////////////////////////////");
         System.out.println(deneme);
-         System.out.println("---------------------");
-        System.out.println(bilgisayar.KarsilasmaNesnesi);
+        System.out.println("---------------------");
+        System.out.println("unal" + bilgisayar.getKarsilasmaNesnesi());
         System.out.println("++++++++++++++++++++++");
         System.out.println(bilgisayar.bilObjects);
-         System.out.println("++++++++++++++++++++++");
-         
-         
+        System.out.println("++++++++++++++++++++++");
+
     }//GEN-LAST:event_jButton2ActionPerformed
-   
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         sayac++;
         jButton1.setEnabled(false);
-        
-        if(sayac==5){
+
+        if (sayac == 5) {
             yeniDuzen();
         }
-        oyun.index=0;
-        oyun.nesne1=icon[0];
-        oyun.objects=deneme;
+        oyun.index = 0;
+        oyun.nesne1 = icon[0];
+        oyun.objects = deneme;
         oyun.check();
-         oyun.kontrol();
-         System.out.println(oyun.objects);
-         System.out.println("////////////////////////////");
+        oyun.kontrol();
+        System.out.println(oyun.objects);
+        System.out.println("////////////////////////////");
         System.out.println(deneme);
-         System.out.println("---------------------");
-        System.out.println(bilgisayar.KarsilasmaNesnesi);
+        System.out.println("---------------------");
+        System.out.println(bilgisayar.getKarsilasmaNesnesi());
         System.out.println("++++++++++++++++++++++");
         System.out.println(bilgisayar.bilObjects);
-         System.out.println("++++++++++++++++++++++");
-       
+        System.out.println("++++++++++++++++++++++");
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         sayac++;
         jButton3.setEnabled(false);
-        if(sayac==5){
+        if (sayac == 5) {
             yeniDuzen();
         }
-        oyun.index=2; 
-        oyun.nesne1=icon[2];
-        oyun.objects=deneme;
+        oyun.index = 2;
+        oyun.nesne1 = icon[2];
+        oyun.objects = deneme;
         oyun.check();
-         oyun.kontrol();
-         System.out.println(oyun.objects);
-         System.out.println("////////////////////////////");
+        oyun.kontrol();
+        System.out.println(oyun.objects);
+        System.out.println("////////////////////////////");
         System.out.println(deneme);
-         System.out.println("---------------------");
-        System.out.println(bilgisayar.KarsilasmaNesnesi);
+        System.out.println("---------------------");
+        System.out.println(bilgisayar.getKarsilasmaNesnesi());
         System.out.println("++++++++++++++++++++++");
         System.out.println(bilgisayar.bilObjects);
-         System.out.println("++++++++++++++++++++++");
-         
-          
+        System.out.println("++++++++++++++++++++++");
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         sayac++;
         jButton4.setEnabled(false);
-        if(sayac==5){
+        if (sayac == 5) {
             yeniDuzen();
         }
-        oyun.index=3; 
-        oyun.nesne1=icon[3];
-        
-        oyun.objects=deneme;
+        oyun.index = 3;
+        oyun.nesne1 = icon[3];
+
+        oyun.objects = deneme;
         oyun.check();
-         oyun.kontrol();
-         System.out.println(oyun.objects);
-         System.out.println("////////////////////////////");
+        oyun.kontrol();
+        System.out.println(oyun.objects);
+        System.out.println("////////////////////////////");
         System.out.println(deneme);
-         System.out.println("---------------------");
-        System.out.println(bilgisayar.KarsilasmaNesnesi);
+        System.out.println("---------------------");
+        System.out.println(bilgisayar.getKarsilasmaNesnesi());
         System.out.println("++++++++++++++++++++++");
         System.out.println(bilgisayar.bilObjects);
-         System.out.println("++++++++++++++++++++++");
-         
-          
+        System.out.println("++++++++++++++++++++++");
+
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         sayac++;
         jButton5.setEnabled(false);
-        if(sayac==5){
+        if (sayac == 5) {
             yeniDuzen();
         }
-        oyun.index=4; 
-        oyun.nesne1=icon[4];
-        
-        
-        oyun.objects=deneme;
+        oyun.index = 4;
+        oyun.nesne1 = icon[4];
+
+        oyun.objects = deneme;
         oyun.check();
-         oyun.kontrol();
-         System.out.println(oyun.objects);
-         System.out.println("////////////////////////////");
+        oyun.kontrol();
+        System.out.println(oyun.objects);
+        System.out.println("////////////////////////////");
         System.out.println(deneme);
-         System.out.println("---------------------");
-        System.out.println(bilgisayar.KarsilasmaNesnesi);
+        System.out.println("---------------------");
+        System.out.println(bilgisayar.getKarsilasmaNesnesi());
         System.out.println("++++++++++++++++++++++");
         System.out.println(bilgisayar.bilObjects);
-         System.out.println("++++++++++++++++++++++");
-              
+        System.out.println("++++++++++++++++++++++");
+
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-       
-        
+
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -415,14 +412,17 @@ private String[] secim = new String[5];
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-               
-                
+
                 new Karsilasma().setVisible(true);
             }
         });
     }
-    void yeniDuzen(){
-        sayac=0;
+
+    void yeniDuzen() {
+        sayac = 0;
+        oyun.sayac=0;
+        Collections.shuffle(bilgisayarObjeleri);
+        
         jButton1.setEnabled(true);
         jButton2.setEnabled(true);
         jButton3.setEnabled(true);

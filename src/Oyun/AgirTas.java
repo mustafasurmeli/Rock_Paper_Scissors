@@ -8,14 +8,15 @@ package Oyun;
  *
  * @author mustafa
  */
-public class AgirTas extends Tas{
-    
-    public AgirTas(int dayaniklilik,int seviyePuani,int katilik){
-         super(dayaniklilik, seviyePuani);
+public class AgirTas extends Tas {
+
+    public AgirTas(int dayaniklilik, int seviyePuani, int katilik) {
+        super(dayaniklilik, seviyePuani);
     }
+
     public AgirTas() {
     }
-    private int sicaklik=2;
+    private int sicaklik = 2;
 
     public int getSicaklik() {
         return sicaklik;
@@ -24,14 +25,17 @@ public class AgirTas extends Tas{
     public void setSicaklik(int sicaklik) {
         this.sicaklik = sicaklik;
     }
-    private int nesnePuaniGoster(){
+
+    private int nesnePuaniGoster() {
         return 0;
     }
-    public double etkiHesapla(){
-        return sicaklik*getKatilik();
+
+    public double etkiHesapla() {
+        return sicaklik * getKatilik();
     }
-    private int durumGuncelle(){
+
+    private int durumGuncelle() {
         return 0;
     }
-    
+
 }
