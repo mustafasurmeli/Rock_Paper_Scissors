@@ -9,9 +9,10 @@ package Oyun;
  * @author mustafa
  */
 public class OzelKagit extends Kagit {
+    private String name ="kagit";
 
-    public OzelKagit(double dayaniklilik, int seviyePuani, double howMuch) {
-        super(dayaniklilik, seviyePuani, howMuch);
+    public String getName() {
+        return name;
     }
    
     

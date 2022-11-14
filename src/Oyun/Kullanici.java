@@ -11,10 +11,10 @@ import java.util.Random;
  * @author mustafa
  */
 public class Kullanici extends Oyuncu {
-
+    
     Random random = new Random();
 
-    public Kullanici(String oyuncuAdi, int skor) {
+    public Kullanici(String oyuncuAdi, double skor) {
         super(oyuncuAdi, skor);
         setOyuncuID(random.nextInt(10));
         super.getOyuncuAdi();
@@ -22,11 +22,13 @@ public class Kullanici extends Oyuncu {
         System.out.println(super.getOyuncuAdi());
         System.out.println(oyuncuAdi);
         System.out.println(getOyuncuID());
-
+        
     }
 
     Kullanici() {
 
     }
+
+    
 
 }

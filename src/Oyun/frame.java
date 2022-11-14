@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
  * @author mustafa
  */
 public class Frame extends javax.swing.JFrame {
-
+    String ad;
     /**
      * Creates new form frame
      */
@@ -136,25 +136,29 @@ public class Frame extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    
     Oyun oyun = new Oyun();
     private void buttonkullaniciActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonkullaniciActionPerformed
+           
         kullanicijframe.setVisible(true);
         setVisible(false);
     }//GEN-LAST:event_buttonkullaniciActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-
-        if (jTextField1.getText().length() == 0) {
-            Kullanici kullanici = new Kullanici("user", 4);
+        if (jTextField1.getText().equals(null)) {
+            Kullanici kullanici = new Kullanici("user", 4.0);
 
         } else {
-            Kullanici kullanici = new Kullanici(jTextField1.getText(), 4);
 
-        }
-        //System.out.println(kullanici.getOyuncuAdi());
+            Kullanici kullanici = new Kullanici(jTextField1.getText(), 4.0);
+
+            //System.out.println(kullanici.getOyuncuAdi());
     }//GEN-LAST:event_jTextField1ActionPerformed
+    
+        
+        
 
+    }
     /**
      * @param args the command line arguments
      */
@@ -192,12 +196,13 @@ public class Frame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-
+             
                 new Frame().setVisible(true);
 
             }
         });
     }
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;

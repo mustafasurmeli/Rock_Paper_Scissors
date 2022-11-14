@@ -10,8 +10,10 @@ package Oyun;
  */
 public class Kagit extends Nesneler {
 
-    public Kagit(double dayaniklilik, int seviyePuani, double howMuch) {
-        super(dayaniklilik, seviyePuani, howMuch);
+    private String name ="kagit";
+
+    public String getName() {
+        return name;
     }
   
     

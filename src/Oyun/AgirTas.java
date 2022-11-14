@@ -9,7 +9,13 @@ package Oyun;
  * @author mustafa
  */
 public class AgirTas extends Tas{
-   
+
+   private String name ="atas";
+
+    public String getName() {
+        return name;
+    }
+    
     
 
     public AgirTas(double dayaniklilik, int seviyePuani, double howMuch) {

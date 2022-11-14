@@ -9,7 +9,11 @@ package Oyun;
  * @author mustafa
  */
 public class Makas extends Nesneler {
+    private String name ="makas";
 
+    public String getName() {
+        return name;
+    }
     public Makas(double dayaniklilik, int seviyePuani, double howMuch) {
         super(dayaniklilik, seviyePuani, howMuch);
     }

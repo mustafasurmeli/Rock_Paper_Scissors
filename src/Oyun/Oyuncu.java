@@ -45,9 +45,9 @@ public class Oyuncu {
         this.oyuncuAdi = oyuncuAdi;
     }
 
-    public Oyuncu(String oyuncuAdi, int skor) {
+    public Oyuncu(String oyuncuAdi, double skor) {
         this.oyuncuAdi = oyuncuAdi;
-        this.skor = skor;
+        this.skor = (int) skor;
 
     }
 

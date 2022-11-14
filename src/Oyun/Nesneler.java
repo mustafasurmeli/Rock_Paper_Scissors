@@ -5,11 +5,15 @@ package Oyun;
  * @author mustafa
  */
 public abstract class Nesneler {
-    
+   private String name;
     private double dayaniklilik=20;
     double howMuch;
     public double getDayaniklilik() {
         return dayaniklilik;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void setDayaniklilik(double dayaniklilik) {

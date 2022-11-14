@@ -10,6 +10,16 @@ package Oyun;
  */
 public class Tas extends Nesneler {
 
+    
+    private String name ="tas";
+
+    public String getName() {
+        return name;
+    }
+    
+
+    
+    
     Kagit kagit = new Kagit();
     OzelKagit ozelKagit = new OzelKagit();
     Makas makas = new Makas();
@@ -33,6 +43,7 @@ public class Tas extends Nesneler {
     }
 
     private int nesnePuaniGoster() {
+        
         return 0;
     }
 
