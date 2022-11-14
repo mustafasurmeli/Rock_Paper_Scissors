@@ -14,10 +14,10 @@ public class Tas extends Nesneler {
     OzelKagit ozelKagit = new OzelKagit();
     Makas makas = new Makas();
     UstaMakas ustaMakas = new UstaMakas();
-
-    public Tas(int dayaniklilik, int seviyePuani) {
-        //   super(dayaniklilik, seviyePuani);
-
+    
+    public Tas(double dayaniklilik, int seviyePuani,double howMuch) {
+           super(dayaniklilik, seviyePuani,howMuch);
+           
     }
 
     public Tas() {
@@ -41,9 +41,9 @@ public class Tas extends Nesneler {
         return katilik;
     }
 
-    private int durumGuncelle() {
-
-        return 0;
+    public double durumGuncelle() {
+         setDayaniklilik(getDayaniklilik()-howMuch);
+        return getDayaniklilik();
     }
 
 }

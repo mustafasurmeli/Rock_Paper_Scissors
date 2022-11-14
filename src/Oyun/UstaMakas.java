@@ -10,9 +10,10 @@ package Oyun;
  */
 public class UstaMakas extends Makas {
 
-    public UstaMakas(int dayaniklilik, int seviyePuani, int keskinlik) {
-        super(dayaniklilik, seviyePuani);
+    public UstaMakas(double dayaniklilik, int seviyePuani, double howMuch) {
+        super(dayaniklilik, seviyePuani, howMuch);
     }
+    
 
     public UstaMakas() {
     }
@@ -34,7 +35,8 @@ public class UstaMakas extends Makas {
         return getKeskinlik() * direnc;
     }
 
-    private void durumGuncelle(double dayaniklilikGuncel, int seviyeGuncel) {
-
+    public double durumGuncelle() {
+         setDayaniklilik(getDayaniklilik()-howMuch);
+        return getDayaniklilik();
     }
 }

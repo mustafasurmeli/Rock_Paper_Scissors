@@ -10,9 +10,10 @@ package Oyun;
  */
 public class Makas extends Nesneler {
 
-    public Makas(int dayaniklilik, int seviyePuani) {
-        super(dayaniklilik, seviyePuani);
+    public Makas(double dayaniklilik, int seviyePuani, double howMuch) {
+        super(dayaniklilik, seviyePuani, howMuch);
     }
+   
 
     public Makas() {
     }
@@ -34,7 +35,8 @@ public class Makas extends Nesneler {
         return keskinlik;
     }
 
-    private int durumGuncelle() {
-        return 0;
+    public double durumGuncelle() {
+         setDayaniklilik(getDayaniklilik()-howMuch);
+        return getDayaniklilik();
     }
 }

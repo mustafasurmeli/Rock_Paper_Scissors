@@ -14,7 +14,7 @@ import java.util.Collections;
  * @author mustafa
  */
 public class Karsilasma extends javax.swing.JFrame {
-
+     
     ArrayList<Nesneler> deneme = new ArrayList<>();
 
     private String[] icon = new String[5];
@@ -39,7 +39,7 @@ public class Karsilasma extends javax.swing.JFrame {
 
         this.secim = secim;
     }
-
+   
     /**
      * Creates new form Karsilasma
      */
@@ -48,7 +48,7 @@ public class Karsilasma extends javax.swing.JFrame {
 
         initComponents();
     }
-
+     Oyun oyun = new Oyun();
     void kullanıcıIcon() {
         int sayc2 = 0;
         for (int sayac = 1; sayac < 6; sayac++) {
@@ -56,22 +56,27 @@ public class Karsilasma extends javax.swing.JFrame {
             switch (sayac) {
                 case 1:
                     jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + icon[sayc2] + ".png")));
+                    jProgressBar1.setValue((int)deneme.get(0).getDayaniklilik()*100);
                     sayc2++;
                     break;
                 case 2:
                     jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + icon[sayc2] + ".png")));
+                    jProgressBar3.setValue((int)deneme.get(1).getDayaniklilik()*100);
                     sayc2++;
                     break;
                 case 3:
                     jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + icon[sayc2] + ".png")));
+                    jProgressBar5.setValue((int)deneme.get(2).getDayaniklilik()*100);
                     sayc2++;
                     break;
                 case 4:
                     jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + icon[sayc2] + ".png")));
+                    jProgressBar7.setValue((int)deneme.get(3).getDayaniklilik()*100);
                     sayc2++;
                     break;
                 case 5:
                     jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + icon[sayc2] + ".png")));
+                    jProgressBar9.setValue((int)deneme.get(4).getDayaniklilik()*100);
                     sayc2++;
                     jButton1.setBackground(Color.LIGHT_GRAY);
                     jButton2.setBackground(Color.LIGHT_GRAY);
@@ -82,7 +87,10 @@ public class Karsilasma extends javax.swing.JFrame {
             }
         }
     }
-
+    
+      int progress=oyun.progressS;
+      
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -110,6 +118,11 @@ public class Karsilasma extends javax.swing.JFrame {
         jProgressBar8 = new javax.swing.JProgressBar();
         jProgressBar9 = new javax.swing.JProgressBar();
         jProgressBar10 = new javax.swing.JProgressBar();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -149,27 +162,67 @@ public class Karsilasma extends javax.swing.JFrame {
             }
         });
 
+        jProgressBar1.setForeground(new java.awt.Color(0, 120, 0));
+        jProgressBar1.setMaximum(2000);
         jProgressBar1.setStringPainted(true);
 
         jProgressBar2.setForeground(new java.awt.Color(204, 0, 0));
-        jProgressBar2.setMaximum(20);
+        jProgressBar2.setMaximum(30);
         jProgressBar2.setStringPainted(true);
 
+        jProgressBar3.setForeground(new java.awt.Color(0, 120, 0));
+        jProgressBar3.setMaximum(2000);
         jProgressBar3.setStringPainted(true);
 
+        jProgressBar4.setForeground(new java.awt.Color(204, 0, 0));
+        jProgressBar4.setMaximum(30);
         jProgressBar4.setStringPainted(true);
 
+        jProgressBar5.setForeground(new java.awt.Color(0, 120, 0));
+        jProgressBar5.setMaximum(2000);
         jProgressBar5.setStringPainted(true);
 
+        jProgressBar6.setForeground(new java.awt.Color(204, 0, 0));
+        jProgressBar6.setMaximum(30);
         jProgressBar6.setStringPainted(true);
 
+        jProgressBar7.setForeground(new java.awt.Color(0, 120, 0));
+        jProgressBar7.setMaximum(2000);
+        jProgressBar7.setToolTipText("");
         jProgressBar7.setStringPainted(true);
 
+        jProgressBar8.setForeground(new java.awt.Color(204, 0, 0));
+        jProgressBar8.setMaximum(30);
         jProgressBar8.setStringPainted(true);
 
+        jProgressBar9.setForeground(new java.awt.Color(0, 120, 0));
+        jProgressBar9.setMaximum(2000);
         jProgressBar9.setStringPainted(true);
 
+        jProgressBar10.setForeground(new java.awt.Color(204, 0, 0));
+        jProgressBar10.setMaximum(30);
         jProgressBar10.setStringPainted(true);
+
+        jLabel4.setOpaque(true);
+        //jLabel4.setBackground(Color.RED);
+        jLabel4.setBackground(new java.awt.Color(204, 0, 0));
+        jLabel4.setForeground(new java.awt.Color(204, 0, 0));
+
+        jLabel5.setText("Seviye Puanı");
+
+        jLabel6.setOpaque(true);
+        jLabel6.setBackground(new java.awt.Color(0, 120, 0));
+        jLabel6.setForeground(new java.awt.Color(0, 120, 0));
+
+        jLabel7.setText("Dayanıklılık");
+
+        jButton6.setText("Yenile");
+        jButton6.setEnabled(false);
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -213,7 +266,16 @@ public class Karsilasma extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jProgressBar9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jProgressBar10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                                    .addComponent(jProgressBar10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(65, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -257,22 +319,34 @@ public class Karsilasma extends javax.swing.JFrame {
                         .addComponent(jProgressBar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(84, 84, 84)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(175, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
+                .addComponent(jButton6)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    Oyun oyun = new Oyun();
+   
     Bilgisayar bilgisayar = new Bilgisayar();
     int sayac = 0;
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        
         sayac++;
+        System.out.println(sayac+"gr");
         jButton2.setEnabled(false);
 
         if (sayac == 5) {
 
-            yeniDuzen();
+           jButton6.setEnabled(true);
         }
         oyun.index = 1;
         oyun.nesne1 = icon[1];
@@ -287,15 +361,23 @@ public class Karsilasma extends javax.swing.JFrame {
         System.out.println("++++++++++++++++++++++");
         System.out.println(bilgisayar.bilObjects);
         System.out.println("++++++++++++++++++++++");
+        int dayan=(int)(deneme.get(1).getDayaniklilik()*100);
+        jProgressBar3.setValue(dayan);
+        int progres=deneme.get(1).getSeviyePuani();
+         jProgressBar4.setValue(progres);
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+        
         sayac++;
+       
+        System.out.println(sayac+"gr");
         jButton1.setEnabled(false);
 
         if (sayac == 5) {
-            yeniDuzen();
+           jButton6.setEnabled(true);
         }
         oyun.index = 0;
         oyun.nesne1 = icon[0];
@@ -310,14 +392,18 @@ public class Karsilasma extends javax.swing.JFrame {
         System.out.println("++++++++++++++++++++++");
         System.out.println(bilgisayar.bilObjects);
         System.out.println("++++++++++++++++++++++");
-
+        int dayan=(int)(deneme.get(0).getDayaniklilik()*100);
+        jProgressBar1.setValue(dayan);
+        int progres=deneme.get(0).getSeviyePuani();
+         jProgressBar2.setValue(progres);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         sayac++;
+        System.out.println(sayac+"gr");
         jButton3.setEnabled(false);
         if (sayac == 5) {
-            yeniDuzen();
+           jButton6.setEnabled(true);
         }
         oyun.index = 2;
         oyun.nesne1 = icon[2];
@@ -332,14 +418,19 @@ public class Karsilasma extends javax.swing.JFrame {
         System.out.println("++++++++++++++++++++++");
         System.out.println(bilgisayar.bilObjects);
         System.out.println("++++++++++++++++++++++");
+        int dayan=(int)(deneme.get(2).getDayaniklilik()*100);
+        jProgressBar5.setValue(dayan);
+        int progres=deneme.get(2).getSeviyePuani();
+         jProgressBar6.setValue(progres);
 
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         sayac++;
+        System.out.println(sayac+"gr");
         jButton4.setEnabled(false);
         if (sayac == 5) {
-            yeniDuzen();
+            jButton6.setEnabled(true);
         }
         oyun.index = 3;
         oyun.nesne1 = icon[3];
@@ -355,14 +446,19 @@ public class Karsilasma extends javax.swing.JFrame {
         System.out.println("++++++++++++++++++++++");
         System.out.println(bilgisayar.bilObjects);
         System.out.println("++++++++++++++++++++++");
+        int dayan=(int)(deneme.get(3).getDayaniklilik()*100);
+        jProgressBar7.setValue(dayan);
+        int progres=deneme.get(3).getSeviyePuani();
+         jProgressBar8.setValue(progres);
 
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         sayac++;
         jButton5.setEnabled(false);
-        if (sayac == 5) {
-            yeniDuzen();
+        if (sayac == deneme.size()) {
+            jButton6.setEnabled(true);
+          
         }
         oyun.index = 4;
         oyun.nesne1 = icon[4];
@@ -378,8 +474,17 @@ public class Karsilasma extends javax.swing.JFrame {
         System.out.println("++++++++++++++++++++++");
         System.out.println(bilgisayar.bilObjects);
         System.out.println("++++++++++++++++++++++");
+        int dayan=(int)(deneme.get(4).getDayaniklilik()*100);
+        jProgressBar9.setValue(dayan);
+        int progres=deneme.get(4).getSeviyePuani();
+         jProgressBar10.setValue(progres);
 
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        sayac++;
+        yeniDuzen();
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -419,6 +524,7 @@ public class Karsilasma extends javax.swing.JFrame {
     }
 
     void yeniDuzen() {
+        jButton6.setEnabled(false);
         sayac = 0;
         oyun.sayac=0;
         Collections.shuffle(bilgisayarObjeleri);
@@ -436,9 +542,14 @@ public class Karsilasma extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JProgressBar jProgressBar10;
     private javax.swing.JProgressBar jProgressBar2;

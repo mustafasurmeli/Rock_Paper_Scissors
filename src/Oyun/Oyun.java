@@ -13,7 +13,7 @@ import java.util.Random;
  * @author mustafa
  */
 public class Oyun {
-
+    int progressS;
     public static String ad;
     ArrayList<Nesneler> objects = new ArrayList<>();
     static ArrayList<Nesneler> bilgisayarObjeleri = new ArrayList<>();
@@ -125,21 +125,41 @@ public class Oyun {
         double temp;
         if ((nesne1 == "tas" && nesne2 == "makas") || (nesne1 == "kagit" && nesne2 == "tas") || (nesne1 == "makas" && nesne2 == "kagit")) {
             temp = nesne1Etki;
-            nesne1Etki /= ((1 - a) * nesne2Etki);
-            nesne2Etki /= (a * temp);
+            nesne1Etki /= (a * nesne2Etki);
+            nesne2Etki /= ((1-a) * temp);
         } else if ((nesne1 == "tas" && nesne2 == "kagit") || (nesne1 == "kagit" && nesne2 == "makas") || (nesne1 == "makas" && nesne2 == "tas")) {
             temp = nesne1Etki;
-            nesne1Etki /= (a * nesne2Etki);
-            nesne2Etki /= ((1 - a) * temp);
+            nesne1Etki /= ((1-a) * nesne2Etki);
+            nesne2Etki /= (a * temp);
         } else if ((nesne1 == "tas" && nesne2 == "tas") || (nesne1 == "kagit" && nesne2 == "kagit") || (nesne1 == "makas" && nesne2 == "makas")) {
             temp = nesne1Etki;
             nesne1Etki /= (a * nesne2Etki);
             nesne2Etki /= (a * temp);
         }
-
+        objects.get(index).howMuch=nesne2Etki;
+        bilgisayarObjeleri.get(ran).howMuch=nesne1Etki;
+        System.out.println(bilgisayarObjeleri.get(ran).durumGuncelle());
+        System.out.println(objects.get(index).durumGuncelle());
+        int seviyeGuncel;
+        if(nesne1Etki>nesne2Etki){
+            System.out.println("oyuncu"+objects.get(index).getSeviyePuani());
+            System.out.println("Bİlgisayar"+bilgisayarObjeleri.get(ran).getSeviyePuani());
+            seviyeGuncel=objects.get(index).getSeviyePuani();
+            seviyeGuncel +=20;
+            objects.get(index).setSeviyePuani(seviyeGuncel);
+        }else if(nesne2Etki>nesne1Etki){
+            System.out.println("Bilgisayar"+bilgisayarObjeleri.get(ran).getSeviyePuani());
+             System.out.println("oyuncu"+objects.get(index).getSeviyePuani());
+            seviyeGuncel=bilgisayarObjeleri.get(ran).getSeviyePuani();
+            seviyeGuncel += 20;
+            bilgisayarObjeleri.get(ran).setSeviyePuani(seviyeGuncel);
+        }
+        System.out.println(objects.get(index).getSeviyePuani());
+        System.out.println(bilgisayarObjeleri.get(ran).getSeviyePuani());
+        progressS=objects.get(index).getSeviyePuani();
         System.out.println("+++" + nesne1Etki);
         System.out.println("1." + nesne1Etki + "--" + "2." + nesne2Etki);
-
+        System.out.println(sayac+"er");
         ///bilgisayar.Goster();
         //KullaniciJFrame kullaniciJFrame = new KullaniciJFrame();
         sayac++;

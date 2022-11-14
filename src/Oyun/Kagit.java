@@ -10,9 +10,11 @@ package Oyun;
  */
 public class Kagit extends Nesneler {
 
-    public Kagit(int dayaniklilik, int seviyePuani) {
-        super(dayaniklilik, seviyePuani);
+    public Kagit(double dayaniklilik, int seviyePuani, double howMuch) {
+        super(dayaniklilik, seviyePuani, howMuch);
     }
+  
+    
 
     public Kagit() {
     }
@@ -34,7 +36,8 @@ public class Kagit extends Nesneler {
         return nufuz;
     }
 
-    private int durumGuncelle() {
-        return 0;
+    public double durumGuncelle() {
+         setDayaniklilik(getDayaniklilik()-howMuch);
+        return getDayaniklilik();
     }
 }

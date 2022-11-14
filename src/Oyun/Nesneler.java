@@ -5,8 +5,28 @@ package Oyun;
  * @author mustafa
  */
 public abstract class Nesneler {
+    
+    private double dayaniklilik=20;
+    double howMuch;
+    public double getDayaniklilik() {
+        return dayaniklilik;
+    }
 
-    public Nesneler(int dayaniklilik, int seviyePuani) {
+    public void setDayaniklilik(double dayaniklilik) {
+        this.dayaniklilik = dayaniklilik;
+    }
+    private int seviyePuani=0;
+    public int getSeviyePuani() {
+        return seviyePuani;
+    }
+
+    public void setSeviyePuani(int seviyePuani) {
+        this.seviyePuani = seviyePuani;
+    }
+    
+
+    
+    public Nesneler(double dayaniklilik, int seviyePuani,double howMuch) {
         //dayaniklilik=20;
         //seviyePuani=0;
     }
@@ -22,8 +42,10 @@ public abstract class Nesneler {
 
     public abstract double etkiHesapla();
 
-    private int durumGuncelle() {
+    public double durumGuncelle() {
         return 0;
     }
+    
+    
 
 }
