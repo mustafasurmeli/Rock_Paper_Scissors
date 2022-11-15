@@ -10,24 +10,20 @@ package Oyun;
  */
 public class Tas extends Nesneler {
 
-    
-    private String name ="tas";
+    private String name = "tas";
 
     public String getName() {
         return name;
     }
-    
 
-    
-    
     Kagit kagit = new Kagit();
     OzelKagit ozelKagit = new OzelKagit();
     Makas makas = new Makas();
     UstaMakas ustaMakas = new UstaMakas();
-    
-    public Tas(double dayaniklilik, int seviyePuani,double howMuch) {
-           super(dayaniklilik, seviyePuani,howMuch);
-           
+
+    public Tas(double dayaniklilik, int seviyePuani, double howMuch) {
+        super(dayaniklilik, seviyePuani, howMuch);
+
     }
 
     public Tas() {
@@ -42,9 +38,13 @@ public class Tas extends Nesneler {
         this.katilik = katilik;
     }
 
-    private int nesnePuaniGoster() {
-        
-        return 0;
+    double nesnePuaniGoster(int kontrol) {
+        if (kontrol == 1) {
+            return getSeviyePuani();
+        } else {
+            return getDayaniklilik();
+        }
+
     }
 
     public double etkiHesapla() {
@@ -53,7 +53,7 @@ public class Tas extends Nesneler {
     }
 
     public double durumGuncelle() {
-         setDayaniklilik(getDayaniklilik()-howMuch);
+        //setDayaniklilik(getDayaniklilik() - howMuch);
         return getDayaniklilik();
     }
 

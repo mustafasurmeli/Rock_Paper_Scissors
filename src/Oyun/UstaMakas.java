@@ -9,16 +9,16 @@ package Oyun;
  * @author mustafa
  */
 public class UstaMakas extends Makas {
-    private String name ="makas";
+
+    private String name = "makas";
 
     public String getName() {
         return name;
     }
-    
+
     public UstaMakas(double dayaniklilik, int seviyePuani, double howMuch) {
         super(dayaniklilik, seviyePuani, howMuch);
     }
-    
 
     public UstaMakas() {
     }
@@ -32,8 +32,13 @@ public class UstaMakas extends Makas {
         this.direnc = direnc;
     }
 
-    private int nesnePuaniGoster() {
-        return 0;
+    double nesnePuaniGoster(int kontrol) {
+        if (kontrol == 1) {
+            return getSeviyePuani();
+        } else {
+            return getDayaniklilik();
+        }
+
     }
 
     public double etkiHesapla() {
@@ -41,7 +46,7 @@ public class UstaMakas extends Makas {
     }
 
     public double durumGuncelle() {
-         setDayaniklilik(getDayaniklilik()-howMuch);
+        //setDayaniklilik(getDayaniklilik() - howMuch);
         return getDayaniklilik();
     }
 }

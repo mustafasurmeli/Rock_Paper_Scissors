@@ -9,13 +9,12 @@ package Oyun;
  * @author mustafa
  */
 public class OzelKagit extends Kagit {
-    private String name ="kagit";
+
+    private String name = "kagit";
 
     public String getName() {
         return name;
     }
-   
-    
 
     public OzelKagit() {
     }
@@ -29,16 +28,21 @@ public class OzelKagit extends Kagit {
         this.kalinlik = kalinlik;
     }
 
-    private int nesnePuaniGoster() {
-        return 0;
+    double nesnePuaniGoster(int kontrol) {
+        if (kontrol == 1) {
+            return getSeviyePuani();
+        } else {
+            return getDayaniklilik();
+        }
+
     }
 
     public double etkiHesapla() {
         return kalinlik * getNufuz();
     }
 
-   public double durumGuncelle() {
-         setDayaniklilik(getDayaniklilik()-howMuch);
+    public double durumGuncelle() {
+        //setDayaniklilik(getDayaniklilik() - howMuch);
         return getDayaniklilik();
     }
 }

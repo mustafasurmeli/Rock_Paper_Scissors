@@ -11,24 +11,25 @@ import java.util.Random;
  * @author mustafa
  */
 public class Kullanici extends Oyuncu {
-    
+
     Random random = new Random();
 
     public Kullanici(String oyuncuAdi, double skor) {
         super(oyuncuAdi, skor);
+        setOyuncuAdi("Kullanıcı");
         setOyuncuID(random.nextInt(10));
         super.getOyuncuAdi();
 
         System.out.println(super.getOyuncuAdi());
         System.out.println(oyuncuAdi);
         System.out.println(getOyuncuID());
-        
+
     }
 
     Kullanici() {
-
+        setOyuncuAdi("KULLANICI");
+        setOyuncuID(random.nextInt(10));
+        System.out.println("rt4" + getOyuncuAdi());
     }
-
-    
 
 }

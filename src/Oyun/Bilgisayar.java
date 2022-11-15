@@ -28,7 +28,8 @@ public class Bilgisayar extends Oyuncu {
     ArrayList<String> randomhamle = new ArrayList<>();
 
     public Bilgisayar() {
-
+        setOyuncuID(random.nextInt(10));
+        setOyuncuAdi("BİLGİSAYAR");
         /* System.out.println(getOyuncuAdi());
         System.out.println(getOyuncuID());*/
     }
@@ -37,10 +38,9 @@ public class Bilgisayar extends Oyuncu {
         super(oyuncuAdi, skor);
 
         setOyuncuID(random.nextInt(10));
-        super.setOyuncuAdi("Bilgisayar1");
+        super.setOyuncuAdi("BILGISAYAR");
         /*System.out.println(getOyuncuAdi());
         System.out.println(getOyuncuID());*/
-
     }
 
     void Secim() {
@@ -64,11 +64,9 @@ public class Bilgisayar extends Oyuncu {
                 randomhamle.add(KarsilasmaNesnesi);
                 bilObjects.add(new Makas());
             }
-
             nesneSecim.remove(t);
         }
     }
-  
 
     public String getKarsilasmaNesnesi() {
         return KarsilasmaNesnesi;

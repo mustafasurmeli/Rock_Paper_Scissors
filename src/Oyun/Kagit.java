@@ -10,13 +10,11 @@ package Oyun;
  */
 public class Kagit extends Nesneler {
 
-    private String name ="kagit";
+    private String name = "kagit";
 
     public String getName() {
         return name;
     }
-  
-    
 
     public Kagit() {
     }
@@ -30,8 +28,13 @@ public class Kagit extends Nesneler {
         this.nufuz = nufuz;
     }
 
-    private int nesnePuaniGoster() {
-        return 0;
+    double nesnePuaniGoster(int kontrol) {
+        if (kontrol == 1) {
+            return getSeviyePuani();
+        } else {
+            return getDayaniklilik();
+        }
+
     }
 
     public double etkiHesapla() {
@@ -39,7 +42,7 @@ public class Kagit extends Nesneler {
     }
 
     public double durumGuncelle() {
-         setDayaniklilik(getDayaniklilik()-howMuch);
+        //setDayaniklilik(getDayaniklilik() - howMuch);
         return getDayaniklilik();
     }
 }
