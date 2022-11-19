@@ -38,6 +38,9 @@ public class Oyuncu {
 
         return oyuncuAdi;
     }
+        void nesneSec(){
+
+    }
 
     public void setOyuncuAdi(String oyuncuAdi) {
         // System.out.println(oyuncuAdi);

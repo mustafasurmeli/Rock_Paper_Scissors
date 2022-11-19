@@ -819,7 +819,7 @@ public class Karsilasma extends javax.swing.JFrame {
 
         sayac = 0;
         oyun.sayac = 0;
-        Collections.shuffle(bilgisayarObjeleri);
+       // Collections.shuffle(bilgisayarObjeleri);
         System.out.println(bilgisayarObjeleri);
 
         jButton1.setEnabled(true);

@@ -43,7 +43,7 @@ public class Bilgisayar extends Oyuncu {
         System.out.println(getOyuncuID());*/
     }
 
-    void Secim() {
+    void nesneSec() {
 
         for (int i = 0; i < 5; i++) {
             nesneSecim.add(baslangicNesne[random.nextInt(baslangicNesne.length)]);

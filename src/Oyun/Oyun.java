@@ -47,7 +47,7 @@ public class Oyun {
         Bilgisayar bilgisayar1 = new Bilgisayar();
         Frame frame = new Frame();
         frame.setVisible(true);
-        bilgisayar1.Secim();
+        bilgisayar1.nesneSec();
         System.out.println(bilgisayar1.bilObjects);
         bilgisayarObjeleri = bilgisayar1.bilObjects;
         //Kullanici kullanici = new Kullanici(ad, skor);
@@ -70,8 +70,15 @@ public class Oyun {
     }
 
     void kontrol() {
+        int sayac=0;
         skor=0;
         bilgisayarskor=0;
+
+        /*if (bilgisayarObjeleri.get(ran).getDayaniklilik()<=0){
+            sayac++;
+            ran++;
+        }*/
+
 
         nesne2Etki = bilgisayarObjeleri.get(ran).etkiHesapla();
         nesne1Etki = objects.get(index).etkiHesapla();
@@ -163,8 +170,11 @@ public class Oyun {
         progressS = objects.get(index).getSeviyePuani();
 
         ran++;
-        if (ran == 5) {
+        if (ran == bilgisayarObjeleri.size()) {
+            sayac++;
+            Collections.shuffle(bilgisayarObjeleri);
             ran = 0;
+
         }
         sayac++;
         skorhesapla();

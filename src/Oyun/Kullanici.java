@@ -11,6 +11,10 @@ import java.util.Random;
  * @author mustafa
  */
 public class Kullanici extends Oyuncu {
+    @Override
+    public void nesneSec() {
+
+    }
 
     Random random = new Random();
 

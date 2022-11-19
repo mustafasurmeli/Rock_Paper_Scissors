@@ -10,7 +10,7 @@ package Oyun;
  */
 public class AgirTas extends Tas {
 
-    private String name = "atas";
+    private String name = "tas";
 
     public String getName() {
         return name;

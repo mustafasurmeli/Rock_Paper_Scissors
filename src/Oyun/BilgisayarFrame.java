@@ -37,7 +37,7 @@ public class BilgisayarFrame extends javax.swing.JFrame {
 
     void islemler() {
         
-        bilgisayar.Secim();
+        bilgisayar.nesneSec();
         pc1objeler = bilgisayar.bilObjects;
         goruntuler();
     }
@@ -326,7 +326,7 @@ public class BilgisayarFrame extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         hamle = Integer.parseInt(jTextField1.getText());
         jLabel20.setText(String.valueOf(hamleSayac+1));
-
+        System.out.println("Oyun" + pc1objeler.get(sayac).getName() + ".png");
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + pc1objeler.get(sayac).getName() + ".png")));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + bilgisayarObjeleri.get(sayac).getName() + ".png")));
         oyun.index = sayac;
