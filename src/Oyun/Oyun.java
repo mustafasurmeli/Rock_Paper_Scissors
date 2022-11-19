@@ -169,7 +169,8 @@ public class Oyun {
 
         progressS = objects.get(index).getSeviyePuani();
 
-        ran++;
+        
+        System.out.println("111111111111111111111111111111111111111111");
         /*if(sayac==5){
            oyunSonu=bilgisayar.getOyuncuAdi()+"adlı oyuncunun nesneleri tükendi.";
         }*/
@@ -205,10 +206,14 @@ public class Oyun {
     }
 
     void skorhesapla() {
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < bilgisayarObjeleri.size(); i++) {
             bilgisayarskor += bilgisayarObjeleri.get(i).getDayaniklilik();
+        }
+        for (int i = 0; i < objects.size(); i++) {
             skor += objects.get(i).getDayaniklilik();
         }
+        System.out.println(bilgisayarskor);
+        System.out.println(skor);
 
     }
 

@@ -5,6 +5,7 @@
 package Oyun;
 
 import static Oyun.Oyun.bilgisayarObjeleri;
+import static Oyun.Oyun.saydir;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -15,7 +16,7 @@ import java.util.Collections;
 public class BilgisayarFrame extends javax.swing.JFrame {
 
     ArrayList<Nesneler> pc1objeler = new ArrayList<>();
-    int sayac = 0, hamleSayac = 0, hamle;
+    int sayac = 0, hamleSayac = 0, hamle,bilgisayar2sayac=0;
 
     /**
      *
@@ -26,7 +27,7 @@ public class BilgisayarFrame extends javax.swing.JFrame {
 
     public BilgisayarFrame() {
        
-        Oyun oyun = new Oyun();
+       
 
         /* Bilgisayar bilgisayar = new Bilgisayar();
          pc1objeler=bilgisayar.bilObjects;
@@ -43,17 +44,40 @@ public class BilgisayarFrame extends javax.swing.JFrame {
     }
 
     void goruntuler() {
-
-        jLabel5.setText(pc1objeler.get(0).getClass().getName());
-        jLabel6.setText(pc1objeler.get(1).getClass().getName());
-        jLabel7.setText(pc1objeler.get(2).getClass().getName());
-        jLabel8.setText(pc1objeler.get(3).getClass().getName());
-        jLabel9.setText(pc1objeler.get(4).getClass().getName());
-        jLabel10.setText(bilgisayarObjeleri.get(0).getClass().getName());
-        jLabel11.setText(bilgisayarObjeleri.get(1).getClass().getName());
-        jLabel12.setText(bilgisayarObjeleri.get(2).getClass().getName());
-        jLabel13.setText(bilgisayarObjeleri.get(3).getClass().getName());
-        jLabel14.setText(bilgisayarObjeleri.get(4).getClass().getName());
+        if(pc1objeler.size()>=1){
+            jLabel5.setText(pc1objeler.get(0).getClass().getName());
+        }else jLabel5.setVisible(false);
+        if(pc1objeler.size()>=2){
+           jLabel6.setText(pc1objeler.get(1).getClass().getName()); 
+        }else jLabel6.setVisible(false);
+        if(pc1objeler.size()>=3){
+            jLabel7.setText(pc1objeler.get(2).getClass().getName());
+        }else jLabel7.setVisible(false);
+        if(pc1objeler.size()>=4){
+            jLabel8.setText(pc1objeler.get(3).getClass().getName());
+        }else jLabel8.setVisible(false);
+        if(pc1objeler.size()>=5){
+            jLabel9.setText(pc1objeler.get(4).getClass().getName());
+        }else jLabel9.setVisible(false);
+        if(bilgisayarObjeleri.size()>=1){
+           jLabel10.setText(bilgisayarObjeleri.get(0).getClass().getName()); 
+        }else jLabel10.setVisible(false);
+        if(bilgisayarObjeleri.size()>=2){
+           jLabel11.setText(bilgisayarObjeleri.get(1).getClass().getName()); 
+        }else jLabel11.setVisible(false);
+        if(bilgisayarObjeleri.size()>=3){
+            jLabel12.setText(bilgisayarObjeleri.get(2).getClass().getName());
+        }else jLabel12.setVisible(false);
+        if(bilgisayarObjeleri.size()>=4){
+            jLabel13.setText(bilgisayarObjeleri.get(3).getClass().getName());
+        }else jLabel13.setVisible(false);
+        if(bilgisayarObjeleri.size()>=5){
+            jLabel14.setText(bilgisayarObjeleri.get(4).getClass().getName());
+        }else jLabel14.setVisible(false);
+       
+        
+        
+        
     }
 
     /**
@@ -92,6 +116,8 @@ public class BilgisayarFrame extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -224,9 +250,7 @@ public class BilgisayarFrame extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 7, Short.MAX_VALUE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
@@ -269,6 +293,12 @@ public class BilgisayarFrame extends javax.swing.JFrame {
         jLabel21.setFont(new java.awt.Font("Yu Gothic UI Semibold", 3, 48)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(102, 0, 0));
 
+        jLabel22.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel22.setBorder(javax.swing.BorderFactory.createTitledBorder("Bilgisayar1 Skor"));
+
+        jLabel23.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel23.setBorder(javax.swing.BorderFactory.createTitledBorder("Bilgisayar2 Skor"));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -288,15 +318,19 @@ public class BilgisayarFrame extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 623, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -311,10 +345,16 @@ public class BilgisayarFrame extends javax.swing.JFrame {
                             .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31)
+                        .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -324,16 +364,26 @@ public class BilgisayarFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        if(bilgisayarObjeleri.size()==0){
+                jLabel21.setText("KAZANAN: BİLGİSAYAR 1");
+                jButton1.setEnabled(false);
+        }else if(pc1objeler.size()==0){
+                jLabel21.setText("KAZANAN: BİLGİSAYAR 2");
+                jButton1.setEnabled(false);
+        }else{
         hamle = Integer.parseInt(jTextField1.getText());
         jLabel20.setText(String.valueOf(hamleSayac+1));
         System.out.println("Oyun" + pc1objeler.get(sayac).getName() + ".png");
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + pc1objeler.get(sayac).getName() + ".png")));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + bilgisayarObjeleri.get(sayac).getName() + ".png")));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + bilgisayarObjeleri.get(oyun.ran).getName() + ".png")));
         oyun.index = sayac;
         oyun.nesne1 = pc1objeler.get(sayac).getName();
         oyun.objects = pc1objeler;
         oyun.kontrol();
+        
         oyun.check();
+        
+        
         String label = "Dayanıklılık:" + Double.toString(pc1objeler.get(sayac).durumGuncelle());
 
         jLabel4.setText(label);
@@ -341,24 +391,45 @@ public class BilgisayarFrame extends javax.swing.JFrame {
         jLabel15.setText(label);
         label = pc1objeler.get(sayac).getClass().getName();
         jLabel16.setText(label);
-        label = "Dayanıklılık:" + Double.toString(bilgisayarObjeleri.get(sayac).durumGuncelle());
+            System.out.println("TTTTTTTTTTTTTTTTTTT"+oyun.ran);
+        label = "Dayanıklılık:" + Double.toString(bilgisayarObjeleri.get(oyun.ran).durumGuncelle());
         jLabel17.setText(label);
-        label = "Seviye Puanı:" + (int) bilgisayarObjeleri.get(sayac).getSeviyePuani();
+        label = "Seviye Puanı:" + (int) bilgisayarObjeleri.get(oyun.ran).getSeviyePuani();
         jLabel18.setText(label);
-        label = bilgisayarObjeleri.get(sayac).getClass().getName();
+        label = bilgisayarObjeleri.get(oyun.ran).getClass().getName();
         jLabel19.setText(label);
+        bilgisayar2sayac++;
+       
+        oyun.ran++;
         sayac++;
-        if (sayac == 5) {
+        if (oyun.ran == bilgisayarObjeleri.size()&&bilgisayarObjeleri.size()!=0) {
+
+            Collections.shuffle(bilgisayarObjeleri);
+            sayac=0;
+            oyun.ran = 0;
+
+        }
+        if (bilgisayarObjeleri.get(oyun.ran).getDayaniklilik()<=0){
+            sayac++;
+            bilgisayarObjeleri.remove(oyun.ran);
+        }
+        if (sayac == pc1objeler.size()&&pc1objeler.size()!=0) {
             sayac = 0;
             Collections.shuffle(pc1objeler);
-            Collections.shuffle(bilgisayarObjeleri);
+            //Collections.shuffle(bilgisayarObjeleri);
             goruntuler();
 
+        }if (pc1objeler.get(sayac).getDayaniklilik()<=0){
+            
+            pc1objeler.remove(sayac);
         }
         System.out.println(oyun.skor);
         System.out.println(oyun.bilgisayarskor);
         hamleSayac++;
         if(hamleSayac==hamle){
+            oyun.skorhesapla();
+            jLabel22.setText(Double.toString(oyun.skor));
+            jLabel23.setText(Double.toString(oyun.bilgisayarskor));
             if(oyun.skor>oyun.bilgisayarskor){
                 
                 jLabel21.setText("KAZANAN: BİLGİSAYAR 1");
@@ -370,6 +441,7 @@ public class BilgisayarFrame extends javax.swing.JFrame {
                 jLabel21.setText("         BERABERE");
                 jButton1.setEnabled(false);
             }
+        }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -431,6 +503,8 @@ public class BilgisayarFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

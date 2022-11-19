@@ -67,7 +67,8 @@ public class Karsilasma extends javax.swing.JFrame {
     void kullanıcıIcon() {
         // frame.temp=hamle;
         int sayc2 = 0;
-
+        jLabel21.setVisible(false);
+        jLabel22.setVisible(false);
         jLabel16.setVisible(false);
         jLabel17.setVisible(false);
         System.out.println("1111111111111111111111112" + hamle);
@@ -158,6 +159,8 @@ public class Karsilasma extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
@@ -306,6 +309,12 @@ public class Karsilasma extends javax.swing.JFrame {
 
         jLabel20.setFont(new java.awt.Font("Segoe UI Historic", 3, 24)); // NOI18N
 
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel21.setBorder(javax.swing.BorderFactory.createTitledBorder("Kullanıcı Skor"));
+
+        jLabel22.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel22.setBorder(javax.swing.BorderFactory.createTitledBorder("Bilgisayar Skor"));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -337,16 +346,20 @@ public class Karsilasma extends javax.swing.JFrame {
                                         .addGap(18, 18, Short.MAX_VALUE)
                                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(0, 0, Short.MAX_VALUE))))))
+                                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(56, 56, 56)
-                        .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel1)))
+                        .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -464,7 +477,10 @@ public class Karsilasma extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -532,6 +548,8 @@ public class Karsilasma extends javax.swing.JFrame {
         jLabel15.setText(info);
         jProgressBar10.setValue(progres);
         //kazananKontrol(4);
+        oyun.ran++;
+        karistir();
         if(bilgisayarObjeleri.size()==0){
             jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
             jButton1.setEnabled(false);
@@ -561,30 +579,7 @@ public class Karsilasma extends javax.swing.JFrame {
             jButton5.setEnabled(false);
         }
         if(hamleSayac==hamle){
-            if(oyun.skor>oyun.bilgisayarskor){
-                
-                jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
-                jButton1.setEnabled(false);
-                jButton2.setEnabled(false);
-                jButton3.setEnabled(false);
-                jButton4.setEnabled(false);
-                jButton5.setEnabled(false);
-
-            }else if(oyun.skor<oyun.bilgisayarskor){
-                jLabel20.setText("KAZANAN: "+bilgisayar.getOyuncuAdi());
-                jButton1.setEnabled(false);
-                jButton2.setEnabled(false);
-                jButton3.setEnabled(false);
-                jButton4.setEnabled(false);
-                jButton5.setEnabled(false);
-            }else{
-                jLabel20.setText("BERABERE");
-                jButton1.setEnabled(false);
-                jButton2.setEnabled(false);
-                jButton3.setEnabled(false);
-                jButton4.setEnabled(false);
-                jButton5.setEnabled(false);
-            }
+            hamleSonu();
         }
     }//GEN-LAST:event_jButton5ActionPerformed
 
@@ -625,6 +620,8 @@ public class Karsilasma extends javax.swing.JFrame {
         jLabel15.setText(info);
         jProgressBar8.setValue(progres);
         //kazananKontrol(3);
+        oyun.ran++;
+        karistir();
         if(bilgisayarObjeleri.size()==0){
             jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
         }
@@ -652,29 +649,7 @@ public class Karsilasma extends javax.swing.JFrame {
             jButton5.setEnabled(false);
         }
         if(hamleSayac==hamle){
-            if(oyun.skor>oyun.bilgisayarskor){
-                
-                jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
-                jButton1.setEnabled(false);
-                jButton2.setEnabled(false);
-                jButton3.setEnabled(false);
-                jButton4.setEnabled(false);
-                jButton5.setEnabled(false);
-            }else if(oyun.skor<oyun.bilgisayarskor){
-                jLabel20.setText("KAZANAN: "+bilgisayar.getOyuncuAdi());
-                jButton1.setEnabled(false);
-                jButton2.setEnabled(false);
-                jButton3.setEnabled(false);
-                jButton4.setEnabled(false);
-                jButton5.setEnabled(false);
-            }else{
-                jLabel20.setText("BERABERE");
-                jButton1.setEnabled(false);
-                jButton2.setEnabled(false);
-                jButton3.setEnabled(false);
-                jButton4.setEnabled(false);
-                jButton5.setEnabled(false);
-            }
+           hamleSonu();
         }
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -721,6 +696,8 @@ public class Karsilasma extends javax.swing.JFrame {
         jLabel15.setText(info);
         jProgressBar6.setValue(progres);
         //kazananKontrol(2);
+        oyun.ran++;
+        karistir();
         if(bilgisayarObjeleri.size()==0){
             jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
         }
@@ -748,29 +725,7 @@ public class Karsilasma extends javax.swing.JFrame {
             jButton5.setEnabled(false);
         }
         if(hamleSayac==hamle){
-            if(oyun.skor>oyun.bilgisayarskor){
-                
-                jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
-                jButton1.setEnabled(false);
-                jButton2.setEnabled(false);
-                jButton3.setEnabled(false);
-                jButton4.setEnabled(false);
-                jButton5.setEnabled(false);
-            }else if(oyun.skor<oyun.bilgisayarskor){
-                jLabel20.setText("KAZANAN: "+bilgisayar.getOyuncuAdi());
-                jButton1.setEnabled(false);
-                jButton2.setEnabled(false);
-                jButton3.setEnabled(false);
-                jButton4.setEnabled(false);
-                jButton5.setEnabled(false);
-            }else{
-                jLabel20.setText("BERABERE");
-                jButton1.setEnabled(false);
-                jButton2.setEnabled(false);
-                jButton3.setEnabled(false);
-                jButton4.setEnabled(false);
-                jButton5.setEnabled(false);
-            }
+           hamleSonu();
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -821,6 +776,8 @@ public class Karsilasma extends javax.swing.JFrame {
         jLabel15.setText(info);
         jProgressBar4.setValue(progres);
         //kazananKontrol(1);
+        oyun.ran++;
+        karistir();
         if(bilgisayarObjeleri.size()==0){
             jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
             jButton1.setEnabled(false);
@@ -850,29 +807,7 @@ public class Karsilasma extends javax.swing.JFrame {
             jButton5.setEnabled(false);
         }
         if(hamleSayac==hamle){
-            if(oyun.skor>oyun.bilgisayarskor){
-                
-                jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
-                jButton1.setEnabled(false);
-                jButton2.setEnabled(false);
-                jButton3.setEnabled(false);
-                jButton4.setEnabled(false);
-                jButton5.setEnabled(false);
-            }else if(oyun.skor<oyun.bilgisayarskor){
-                jLabel20.setText("KAZANAN: "+bilgisayar.getOyuncuAdi());
-                jButton1.setEnabled(false);
-                jButton2.setEnabled(false);
-                jButton3.setEnabled(false);
-                jButton4.setEnabled(false);
-                jButton5.setEnabled(false);
-            }else{
-                jLabel20.setText("BERABERE");
-                jButton1.setEnabled(false);
-                jButton2.setEnabled(false);
-                jButton3.setEnabled(false);
-                jButton4.setEnabled(false);
-                jButton5.setEnabled(false);
-            }
+            hamleSonu();
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -921,6 +856,8 @@ public class Karsilasma extends javax.swing.JFrame {
         jLabel15.setText(info);
         jProgressBar2.setValue(progres);
         //kazananKontrol(0);
+        oyun.ran++;
+        karistir();
         if(bilgisayarObjeleri.size()==0){
             jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
 
@@ -949,30 +886,7 @@ public class Karsilasma extends javax.swing.JFrame {
             jButton5.setEnabled(false);
         }
         if(hamleSayac==hamle){
-            oyun.skorhesapla();
-            if(oyun.skor>oyun.bilgisayarskor){
-                
-                jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
-                jButton1.setEnabled(false);
-                jButton2.setEnabled(false);
-                jButton3.setEnabled(false);
-                jButton4.setEnabled(false);
-                jButton5.setEnabled(false);
-            }else if(oyun.skor<oyun.bilgisayarskor){
-                jLabel20.setText("KAZANAN: "+bilgisayar.getOyuncuAdi());
-                jButton1.setEnabled(false);
-                jButton2.setEnabled(false);
-                jButton3.setEnabled(false);
-                jButton4.setEnabled(false);
-                jButton5.setEnabled(false);
-            }else{
-                jLabel20.setText("BERABERE");
-                jButton1.setEnabled(false);
-                jButton2.setEnabled(false);
-                jButton3.setEnabled(false);
-                jButton4.setEnabled(false);
-                jButton5.setEnabled(false);
-            }
+            hamleSonu();
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -1028,7 +942,50 @@ public class Karsilasma extends javax.swing.JFrame {
             jLabel16.setVisible(false);
         }
     }
+    void hamleSonu(){
+        oyun.skorhesapla();
+            jLabel21.setText(Double.toString(oyun.skor));
+            jLabel22.setText(Double.toString(oyun.bilgisayarskor));
+            jLabel21.setVisible(true);
+            jLabel22.setVisible(true);
+            if(oyun.skor>oyun.bilgisayarskor){
+                
+                jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
+                jButton1.setEnabled(false);
+                jButton2.setEnabled(false);
+                jButton3.setEnabled(false);
+                jButton4.setEnabled(false);
+                jButton5.setEnabled(false);
 
+            }else if(oyun.skor<oyun.bilgisayarskor){
+                jLabel20.setText("KAZANAN: "+bilgisayar.getOyuncuAdi());
+                jButton1.setEnabled(false);
+                jButton2.setEnabled(false);
+                jButton3.setEnabled(false);
+                jButton4.setEnabled(false);
+                jButton5.setEnabled(false);
+            }else{
+                jLabel20.setText("BERABERE");
+                jButton1.setEnabled(false);
+                jButton2.setEnabled(false);
+                jButton3.setEnabled(false);
+                jButton4.setEnabled(false);
+                jButton5.setEnabled(false);
+            }
+    }
+    void karistir(){
+        if (oyun.ran >= bilgisayarObjeleri.size()&&bilgisayarObjeleri.size()!=0) {
+
+            Collections.shuffle(bilgisayarObjeleri);
+            sayac=0;
+            oyun.ran = 0;
+
+        }
+        if (bilgisayarObjeleri.get(oyun.ran).getDayaniklilik()<=0){
+            sayac++;
+            bilgisayarObjeleri.remove(oyun.ran);
+        }
+    }
     void yeniDuzen() {
         saydir=deneme.size()-dayaniklilikSayac;
         sayac = 0;
@@ -1076,6 +1033,8 @@ public class Karsilasma extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1083,9 +1042,7 @@ public class Karsilasma extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JProgressBar jProgressBar10;
     private javax.swing.JProgressBar jProgressBar2;
@@ -1096,8 +1053,6 @@ public class Karsilasma extends javax.swing.JFrame {
     private javax.swing.JProgressBar jProgressBar7;
     private javax.swing.JProgressBar jProgressBar8;
     private javax.swing.JProgressBar jProgressBar9;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
 }
