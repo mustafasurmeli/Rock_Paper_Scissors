@@ -5,6 +5,8 @@
 package Oyun;
 
 import static Oyun.Oyun.bilgisayarObjeleri;
+import static Oyun.Oyun.logger;
+
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -551,6 +553,7 @@ public class Karsilasma extends javax.swing.JFrame {
         oyun.ran++;
         karistir();
         if(bilgisayarObjeleri.size()==0){
+            logger.info("KAZANAN: "+kullanici.getOyuncuAdi());
             jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
             jButton1.setEnabled(false);
             jButton2.setEnabled(false);
@@ -563,6 +566,7 @@ public class Karsilasma extends javax.swing.JFrame {
 
         }
         if(dayaniklilikSayac==5){
+            logger.info("KAZANAN: "+bilgisayar.getOyuncuAdi());
             jLabel20.setText("KAZANAN: "+bilgisayar.getOyuncuAdi());
         }
         if (sayac == saydir) {
@@ -623,19 +627,22 @@ public class Karsilasma extends javax.swing.JFrame {
         oyun.ran++;
         karistir();
         if(bilgisayarObjeleri.size()==0){
+            logger.info("KAZANAN: "+kullanici.getOyuncuAdi());
             jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
+            jButton1.setEnabled(false);
+            jButton2.setEnabled(false);
+            jButton3.setEnabled(false);
+            jButton4.setEnabled(false);
+            jButton5.setEnabled(false);
         }
         if(deneme.get(3).getDayaniklilik()<=0){
             dayaniklilikSayac++;
 
         }
         if(dayaniklilikSayac==5){
+            logger.info("KAZANAN: "+bilgisayar.getOyuncuAdi());
             jLabel20.setText("KAZANAN: "+bilgisayar.getOyuncuAdi());
-            jButton1.setEnabled(false);
-            jButton2.setEnabled(false);
-            jButton3.setEnabled(false);
-            jButton4.setEnabled(false);
-            jButton5.setEnabled(false);
+
         }
         if (sayac == saydir) {
             yeniDuzen();
@@ -699,7 +706,13 @@ public class Karsilasma extends javax.swing.JFrame {
         oyun.ran++;
         karistir();
         if(bilgisayarObjeleri.size()==0){
+            logger.info("KAZANAN: "+kullanici.getOyuncuAdi());
             jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
+            jButton1.setEnabled(false);
+            jButton2.setEnabled(false);
+            jButton3.setEnabled(false);
+            jButton4.setEnabled(false);
+            jButton5.setEnabled(false);
         }
         if(deneme.get(2).getDayaniklilik()<=0){
             dayaniklilikSayac++;
@@ -709,12 +722,9 @@ public class Karsilasma extends javax.swing.JFrame {
             yeniDuzen();
         }
         if(dayaniklilikSayac==5){
+            logger.info("KAZANAN: "+bilgisayar.getOyuncuAdi());
             jLabel20.setText("KAZANAN: "+bilgisayar.getOyuncuAdi());
-            jButton1.setEnabled(false);
-            jButton2.setEnabled(false);
-            jButton3.setEnabled(false);
-            jButton4.setEnabled(false);
-            jButton5.setEnabled(false);
+
         }
         if(oyun.sayac==5){
             jLabel20.setText(oyun.oyunSonu);
@@ -779,6 +789,7 @@ public class Karsilasma extends javax.swing.JFrame {
         oyun.ran++;
         karistir();
         if(bilgisayarObjeleri.size()==0){
+            logger.info("KAZANAN: "+kullanici.getOyuncuAdi());
             jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
             jButton1.setEnabled(false);
             jButton2.setEnabled(false);
@@ -795,6 +806,7 @@ public class Karsilasma extends javax.swing.JFrame {
 
         }
         if(dayaniklilikSayac==5){
+            logger.info("KAZANAN: "+bilgisayar.getOyuncuAdi());
             jLabel20.setText("KAZANAN: "+bilgisayar.getOyuncuAdi());
 
         }
@@ -859,6 +871,7 @@ public class Karsilasma extends javax.swing.JFrame {
         oyun.ran++;
         karistir();
         if(bilgisayarObjeleri.size()==0){
+            logger.info("KAZANAN: "+kullanici.getOyuncuAdi());
             jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
 
         }
@@ -871,6 +884,7 @@ public class Karsilasma extends javax.swing.JFrame {
             jButton5.setEnabled(false);
         }
         if(dayaniklilikSayac==5){
+            logger.info("KAZANAN: "+bilgisayar.getOyuncuAdi());
             jLabel20.setText("KAZANAN: "+bilgisayar.getOyuncuAdi());
         }
         if (sayac == saydir) {
@@ -949,7 +963,7 @@ public class Karsilasma extends javax.swing.JFrame {
             jLabel21.setVisible(true);
             jLabel22.setVisible(true);
             if(oyun.skor>oyun.bilgisayarskor){
-                
+                logger.info("KAZANAN: "+kullanici.getOyuncuAdi());
                 jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
                 jButton1.setEnabled(false);
                 jButton2.setEnabled(false);
@@ -958,6 +972,7 @@ public class Karsilasma extends javax.swing.JFrame {
                 jButton5.setEnabled(false);
 
             }else if(oyun.skor<oyun.bilgisayarskor){
+                logger.info("KAZANAN: "+bilgisayar.getOyuncuAdi());
                 jLabel20.setText("KAZANAN: "+bilgisayar.getOyuncuAdi());
                 jButton1.setEnabled(false);
                 jButton2.setEnabled(false);
@@ -965,6 +980,7 @@ public class Karsilasma extends javax.swing.JFrame {
                 jButton4.setEnabled(false);
                 jButton5.setEnabled(false);
             }else{
+                logger.info("BERABERE");
                 jLabel20.setText("BERABERE");
                 jButton1.setEnabled(false);
                 jButton2.setEnabled(false);
@@ -983,6 +999,7 @@ public class Karsilasma extends javax.swing.JFrame {
         }
         if (bilgisayarObjeleri.get(oyun.ran).getDayaniklilik()<=0){
             sayac++;
+            logger.info(bilgisayarObjeleri.get(oyun.ran).getName()+" nesnesi silindi.("+bilgisayar.getOyuncuAdi()+")");
             bilgisayarObjeleri.remove(oyun.ran);
         }
     }
@@ -1000,14 +1017,19 @@ public class Karsilasma extends javax.swing.JFrame {
         jButton5.setEnabled(true);
         if(deneme.get(0).getDayaniklilik()<=0){
             jButton1.setEnabled(false);
+            logger.info(deneme.get(0).getName()+" nesnesi silindi.("+kullanici.getOyuncuAdi()+")");
         }if(deneme.get(1).getDayaniklilik()<=0){
             jButton2.setEnabled(false);
+            logger.info(deneme.get(1).getName()+" nesnesi silindi.("+kullanici.getOyuncuAdi()+")");
         }if(deneme.get(2).getDayaniklilik()<=0){
             jButton3.setEnabled(false);
+            logger.info(deneme.get(2).getName()+" nesnesi silindi.("+kullanici.getOyuncuAdi()+")");
         }if(deneme.get(3).getDayaniklilik()<=0){
             jButton4.setEnabled(false);
+            logger.info(deneme.get(3).getName()+" nesnesi silindi.("+kullanici.getOyuncuAdi()+")");
         }if(deneme.get(4).getDayaniklilik()<=0){
             jButton5.setEnabled(false);
+            logger.info(deneme.get(4).getName()+" nesnesi silindi.("+kullanici.getOyuncuAdi()+")");
         }
 
 

@@ -8,13 +8,13 @@ import java.awt.Color;
 import java.awt.Image;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
-
+import java.util.logging.*;
 /**
  *
  * @author mustafa
  */
 public class KullaniciJFrame extends javax.swing.JFrame {
-
+    Kullanici kullanici= new Kullanici();
     Nesneler nesneler = new Nesneler() {
         @Override
         public double etkiHesapla() {
@@ -263,17 +263,20 @@ public class KullaniciJFrame extends javax.swing.JFrame {
                     oyun.objects.add(new Tas());
                     secimler[0] = "taş";
                     iconlar[0] = "tas";
+                    oyun.logger.info(kullanici.getOyuncuAdi()+" "+secimler[0]+" nesnesi oluşturdu.");
 
                 } else if (kagitSayac == 1) {
                     jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/kagit.png")));
                     oyun.objects.add(new Kagit());
                     secimler[0] = "kağıt";
                     iconlar[0] = "kagit";
+                    oyun.logger.info(kullanici.getOyuncuAdi()+" "+secimler[0]+" nesnesi oluşturdu.");
                 } else {
                     jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/makas.png")));
                     oyun.objects.add(new Makas());
                     secimler[0] = "makas";
                     iconlar[0] = "makas";
+                    oyun.logger.info(kullanici.getOyuncuAdi()+" "+secimler[0]+" nesnesi oluşturdu.");
                 }
                 break;
             case 2:
@@ -282,16 +285,19 @@ public class KullaniciJFrame extends javax.swing.JFrame {
                     oyun.objects.add(new Tas());
                     secimler[1] = "taş";
                     iconlar[1] = "tas";
+                    oyun.logger.info(kullanici.getOyuncuAdi()+" "+secimler[1]+" nesnesi oluşturdu.");
                 } else if (kagitSayac == 1) {
                     jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/kagit.png")));
                     oyun.objects.add(new Kagit());
                     secimler[1] = "kağıt";
                     iconlar[1] = "kagit";
+                    oyun.logger.info(kullanici.getOyuncuAdi()+" "+secimler[1]+" nesnesi oluşturdu.");
                 } else {
                     jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/makas.png")));
                     oyun.objects.add(new Makas());
                     secimler[1] = "makas";
                     iconlar[1] = "makas";
+                    oyun.logger.info(kullanici.getOyuncuAdi()+" "+secimler[1]+" nesnesi oluşturdu.");
                 }
                 break;
             case 3:
@@ -300,16 +306,19 @@ public class KullaniciJFrame extends javax.swing.JFrame {
                     oyun.objects.add(new Tas());
                     secimler[2] = "taş";
                     iconlar[2] = "tas";
+                    oyun.logger.info(secimler[2]+" nesnesi oluşturuldu.");
                 } else if (kagitSayac == 1) {
                     jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/kagit.png")));
                     oyun.objects.add(new Kagit());
                     secimler[2] = "kağıt";
                     iconlar[2] = "kagit";
+                    oyun.logger.info(kullanici.getOyuncuAdi()+" "+secimler[2]+" nesnesi oluşturdu.");
                 } else {
                     jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/makas.png")));
                     oyun.objects.add(new Makas());
                     secimler[2] = "makas";
                     iconlar[2] = "makas";
+                    oyun.logger.info(kullanici.getOyuncuAdi()+" "+secimler[2]+" nesnesi oluşturdu.");
                 }
                 break;
             case 4:
@@ -318,16 +327,19 @@ public class KullaniciJFrame extends javax.swing.JFrame {
                     oyun.objects.add(new Tas());
                     secimler[3] = "taş";
                     iconlar[3] = "tas";
+                    oyun.logger.info(kullanici.getOyuncuAdi()+" "+secimler[3]+" nesnesi oluşturdu.");
                 } else if (kagitSayac == 1) {
                     jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/kagit.png")));
                     oyun.objects.add(new Kagit());
                     secimler[3] = "kağıt";
                     iconlar[3] = "kagit";
+                    oyun.logger.info(kullanici.getOyuncuAdi()+" "+secimler[3]+" nesnesi oluşturdu.");
                 } else {
                     jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/makas.png")));
                     oyun.objects.add(new Makas());
                     secimler[3] = "makas";
                     iconlar[3] = "makas";
+                    oyun.logger.info(kullanici.getOyuncuAdi()+" "+secimler[3]+" nesnesi oluşturdu.");
                 }
                 break;
             case 5:
@@ -336,16 +348,19 @@ public class KullaniciJFrame extends javax.swing.JFrame {
                     oyun.objects.add(new Tas());
                     secimler[4] = "taş";
                     iconlar[4] = "tas";
+                    oyun.logger.info(kullanici.getOyuncuAdi()+" "+ secimler[4]+" nesnesi oluşturdu.");
                 } else if (kagitSayac == 1) {
                     jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/kagit.png")));
                     oyun.objects.add(new Kagit());
                     secimler[4] = "kağıt";
                     iconlar[4] = "kagit";
+                    oyun.logger.info(kullanici.getOyuncuAdi()+" "+secimler[4]+" nesnesi oluşturdu.");
                 } else {
                     jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/makas.png")));
                     oyun.objects.add(new Makas());
                     secimler[4] = "makas";
                     iconlar[4] = "makas";
+                    oyun.logger.info(kullanici.getOyuncuAdi()+" "+secimler[4]+" nesnesi oluşturdu.");
                 }
                 karsilasma.saydir=oyun.objects.size();
                 karsilasma.deneme = oyun.objects;

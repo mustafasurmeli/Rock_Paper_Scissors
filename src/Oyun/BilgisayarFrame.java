@@ -4,10 +4,10 @@
  */
 package Oyun;
 
-import static Oyun.Oyun.bilgisayarObjeleri;
-import static Oyun.Oyun.saydir;
 import java.util.ArrayList;
 import java.util.Collections;
+
+import static Oyun.Oyun.*;
 
 /**
  *
@@ -27,7 +27,7 @@ public class BilgisayarFrame extends javax.swing.JFrame {
 
     public BilgisayarFrame() {
        
-       
+       bilgisayar.setOyuncuAdi("BILGISAYAR1");
 
         /* Bilgisayar bilgisayar = new Bilgisayar();
          pc1objeler=bilgisayar.bilObjects;
@@ -40,6 +40,9 @@ public class BilgisayarFrame extends javax.swing.JFrame {
         
         bilgisayar.nesneSec();
         pc1objeler = bilgisayar.bilObjects;
+        for (int i = 0; i < pc1objeler.size(); i++) {
+            logger.info(bilgisayar.getOyuncuAdi()+" "+pc1objeler.get(i).getName()+" nesnesi oluşturdu.");
+        }
         goruntuler();
     }
 
@@ -410,7 +413,8 @@ public class BilgisayarFrame extends javax.swing.JFrame {
 
         }
         if (bilgisayarObjeleri.get(oyun.ran).getDayaniklilik()<=0){
-            sayac++;
+
+            logger.info(bilgisayarObjeleri.get(oyun.ran).getName()+" nesnesi silindi.(BILGISAYAR2)");
             bilgisayarObjeleri.remove(oyun.ran);
         }
         if (sayac == pc1objeler.size()&&pc1objeler.size()!=0) {
@@ -420,7 +424,7 @@ public class BilgisayarFrame extends javax.swing.JFrame {
             goruntuler();
 
         }if (pc1objeler.get(sayac).getDayaniklilik()<=0){
-            
+            logger.info(pc1objeler.get(oyun.ran).getName()+" nesnesi silindi.("+bilgisayar.getOyuncuAdi()+")");
             pc1objeler.remove(sayac);
         }
         System.out.println(oyun.skor);
@@ -431,13 +435,15 @@ public class BilgisayarFrame extends javax.swing.JFrame {
             jLabel22.setText(Double.toString(oyun.skor));
             jLabel23.setText(Double.toString(oyun.bilgisayarskor));
             if(oyun.skor>oyun.bilgisayarskor){
-                
+                logger.info("KAZANAN: "+bilgisayar.getOyuncuAdi());
                 jLabel21.setText("KAZANAN: BİLGİSAYAR 1");
                 jButton1.setEnabled(false);
             }else if(oyun.skor<oyun.bilgisayarskor){
+                logger.info("KAZANAN: BILGISAYAR2");
                 jLabel21.setText("KAZANAN: BİLGİSAYAR 2");
                 jButton1.setEnabled(false);
             }else{
+                logger.info("BERABERE");
                 jLabel21.setText("         BERABERE");
                 jButton1.setEnabled(false);
             }

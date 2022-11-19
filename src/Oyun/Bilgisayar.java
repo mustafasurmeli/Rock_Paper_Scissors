@@ -6,7 +6,7 @@ package Oyun;
 
 import java.util.Random;
 import java.util.ArrayList;
-
+import java.util.logging.*;
 /**
  *
  * @author mustafa
@@ -57,6 +57,7 @@ public class Bilgisayar extends Oyuncu {
             if (KarsilasmaNesnesi == "tas") {
                 randomhamle.add(KarsilasmaNesnesi);
                 bilObjects.add(new Tas());
+
             } else if (KarsilasmaNesnesi == "kagit") {
                 randomhamle.add(KarsilasmaNesnesi);
                 bilObjects.add(new Kagit());

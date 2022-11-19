@@ -7,12 +7,14 @@ package Oyun;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
+import java.util.logging.*;
+
 
 /**
  * @author mustafa
  */
 public class Oyun {
-
+    public static Logger logger = Logger.getLogger("Rock Paper Scissors Log");
     double dayanguı;
     int seviyeguı;
     String classgui,oyunSonu;
@@ -44,12 +46,17 @@ public class Oyun {
     boolean c = false, d = false, e = false;
 
     public static void main(String[] args) {
+        init();
         Bilgisayar bilgisayar1 = new Bilgisayar();
         Frame frame = new Frame();
         frame.setVisible(true);
+        bilgisayar1.setOyuncuAdi("BILGISAYAR2");
         bilgisayar1.nesneSec();
         System.out.println(bilgisayar1.bilObjects);
         bilgisayarObjeleri = bilgisayar1.bilObjects;
+        for (int i = 0; i < bilgisayarObjeleri.size(); i++) {
+            logger.info(bilgisayar1.getOyuncuAdi()+" "+bilgisayarObjeleri.get(i).getName()+" nesnesi oluşturdu");
+        }
         //Kullanici kullanici = new Kullanici(ad, skor);
         bilgisayarHamleler = bilgisayar1.randomhamle;
         saydir=bilgisayarObjeleri.size();
@@ -70,6 +77,7 @@ public class Oyun {
     }
 
     void kontrol() {
+        logger.info("///////////////////////El BAŞI//////////////////////////");
         saydir=bilgisayarObjeleri.size()-1;
 
 
@@ -88,18 +96,23 @@ public class Oyun {
         if ((nesne1 == "tas" && bilgisayarObjeleri.get(ran).getName() == "makas") || (nesne1 == "kagit" && bilgisayarObjeleri.get(ran).getName() == "tas") || (nesne1 == "makas" && bilgisayarObjeleri.get(ran).getName() == "kagit")) {
             temp = nesne1Etki;
             nesne1Etki /= (a * nesne2Etki);
+            logger.info("1.oyuncunun etkisi:"+nesne1Etki);
             nesne2Etki /= ((1 - a) * temp);
+            logger.info("2.oyuncunun etki puanı:"+nesne2Etki);
             seviyeGuncel = objects.get(index).getSeviyePuani();
             seviyeGuncel += 20;
 
             objects.get(index).setSeviyePuani(seviyeGuncel);
-            if (seviyeGuncel >= 30) {
+            logger.info("Bu eli 1.oyuncu kazandı.");
+            logger.info(objects.get(index).getName()+" nesnesinin seviye puanı:" +objects.get(index).getSeviyePuani());
+            if (seviyeGuncel == 30) {
                 if (nesne1.equals("tas")) {
                     double dayanikliliktemp = objects.get(index).getDayaniklilik();
                     int seviyetemp = objects.get(index).getSeviyePuani();
                     objects.set(index, agirTas);
                     objects.get(index).setSeviyePuani(seviyetemp);
                     objects.get(index).setDayaniklilik(dayanikliliktemp);
+                    logger.info("Taş nesnesi Ağır Taşa Dönüştü.");
 
                 } else if (nesne1.equals("kagit")) {
                     double dayanikliliktemp = objects.get(index).getDayaniklilik();
@@ -107,6 +120,7 @@ public class Oyun {
                     objects.set(index, ozelKagit);
                     objects.get(index).setSeviyePuani(seviyetemp);
                     objects.get(index).setDayaniklilik(dayanikliliktemp);
+                    logger.info("Kağıt nesnesi Özel Kağıda dönüştü");
 
                 } else if (nesne1.equals("makas")) {
                     double dayanikliliktemp = objects.get(index).getDayaniklilik();
@@ -114,6 +128,7 @@ public class Oyun {
                     objects.set(index, ustaMakas);
                     objects.get(index).setSeviyePuani(seviyetemp);
                     objects.get(index).setDayaniklilik(dayanikliliktemp);
+                    logger.info("Makas nesnesi Usta Makasa dönüştü");
 
                 }
 
@@ -121,18 +136,23 @@ public class Oyun {
         } else if ((nesne1 == "tas" && bilgisayarObjeleri.get(ran).getName() == "kagit") || (nesne1 == "kagit" && bilgisayarObjeleri.get(ran).getName() == "makas") || (nesne1 == "makas" && bilgisayarObjeleri.get(ran).getName() == "tas")) {
             temp = nesne1Etki;
             nesne1Etki /= ((1 - a) * nesne2Etki);
+            logger.info("1.oyuncunun etkisi:"+nesne1Etki);
             nesne2Etki /= (a * temp);
+            logger.info("2.oyuncunun etki puanı:"+nesne2Etki);
             seviyeGuncel = bilgisayarObjeleri.get(ran).getSeviyePuani();
             seviyeGuncel += 20;
             seviyeguı = seviyeGuncel;
             bilgisayarObjeleri.get(ran).setSeviyePuani(seviyeGuncel);
-            if (seviyeGuncel >= 30) {
+            logger.info("Bu eli 2.oyuncu kazandı.");
+            logger.info(bilgisayarObjeleri.get(index).getName()+" nesnesinin seviye puanı:" +objects.get(index).getSeviyePuani());
+            if (seviyeGuncel == 30) {
                 if (bilgisayarObjeleri.get(ran).getName().equals("tas")) {
                     double dayanikliliktemp = bilgisayarObjeleri.get(ran).getDayaniklilik();
                     int seviyetemp = bilgisayarObjeleri.get(index).getSeviyePuani();
                     bilgisayarObjeleri.set(ran, agirTas);
                     bilgisayarObjeleri.get(ran).setSeviyePuani(seviyetemp);
                     bilgisayarObjeleri.get(ran).setDayaniklilik(dayanikliliktemp);
+                    logger.info("Taş nesnesi Ağır Taşa dönüştü.");
 
                 } else if (bilgisayarObjeleri.get(ran).getName().equals("kagit")) {
                     double dayanikliliktemp = bilgisayarObjeleri.get(ran).getDayaniklilik();
@@ -140,6 +160,7 @@ public class Oyun {
                     bilgisayarObjeleri.set(ran, ozelKagit);
                     bilgisayarObjeleri.get(ran).setSeviyePuani(seviyetemp);
                     bilgisayarObjeleri.get(ran).setDayaniklilik(dayanikliliktemp);
+                    logger.info("Kağıt nesnesi Özel Kağıda dönüştü ");
 
                 } else if (bilgisayarObjeleri.get(ran).getName().equals("makas")) {
                     double dayanikliliktemp = bilgisayarObjeleri.get(ran).getDayaniklilik();
@@ -147,6 +168,7 @@ public class Oyun {
                     bilgisayarObjeleri.set(ran, ustaMakas);
                     bilgisayarObjeleri.get(ran).setSeviyePuani(seviyetemp);
                     bilgisayarObjeleri.get(ran).setDayaniklilik(dayanikliliktemp);
+                    logger.info("Makas nesnesi Usta Makasa dönüştü.");
 
                 }
 
@@ -154,7 +176,10 @@ public class Oyun {
         } else if ((nesne1 == "tas" && bilgisayarObjeleri.get(ran).getName() == "tas") || (nesne1 == "kagit" && bilgisayarObjeleri.get(ran).getName() == "kagit") || (nesne1 == "makas" && bilgisayarObjeleri.get(ran).getName() == "makas")) {
             temp = nesne1Etki;
             nesne1Etki /= (a * nesne2Etki);
+            logger.info("1.oyuncunun etkisi:"+nesne1Etki);
             nesne2Etki /= (a * temp);
+            logger.info("2.oyuncunun etki puanı:"+nesne2Etki);
+            logger.info("Bu el berabere.");
         }
 
         objects.get(index).howMuch = nesne2Etki;
@@ -168,8 +193,9 @@ public class Oyun {
         classgui = bilgisayarObjeleri.get(ran).getClass().getName();
 
         progressS = objects.get(index).getSeviyePuani();
+        logger.info("1.oyuncunun "+objects.get(index).getName()+" nesnesinin dayanıklılığı: "+objects.get(index).getDayaniklilik());
+        logger.info("2.oyuncunun "+bilgisayarObjeleri.get(index).getName()+" nesnesinin dayanıklılığı: "+bilgisayarObjeleri.get(index).getDayaniklilik());
 
-        
         System.out.println("111111111111111111111111111111111111111111");
         /*if(sayac==5){
            oyunSonu=bilgisayar.getOyuncuAdi()+"adlı oyuncunun nesneleri tükendi.";
@@ -201,8 +227,7 @@ public class Oyun {
             bilgisayarObjeleri.remove(ran);
         }*/
 
-
-
+        logger.info("///////////////////////El SONU//////////////////////////");
     }
 
     void skorhesapla() {
@@ -227,6 +252,20 @@ public class Oyun {
             output += bilgisayarObjeleri.get(i).getClass().getName() + " ";
         }
         return output;
+    }
+    public static void init(){
+        FileHandler fh;
+        try{
+            fh = new FileHandler("./tasKagitMakas.log");
+
+            logger.addHandler(fh);
+            SimpleFormatter formatter = new SimpleFormatter();
+            fh.setFormatter(formatter);
+
+            logger.info("Logger Initialized");
+        }catch(Exception e){
+            logger.log(Level.WARNING,"Exception ::",e);
+        }
     }
 
 }
