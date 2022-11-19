@@ -347,7 +347,7 @@ public class KullaniciJFrame extends javax.swing.JFrame {
                     secimler[4] = "makas";
                     iconlar[4] = "makas";
                 }
-
+                karsilasma.saydir=oyun.objects.size();
                 karsilasma.deneme = oyun.objects;
                 System.out.println("wewqrqwrqwer" + oyun.objects);
                 karsilasma.setVisible(true);

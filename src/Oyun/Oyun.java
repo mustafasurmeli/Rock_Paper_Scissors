@@ -9,14 +9,13 @@ import java.util.Collections;
 import java.util.Random;
 
 /**
- *
  * @author mustafa
  */
 public class Oyun {
 
     double dayanguı;
     int seviyeguı;
-    String classgui;
+    String classgui,oyunSonu;
     int ran = 0;
     int progressS;
     public static String ad;
@@ -25,6 +24,7 @@ public class Oyun {
     ArrayList<Integer> bindex = new ArrayList<Integer>();
     static ArrayList<String> bilgisayarHamleler = new ArrayList<>();
     int index;
+     static int saydir=0;
     double bilgisayarskor = 0, skor = 0;
     //Bilgisayar bilgisayar = new Bilgisayar("Bİlgisayar", skor);
     Random random = new Random();
@@ -52,7 +52,7 @@ public class Oyun {
         bilgisayarObjeleri = bilgisayar1.bilObjects;
         //Kullanici kullanici = new Kullanici(ad, skor);
         bilgisayarHamleler = bilgisayar1.randomhamle;
-
+        saydir=bilgisayarObjeleri.size();
 
         /*   
             nesne1      nesne2
@@ -70,9 +70,9 @@ public class Oyun {
     }
 
     void kontrol() {
-        int sayac=0;
-        skor=0;
-        bilgisayarskor=0;
+        saydir=bilgisayarObjeleri.size()-1;
+
+
 
         /*if (bilgisayarObjeleri.get(ran).getDayaniklilik()<=0){
             sayac++;
@@ -156,11 +156,11 @@ public class Oyun {
             nesne1Etki /= (a * nesne2Etki);
             nesne2Etki /= (a * temp);
         }
-        
+
         objects.get(index).howMuch = nesne2Etki;
         bilgisayarObjeleri.get(ran).howMuch = nesne1Etki;
-        objects.get(index).setDayaniklilik(objects.get(index).getDayaniklilik()-nesne2Etki);
-        bilgisayarObjeleri.get(ran).setDayaniklilik(bilgisayarObjeleri.get(ran).getDayaniklilik()-nesne1Etki);
+        objects.get(index).setDayaniklilik(objects.get(index).getDayaniklilik() - nesne2Etki);
+        bilgisayarObjeleri.get(ran).setDayaniklilik(bilgisayarObjeleri.get(ran).getDayaniklilik() - nesne1Etki);
         System.out.println(objects.get(index).howMuch);
         System.out.println(bilgisayarObjeleri.get(ran).howMuch);
         dayanguı = bilgisayarObjeleri.get(ran).durumGuncelle();
@@ -170,20 +170,38 @@ public class Oyun {
         progressS = objects.get(index).getSeviyePuani();
 
         ran++;
-        if (ran == bilgisayarObjeleri.size()) {
-            sayac++;
+        /*if(sayac==5){
+           oyunSonu=bilgisayar.getOyuncuAdi()+"adlı oyuncunun nesneleri tükendi.";
+        }*/
+
+        if (ran >= saydir&&bilgisayarObjeleri.size()!=0) {
+
             Collections.shuffle(bilgisayarObjeleri);
+            sayac=0;
             ran = 0;
 
         }
-        sayac++;
-        skorhesapla();
+        if (bilgisayarObjeleri.get(ran).getDayaniklilik()<=0){
+            sayac++;
+            bilgisayarObjeleri.remove(ran);
+        }
+        System.out.println(bilgisayarObjeleri);
+        System.out.println("///////////////////////////////////////////////////////////");
+        for (int i = 0; i < bilgisayarObjeleri.size(); i++) {
+            System.out.println(bilgisayarObjeleri.get(i).getDayaniklilik());
+        }
+        System.out.println("///////////////////////////////////////////////////////////");
+
+
         /*if(objects.get(index).getDayaniklilik()<=0){
             objects.remove(index);
         }
         if(bilgisayarObjeleri.get(ran).getDayaniklilik()<=0){
             bilgisayarObjeleri.remove(ran);
         }*/
+
+
+
     }
 
     void skorhesapla() {
@@ -191,7 +209,7 @@ public class Oyun {
             bilgisayarskor += bilgisayarObjeleri.get(i).getDayaniklilik();
             skor += objects.get(i).getDayaniklilik();
         }
-       
+
     }
 
     void check() {
@@ -205,4 +223,5 @@ public class Oyun {
         }
         return output;
     }
+
 }

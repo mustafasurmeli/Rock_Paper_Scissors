@@ -335,6 +335,7 @@ public class BilgisayarFrame extends javax.swing.JFrame {
         oyun.kontrol();
         oyun.check();
         String label = "Dayanıklılık:" + Double.toString(pc1objeler.get(sayac).durumGuncelle());
+
         jLabel4.setText(label);
         label = "Seviye Puanı:" + (int) pc1objeler.get(sayac).getSeviyePuani();
         jLabel15.setText(label);
@@ -361,10 +362,13 @@ public class BilgisayarFrame extends javax.swing.JFrame {
             if(oyun.skor>oyun.bilgisayarskor){
                 
                 jLabel21.setText("KAZANAN: BİLGİSAYAR 1");
+                jButton1.setEnabled(false);
             }else if(oyun.skor<oyun.bilgisayarskor){
                 jLabel21.setText("KAZANAN: BİLGİSAYAR 2");
+                jButton1.setEnabled(false);
             }else{
-                jLabel21.setText("BERABERE");
+                jLabel21.setText("         BERABERE");
+                jButton1.setEnabled(false);
             }
         }
     }//GEN-LAST:event_jButton1ActionPerformed

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Oyun">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/Oyun.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

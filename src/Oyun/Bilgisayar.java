@@ -29,7 +29,7 @@ public class Bilgisayar extends Oyuncu {
 
     public Bilgisayar() {
         setOyuncuID(random.nextInt(10));
-        setOyuncuAdi("BİLGİSAYAR");
+        setOyuncuAdi("BILGISAYAR");
         /* System.out.println(getOyuncuAdi());
         System.out.println(getOyuncuID());*/
     }
