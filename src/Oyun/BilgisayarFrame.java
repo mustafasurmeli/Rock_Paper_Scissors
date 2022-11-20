@@ -367,41 +367,64 @@ public class BilgisayarFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if(bilgisayarObjeleri.size()==0){
-                jLabel21.setText("KAZANAN: BİLGİSAYAR 1");
-                jButton1.setEnabled(false);
-        }else if(pc1objeler.size()==0){
-                jLabel21.setText("KAZANAN: BİLGİSAYAR 2");
-                jButton1.setEnabled(false);
-        }else{
+        if(bilgisayarObjeleri.size()!=0||pc1objeler.size()!=0){
+            if (sayac >= pc1objeler.size()) {
+                sayac = 0;
+                Collections.shuffle(pc1objeler);
+                //Collections.shuffle(bilgisayarObjeleri);
+                goruntuler();
+
+            }
+            if (oyun.ran >= bilgisayarObjeleri.size()) {
+
+                Collections.shuffle(bilgisayarObjeleri);
+                sayac=0;
+                oyun.ran = 0;
+
+            }
         hamle = Integer.parseInt(jTextField1.getText());
         jLabel20.setText(String.valueOf(hamleSayac+1));
-        System.out.println("Oyun" + pc1objeler.get(sayac).getName() + ".png");
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + pc1objeler.get(sayac).getName() + ".png")));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + bilgisayarObjeleri.get(oyun.ran).getName() + ".png")));
+        //System.out.println("Oyun" + pc1objeler.get(sayac).getName() + ".png");
+            if (sayac<pc1objeler.size())
+            jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + pc1objeler.get(sayac).getName() + ".png")));
+            if (oyun.ran<bilgisayarObjeleri.size())
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + bilgisayarObjeleri.get(oyun.ran).getName() + ".png")));
         oyun.index = sayac;
         oyun.nesne1 = pc1objeler.get(sayac).getName();
         oyun.objects = pc1objeler;
         oyun.kontrol();
         
         oyun.check();
-        
-        
-        String label = "Dayanıklılık:" + Double.toString(pc1objeler.get(sayac).durumGuncelle());
+        String label;
 
-        jLabel4.setText(label);
-        label = "Seviye Puanı:" + (int) pc1objeler.get(sayac).getSeviyePuani();
-        jLabel15.setText(label);
-        label = pc1objeler.get(sayac).getClass().getName();
-        jLabel16.setText(label);
+             label = "Dayanıklılık:" + Double.toString(pc1objeler.get(sayac).durumGuncelle());
+
+            jLabel4.setText(label);
+            label = "Seviye Puanı:" + (int) pc1objeler.get(sayac).getSeviyePuani();
+            jLabel15.setText(label);
+            label = pc1objeler.get(sayac).getClass().getName();
+            jLabel16.setText(label);
+
+//            jLabel4.setText("");
+//            jLabel15.setText("");
+//            jLabel16.setText("");
+
+
             System.out.println("TTTTTTTTTTTTTTTTTTT"+oyun.ran);
-        label = "Dayanıklılık:" + Double.toString(bilgisayarObjeleri.get(oyun.ran).durumGuncelle());
-        jLabel17.setText(label);
-        label = "Seviye Puanı:" + (int) bilgisayarObjeleri.get(oyun.ran).getSeviyePuani();
-        jLabel18.setText(label);
-        label = bilgisayarObjeleri.get(oyun.ran).getClass().getName();
-        jLabel19.setText(label);
-        bilgisayar2sayac++;
+
+                label = "Dayanıklılık:" + Double.toString(bilgisayarObjeleri.get(oyun.ran).durumGuncelle());
+                jLabel17.setText(label);
+                label = "Seviye Puanı:" + (int) bilgisayarObjeleri.get(oyun.ran).getSeviyePuani();
+                jLabel18.setText(label);
+                label = bilgisayarObjeleri.get(oyun.ran).getClass().getName();
+                jLabel19.setText(label);
+                bilgisayar2sayac++;
+
+//                jLabel17.setText("");
+//                jLabel18.setText("");
+//                jLabel19.setText("");
+
+
        
         oyun.ran++;
         sayac++;
@@ -412,7 +435,14 @@ public class BilgisayarFrame extends javax.swing.JFrame {
             oyun.ran = 0;
 
         }
-        if (bilgisayarObjeleri.get(oyun.ran).getDayaniklilik()<=0){
+            if(bilgisayarObjeleri.size()==0){
+                jLabel21.setText("KAZANAN: BİLGİSAYAR 1");
+                jButton1.setEnabled(false);
+
+            }else if(pc1objeler.size()==0){
+                jLabel21.setText("KAZANAN: BİLGİSAYAR 2");
+                jButton1.setEnabled(false);
+            }else if (bilgisayarObjeleri.get(oyun.ran).getDayaniklilik()<=0){
 
             logger.info(bilgisayarObjeleri.get(oyun.ran).getName()+" nesnesi silindi.(BILGISAYAR2)");
             bilgisayarObjeleri.remove(oyun.ran);
@@ -423,8 +453,15 @@ public class BilgisayarFrame extends javax.swing.JFrame {
             //Collections.shuffle(bilgisayarObjeleri);
             goruntuler();
 
-        }if (pc1objeler.get(sayac).getDayaniklilik()<=0){
-            logger.info(pc1objeler.get(oyun.ran).getName()+" nesnesi silindi.("+bilgisayar.getOyuncuAdi()+")");
+        }if(bilgisayarObjeleri.size()==0){
+                jLabel21.setText("KAZANAN: BİLGİSAYAR 1");
+                jButton1.setEnabled(false);
+
+            }else if(pc1objeler.size()==0){
+                jLabel21.setText("KAZANAN: BİLGİSAYAR 2");
+                jButton1.setEnabled(false);
+            }else if (pc1objeler.get(sayac).getDayaniklilik()<=0){
+            logger.info(pc1objeler.get(sayac).getName()+" nesnesi silindi.("+bilgisayar.getOyuncuAdi()+")");
             pc1objeler.remove(sayac);
         }
         System.out.println(oyun.skor);
@@ -448,7 +485,17 @@ public class BilgisayarFrame extends javax.swing.JFrame {
                 jButton1.setEnabled(false);
             }
         }
+        }  if (bilgisayarObjeleri.size()==0) {
+            logger.info("KAZANAN: "+bilgisayar.getOyuncuAdi());
+            jLabel21.setText("KAZANAN: BİLGİSAYAR 1");
+            jButton1.setEnabled(false);
+        }  if (pc1objeler.size()==0){
+            logger.info("KAZANAN: "+bilgisayar.getOyuncuAdi());
+            jLabel21.setText("KAZANAN: BİLGİSAYAR 2");
+            jButton1.setEnabled(false);
         }
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed

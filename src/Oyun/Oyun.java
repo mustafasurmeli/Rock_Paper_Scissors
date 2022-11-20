@@ -17,6 +17,7 @@ public class Oyun {
     public static Logger logger = Logger.getLogger("Rock Paper Scissors Log");
     double dayanguı;
     int seviyeguı;
+    String tempName;
     String classgui,oyunSonu;
     int ran = 0;
     int progressS;
@@ -79,7 +80,7 @@ public class Oyun {
     void kontrol() {
         logger.info("///////////////////////El BAŞI//////////////////////////");
         saydir=bilgisayarObjeleri.size()-1;
-
+        
 
 
         /*if (bilgisayarObjeleri.get(ran).getDayaniklilik()<=0){
@@ -87,137 +88,139 @@ public class Oyun {
             ran++;
         }*/
 
+        if (bilgisayarObjeleri.size()!=0||objects.size()!=0) {
 
-        nesne2Etki = bilgisayarObjeleri.get(ran).etkiHesapla();
-        nesne1Etki = objects.get(index).etkiHesapla();
 
-        int seviyeGuncel = 0;
-        double temp;
-        if ((nesne1 == "tas" && bilgisayarObjeleri.get(ran).getName() == "makas") || (nesne1 == "kagit" && bilgisayarObjeleri.get(ran).getName() == "tas") || (nesne1 == "makas" && bilgisayarObjeleri.get(ran).getName() == "kagit")) {
-            temp = nesne1Etki;
-            nesne1Etki /= (a * nesne2Etki);
-            logger.info("1.oyuncunun etkisi:"+nesne1Etki);
-            nesne2Etki /= ((1 - a) * temp);
-            logger.info("2.oyuncunun etki puanı:"+nesne2Etki);
-            seviyeGuncel = objects.get(index).getSeviyePuani();
-            seviyeGuncel += 20;
+            nesne2Etki = bilgisayarObjeleri.get(ran).etkiHesapla();
+            nesne1Etki = objects.get(index).etkiHesapla();
 
-            objects.get(index).setSeviyePuani(seviyeGuncel);
-            logger.info("Bu eli 1.oyuncu kazandı.");
-            logger.info(objects.get(index).getName()+" nesnesinin seviye puanı:" +objects.get(index).getSeviyePuani());
-            if (seviyeGuncel == 30) {
-                if (nesne1.equals("tas")) {
-                    double dayanikliliktemp = objects.get(index).getDayaniklilik();
-                    int seviyetemp = objects.get(index).getSeviyePuani();
-                    objects.set(index, agirTas);
-                    objects.get(index).setSeviyePuani(seviyetemp);
-                    objects.get(index).setDayaniklilik(dayanikliliktemp);
-                    logger.info("Taş nesnesi Ağır Taşa Dönüştü.");
+            int seviyeGuncel = 0;
+            double temp;
+            if ((nesne1 == "tas" && bilgisayarObjeleri.get(ran).getName() == "makas") || (nesne1 == "kagit" && bilgisayarObjeleri.get(ran).getName() == "tas") || (nesne1 == "makas" && bilgisayarObjeleri.get(ran).getName() == "kagit")) {
+                temp = nesne1Etki;
+                nesne1Etki /= (a * nesne2Etki);
+                logger.info("1.oyuncunun etkisi:" + nesne1Etki);
+                nesne2Etki /= ((1 - a) * temp);
+                logger.info("2.oyuncunun etki puanı:" + nesne2Etki);
+                seviyeGuncel = objects.get(index).getSeviyePuani();
+                seviyeGuncel += 20;
 
-                } else if (nesne1.equals("kagit")) {
-                    double dayanikliliktemp = objects.get(index).getDayaniklilik();
-                    int seviyetemp = objects.get(index).getSeviyePuani();
-                    objects.set(index, ozelKagit);
-                    objects.get(index).setSeviyePuani(seviyetemp);
-                    objects.get(index).setDayaniklilik(dayanikliliktemp);
-                    logger.info("Kağıt nesnesi Özel Kağıda dönüştü");
+                objects.get(index).setSeviyePuani(seviyeGuncel);
+                logger.info("Bu eli 1.oyuncu kazandı.");
+                logger.info(objects.get(index).getName() + " nesnesinin seviye puanı:" + objects.get(index).getSeviyePuani());
+                if (seviyeGuncel == 40) {
+                    if (nesne1.equals("tas")) {
+                        double dayanikliliktemp = objects.get(index).getDayaniklilik();
+                        int seviyetemp = objects.get(index).getSeviyePuani();
+                        objects.set(index, agirTas);
+                        objects.get(index).setSeviyePuani(seviyetemp);
+                        objects.get(index).setDayaniklilik(dayanikliliktemp);
+                        logger.info("Taş nesnesi Ağır Taşa Dönüştü.");
 
-                } else if (nesne1.equals("makas")) {
-                    double dayanikliliktemp = objects.get(index).getDayaniklilik();
-                    int seviyetemp = objects.get(index).getSeviyePuani();
-                    objects.set(index, ustaMakas);
-                    objects.get(index).setSeviyePuani(seviyetemp);
-                    objects.get(index).setDayaniklilik(dayanikliliktemp);
-                    logger.info("Makas nesnesi Usta Makasa dönüştü");
+                    } else if (nesne1.equals("kagit")) {
+                        double dayanikliliktemp = objects.get(index).getDayaniklilik();
+                        int seviyetemp = objects.get(index).getSeviyePuani();
+                        objects.set(index, ozelKagit);
+                        objects.get(index).setSeviyePuani(seviyetemp);
+                        objects.get(index).setDayaniklilik(dayanikliliktemp);
+                        logger.info("Kağıt nesnesi Özel Kağıda dönüştü");
 
-                }
+                    } else if (nesne1.equals("makas")) {
+                        double dayanikliliktemp = objects.get(index).getDayaniklilik();
+                        int seviyetemp = objects.get(index).getSeviyePuani();
+                        objects.set(index, ustaMakas);
+                        objects.get(index).setSeviyePuani(seviyetemp);
+                        objects.get(index).setDayaniklilik(dayanikliliktemp);
+                        logger.info("Makas nesnesi Usta Makasa dönüştü");
 
-            }
-        } else if ((nesne1 == "tas" && bilgisayarObjeleri.get(ran).getName() == "kagit") || (nesne1 == "kagit" && bilgisayarObjeleri.get(ran).getName() == "makas") || (nesne1 == "makas" && bilgisayarObjeleri.get(ran).getName() == "tas")) {
-            temp = nesne1Etki;
-            nesne1Etki /= ((1 - a) * nesne2Etki);
-            logger.info("1.oyuncunun etkisi:"+nesne1Etki);
-            nesne2Etki /= (a * temp);
-            logger.info("2.oyuncunun etki puanı:"+nesne2Etki);
-            seviyeGuncel = bilgisayarObjeleri.get(ran).getSeviyePuani();
-            seviyeGuncel += 20;
-            seviyeguı = seviyeGuncel;
-            bilgisayarObjeleri.get(ran).setSeviyePuani(seviyeGuncel);
-            logger.info("Bu eli 2.oyuncu kazandı.");
-            logger.info(bilgisayarObjeleri.get(index).getName()+" nesnesinin seviye puanı:" +objects.get(index).getSeviyePuani());
-            if (seviyeGuncel == 30) {
-                if (bilgisayarObjeleri.get(ran).getName().equals("tas")) {
-                    double dayanikliliktemp = bilgisayarObjeleri.get(ran).getDayaniklilik();
-                    int seviyetemp = bilgisayarObjeleri.get(index).getSeviyePuani();
-                    bilgisayarObjeleri.set(ran, agirTas);
-                    bilgisayarObjeleri.get(ran).setSeviyePuani(seviyetemp);
-                    bilgisayarObjeleri.get(ran).setDayaniklilik(dayanikliliktemp);
-                    logger.info("Taş nesnesi Ağır Taşa dönüştü.");
-
-                } else if (bilgisayarObjeleri.get(ran).getName().equals("kagit")) {
-                    double dayanikliliktemp = bilgisayarObjeleri.get(ran).getDayaniklilik();
-                    int seviyetemp = bilgisayarObjeleri.get(ran).getSeviyePuani();
-                    bilgisayarObjeleri.set(ran, ozelKagit);
-                    bilgisayarObjeleri.get(ran).setSeviyePuani(seviyetemp);
-                    bilgisayarObjeleri.get(ran).setDayaniklilik(dayanikliliktemp);
-                    logger.info("Kağıt nesnesi Özel Kağıda dönüştü ");
-
-                } else if (bilgisayarObjeleri.get(ran).getName().equals("makas")) {
-                    double dayanikliliktemp = bilgisayarObjeleri.get(ran).getDayaniklilik();
-                    int seviyetemp = bilgisayarObjeleri.get(ran).getSeviyePuani();
-                    bilgisayarObjeleri.set(ran, ustaMakas);
-                    bilgisayarObjeleri.get(ran).setSeviyePuani(seviyetemp);
-                    bilgisayarObjeleri.get(ran).setDayaniklilik(dayanikliliktemp);
-                    logger.info("Makas nesnesi Usta Makasa dönüştü.");
+                    }
 
                 }
+            } else if ((nesne1 == "tas" && bilgisayarObjeleri.get(ran).getName() == "kagit") || (nesne1 == "kagit" && bilgisayarObjeleri.get(ran).getName() == "makas") || (nesne1 == "makas" && bilgisayarObjeleri.get(ran).getName() == "tas")) {
+                temp = nesne1Etki;
+                nesne1Etki /= ((1 - a) * nesne2Etki);
+                logger.info("1.oyuncunun etkisi:" + nesne1Etki);
+                nesne2Etki /= (a * temp);
+                logger.info("2.oyuncunun etki puanı:" + nesne2Etki);
+                seviyeGuncel = bilgisayarObjeleri.get(ran).getSeviyePuani();
+                seviyeGuncel += 20;
+                seviyeguı = seviyeGuncel;
+                bilgisayarObjeleri.get(ran).setSeviyePuani(seviyeGuncel);
+                logger.info("Bu eli 2.oyuncu kazandı.");
+                logger.info(bilgisayarObjeleri.get(ran).getName() + " nesnesinin seviye puanı:" + objects.get(index).getSeviyePuani());
+                if (seviyeGuncel == 40) {
+                    if (bilgisayarObjeleri.get(ran).getName().equals("tas")) {
+                        double dayanikliliktemp = bilgisayarObjeleri.get(ran).getDayaniklilik();
+                        int seviyetemp = bilgisayarObjeleri.get(ran).getSeviyePuani();
+                        bilgisayarObjeleri.set(ran, agirTas);
+                        bilgisayarObjeleri.get(ran).setSeviyePuani(seviyetemp);
+                        bilgisayarObjeleri.get(ran).setDayaniklilik(dayanikliliktemp);
+                        logger.info("Taş nesnesi Ağır Taşa dönüştü.");
+
+                    } else if (bilgisayarObjeleri.get(ran).getName().equals("kagit")) {
+                        double dayanikliliktemp = bilgisayarObjeleri.get(ran).getDayaniklilik();
+                        int seviyetemp = bilgisayarObjeleri.get(ran).getSeviyePuani();
+                        bilgisayarObjeleri.set(ran, ozelKagit);
+                        bilgisayarObjeleri.get(ran).setSeviyePuani(seviyetemp);
+                        bilgisayarObjeleri.get(ran).setDayaniklilik(dayanikliliktemp);
+                        logger.info("Kağıt nesnesi Özel Kağıda dönüştü ");
+
+                    } else if (bilgisayarObjeleri.get(ran).getName().equals("makas")) {
+                        double dayanikliliktemp = bilgisayarObjeleri.get(ran).getDayaniklilik();
+                        int seviyetemp = bilgisayarObjeleri.get(ran).getSeviyePuani();
+                        bilgisayarObjeleri.set(ran, ustaMakas);
+                        bilgisayarObjeleri.get(ran).setSeviyePuani(seviyetemp);
+                        bilgisayarObjeleri.get(ran).setDayaniklilik(dayanikliliktemp);
+                        logger.info("Makas nesnesi Usta Makasa dönüştü.");
+
+                    }
+
+                }
+            } else if ((nesne1 == "tas" && bilgisayarObjeleri.get(ran).getName() == "tas") || (nesne1 == "kagit" && bilgisayarObjeleri.get(ran).getName() == "kagit") || (nesne1 == "makas" && bilgisayarObjeleri.get(ran).getName() == "makas")) {
+                temp = nesne1Etki;
+                nesne1Etki /= (a * nesne2Etki);
+                logger.info("1.oyuncunun etkisi:" + nesne1Etki);
+                nesne2Etki /= (a * temp);
+                logger.info("2.oyuncunun etki puanı:" + nesne2Etki);
+                logger.info("Bu el berabere.");
+            }
+
+            objects.get(index).howMuch = nesne2Etki;
+            bilgisayarObjeleri.get(ran).howMuch = nesne1Etki;
+            objects.get(index).setDayaniklilik(objects.get(index).getDayaniklilik() - nesne2Etki);
+            bilgisayarObjeleri.get(ran).setDayaniklilik(bilgisayarObjeleri.get(ran).getDayaniklilik() - nesne1Etki);
+            System.out.println(objects.get(index).howMuch);
+            System.out.println(bilgisayarObjeleri.get(ran).howMuch);
+            dayanguı = bilgisayarObjeleri.get(ran).durumGuncelle();
+
+            classgui = bilgisayarObjeleri.get(ran).getClass().getName();
+
+            progressS = objects.get(index).getSeviyePuani();
+            logger.info("1.oyuncunun " + objects.get(index).getName() + " nesnesinin dayanıklılığı: " + objects.get(index).getDayaniklilik());
+            logger.info("2.oyuncunun " + bilgisayarObjeleri.get(ran).getName() + " nesnesinin dayanıklılığı: " + bilgisayarObjeleri.get(ran).getDayaniklilik());
+
+            System.out.println("111111111111111111111111111111111111111111");
+
+            oyunSonu = bilgisayar.getOyuncuAdi() + "adlı oyuncunun nesneleri tükendi.";
+
+
+           /* if (ran >= saydir && bilgisayarObjeleri.size() != 0) {
+
+                Collections.shuffle(bilgisayarObjeleri);
+                sayac = 0;
+                ran = 0;
 
             }
-        } else if ((nesne1 == "tas" && bilgisayarObjeleri.get(ran).getName() == "tas") || (nesne1 == "kagit" && bilgisayarObjeleri.get(ran).getName() == "kagit") || (nesne1 == "makas" && bilgisayarObjeleri.get(ran).getName() == "makas")) {
-            temp = nesne1Etki;
-            nesne1Etki /= (a * nesne2Etki);
-            logger.info("1.oyuncunun etkisi:"+nesne1Etki);
-            nesne2Etki /= (a * temp);
-            logger.info("2.oyuncunun etki puanı:"+nesne2Etki);
-            logger.info("Bu el berabere.");
-        }
-
-        objects.get(index).howMuch = nesne2Etki;
-        bilgisayarObjeleri.get(ran).howMuch = nesne1Etki;
-        objects.get(index).setDayaniklilik(objects.get(index).getDayaniklilik() - nesne2Etki);
-        bilgisayarObjeleri.get(ran).setDayaniklilik(bilgisayarObjeleri.get(ran).getDayaniklilik() - nesne1Etki);
-        System.out.println(objects.get(index).howMuch);
-        System.out.println(bilgisayarObjeleri.get(ran).howMuch);
-        dayanguı = bilgisayarObjeleri.get(ran).durumGuncelle();
-
-        classgui = bilgisayarObjeleri.get(ran).getClass().getName();
-
-        progressS = objects.get(index).getSeviyePuani();
-        logger.info("1.oyuncunun "+objects.get(index).getName()+" nesnesinin dayanıklılığı: "+objects.get(index).getDayaniklilik());
-        logger.info("2.oyuncunun "+bilgisayarObjeleri.get(index).getName()+" nesnesinin dayanıklılığı: "+bilgisayarObjeleri.get(index).getDayaniklilik());
-
-        System.out.println("111111111111111111111111111111111111111111");
-        /*if(sayac==5){
-           oyunSonu=bilgisayar.getOyuncuAdi()+"adlı oyuncunun nesneleri tükendi.";
-        }*/
-
-        if (ran >= saydir&&bilgisayarObjeleri.size()!=0) {
-
-            Collections.shuffle(bilgisayarObjeleri);
-            sayac=0;
-            ran = 0;
-
-        }
-        if (bilgisayarObjeleri.get(ran).getDayaniklilik()<=0){
-            sayac++;
-            bilgisayarObjeleri.remove(ran);
-        }
-        System.out.println(bilgisayarObjeleri);
-        System.out.println("///////////////////////////////////////////////////////////");
-        for (int i = 0; i < bilgisayarObjeleri.size(); i++) {
-            System.out.println(bilgisayarObjeleri.get(i).getDayaniklilik());
-        }
-        System.out.println("///////////////////////////////////////////////////////////");
+            if (bilgisayarObjeleri.get(ran).getDayaniklilik() <= 0) {
+                sayac++;
+                bilgisayarObjeleri.remove(ran);
+            }*/
+            System.out.println(bilgisayarObjeleri);
+            System.out.println("///////////////////////////////////////////////////////////");
+            for (int i = 0; i < bilgisayarObjeleri.size(); i++) {
+                System.out.println(bilgisayarObjeleri.get(i).getDayaniklilik());
+            }
+            System.out.println("///////////////////////////////////////////////////////////");
 
 
         /*if(objects.get(index).getDayaniklilik()<=0){
@@ -227,7 +230,8 @@ public class Oyun {
             bilgisayarObjeleri.remove(ran);
         }*/
 
-        logger.info("///////////////////////El SONU//////////////////////////");
+            logger.info("///////////////////////El SONU//////////////////////////");
+        }
     }
 
     void skorhesapla() {

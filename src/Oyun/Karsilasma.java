@@ -506,6 +506,7 @@ public class Karsilasma extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        karistir();
         System.out.println("++++++++++++++++++++++++++++++");
         System.out.println(saydir);
         System.out.println("++++++++++++++++++++++++++++++");
@@ -513,6 +514,16 @@ public class Karsilasma extends javax.swing.JFrame {
         jLabel18.setText(String.valueOf(hamleSayac));
         sayac++;
         jButton5.setEnabled(false);
+        if(bilgisayarObjeleri.size()==0){
+            logger.info("KAZANAN: "+kullanici.getOyuncuAdi());
+            jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
+            jButton1.setEnabled(false);
+            jButton2.setEnabled(false);
+            jButton3.setEnabled(false);
+            jButton4.setEnabled(false);
+            jButton5.setEnabled(false);
+
+        }
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + deneme.get(4).getName() + ".png")));
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + bilgisayarObjeleri.get(oyun.ran).getName() + ".png")));
         oyun.index = 4;
@@ -550,7 +561,9 @@ public class Karsilasma extends javax.swing.JFrame {
         jLabel15.setText(info);
         jProgressBar10.setValue(progres);
         //kazananKontrol(4);
+
         oyun.ran++;
+
         karistir();
         if(bilgisayarObjeleri.size()==0){
             logger.info("KAZANAN: "+kullanici.getOyuncuAdi());
@@ -563,17 +576,17 @@ public class Karsilasma extends javax.swing.JFrame {
         }
         if(deneme.get(4).getDayaniklilik()<=0){
             dayaniklilikSayac++;
+            
+        }
 
+        if (sayac == saydir) {
+            yeniDuzen();
+            
         }
         if(dayaniklilikSayac==5){
             logger.info("KAZANAN: "+bilgisayar.getOyuncuAdi());
             jLabel20.setText("KAZANAN: "+bilgisayar.getOyuncuAdi());
         }
-        if (sayac == saydir) {
-            yeniDuzen();
-            
-        }
-
         if(oyun.sayac==5){
             jLabel20.setText(oyun.oyunSonu);
             jButton1.setEnabled(false);
@@ -588,6 +601,7 @@ public class Karsilasma extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        karistir();
         System.out.println("++++++++++++++++++++++++++++++");
         System.out.println(saydir);
         System.out.println("++++++++++++++++++++++++++++++");
@@ -596,6 +610,16 @@ public class Karsilasma extends javax.swing.JFrame {
         sayac++;
         System.out.println(sayac + "gr");
         jButton4.setEnabled(false);
+        if(bilgisayarObjeleri.size()==0){
+            logger.info("KAZANAN: "+kullanici.getOyuncuAdi());
+            jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
+            jButton1.setEnabled(false);
+            jButton2.setEnabled(false);
+            jButton3.setEnabled(false);
+            jButton4.setEnabled(false);
+            jButton5.setEnabled(false);
+
+        }
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + deneme.get(3).getName() + ".png")));
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + bilgisayarObjeleri.get(oyun.ran).getName() + ".png")));
         oyun.index = 3;
@@ -637,15 +661,17 @@ public class Karsilasma extends javax.swing.JFrame {
         }
         if(deneme.get(3).getDayaniklilik()<=0){
             dayaniklilikSayac++;
+           
+            
+        }
 
+        if (sayac == saydir) {
+            yeniDuzen();
         }
         if(dayaniklilikSayac==5){
             logger.info("KAZANAN: "+bilgisayar.getOyuncuAdi());
             jLabel20.setText("KAZANAN: "+bilgisayar.getOyuncuAdi());
 
-        }
-        if (sayac == saydir) {
-            yeniDuzen();
         }
         if(oyun.sayac==5){
             jLabel20.setText(oyun.oyunSonu);
@@ -661,6 +687,7 @@ public class Karsilasma extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        karistir();
         System.out.println("++++++++++++++++++++++++++++++");
         System.out.println(saydir);
         System.out.println("++++++++++++++++++++++++++++++");
@@ -669,6 +696,16 @@ public class Karsilasma extends javax.swing.JFrame {
         sayac++;
         System.out.println(sayac + "gr");
         jButton3.setEnabled(false);
+        if(bilgisayarObjeleri.size()==0){
+            logger.info("KAZANAN: "+kullanici.getOyuncuAdi());
+            jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
+            jButton1.setEnabled(false);
+            jButton2.setEnabled(false);
+            jButton3.setEnabled(false);
+            jButton4.setEnabled(false);
+            jButton5.setEnabled(false);
+
+        }
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + deneme.get(2).getName() + ".png")));
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + bilgisayarObjeleri.get(oyun.ran).getName() + ".png")));
         oyun.index = 2;
@@ -716,8 +753,11 @@ public class Karsilasma extends javax.swing.JFrame {
         }
         if(deneme.get(2).getDayaniklilik()<=0){
             dayaniklilikSayac++;
-
+            
+            
         }
+        
+
         if (sayac == saydir) {
             yeniDuzen();
         }
@@ -740,6 +780,7 @@ public class Karsilasma extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        karistir();
         System.out.println("++++++++++++++++++++++++++++++");
         System.out.println(saydir);
         System.out.println("++++++++++++++++++++++++++++++");
@@ -750,6 +791,16 @@ public class Karsilasma extends javax.swing.JFrame {
         jButton2.setEnabled(false);
 
         System.out.println();
+        if(bilgisayarObjeleri.size()==0){
+            logger.info("KAZANAN: "+kullanici.getOyuncuAdi());
+            jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
+            jButton1.setEnabled(false);
+            jButton2.setEnabled(false);
+            jButton3.setEnabled(false);
+            jButton4.setEnabled(false);
+            jButton5.setEnabled(false);
+
+        }
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + deneme.get(1).getName() + ".png")));
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + bilgisayarObjeleri.get(oyun.ran).getName() + ".png")));
@@ -799,8 +850,10 @@ public class Karsilasma extends javax.swing.JFrame {
         }
         if(deneme.get(1).getDayaniklilik()<=0){
             dayaniklilikSayac++;
-
+            
+           
         }
+
         if (sayac == saydir) {
             yeniDuzen();
 
@@ -824,6 +877,7 @@ public class Karsilasma extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        karistir();
         System.out.println("++++++++++++++++++++++++++++++");
         System.out.println(saydir);
         System.out.println("++++++++++++++++++++++++++++++");
@@ -833,7 +887,16 @@ public class Karsilasma extends javax.swing.JFrame {
 
         System.out.println(sayac + "gr");
         jButton1.setEnabled(false);
+        if(bilgisayarObjeleri.size()==0){
+            logger.info("KAZANAN: "+kullanici.getOyuncuAdi());
+            jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
+            jButton1.setEnabled(false);
+            jButton2.setEnabled(false);
+            jButton3.setEnabled(false);
+            jButton4.setEnabled(false);
+            jButton5.setEnabled(false);
 
+        }
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + deneme.get(0).getName() + ".png")));
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + bilgisayarObjeleri.get(oyun.ran).getName() + ".png")));
         oyun.index = 0;
@@ -868,27 +931,27 @@ public class Karsilasma extends javax.swing.JFrame {
         jLabel15.setText(info);
         jProgressBar2.setValue(progres);
         //kazananKontrol(0);
+
         oyun.ran++;
         karistir();
-        if(bilgisayarObjeleri.size()==0){
-            logger.info("KAZANAN: "+kullanici.getOyuncuAdi());
-            jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
 
-        }
+
         if(deneme.get(0).getDayaniklilik()<=0){
             dayaniklilikSayac++;
-            jButton1.setEnabled(false);
-            jButton2.setEnabled(false);
-            jButton3.setEnabled(false);
-            jButton4.setEnabled(false);
-            jButton5.setEnabled(false);
+            
         }
+        
         if(dayaniklilikSayac==5){
             logger.info("KAZANAN: "+bilgisayar.getOyuncuAdi());
             jLabel20.setText("KAZANAN: "+bilgisayar.getOyuncuAdi());
         }
         if (sayac == saydir) {
             yeniDuzen();
+
+        }
+        if(bilgisayarObjeleri.size()==0){
+            logger.info("KAZANAN: "+kullanici.getOyuncuAdi());
+            jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
 
         }
         if(oyun.sayac==5){
@@ -993,20 +1056,43 @@ public class Karsilasma extends javax.swing.JFrame {
         if (oyun.ran >= bilgisayarObjeleri.size()&&bilgisayarObjeleri.size()!=0) {
 
             Collections.shuffle(bilgisayarObjeleri);
-            sayac=0;
+            //sayac=0;
             oyun.ran = 0;
 
         }
-        if (bilgisayarObjeleri.get(oyun.ran).getDayaniklilik()<=0){
-            sayac++;
+        if(bilgisayarObjeleri.size()==0){
+            logger.info("KAZANAN: "+kullanici.getOyuncuAdi());
+            jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
+            jButton1.setEnabled(false);
+            jButton2.setEnabled(false);
+            jButton3.setEnabled(false);
+            jButton4.setEnabled(false);
+            jButton5.setEnabled(false);
+        }
+
+        else if (bilgisayarObjeleri.get(oyun.ran).getDayaniklilik()<=0){
+            //sayac++;
             logger.info(bilgisayarObjeleri.get(oyun.ran).getName()+" nesnesi silindi.("+bilgisayar.getOyuncuAdi()+")");
             bilgisayarObjeleri.remove(oyun.ran);
+
         }
+        if(bilgisayarObjeleri.size()==0){
+            logger.info("KAZANAN: "+kullanici.getOyuncuAdi());
+            jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
+            jButton1.setEnabled(false);
+            jButton2.setEnabled(false);
+            jButton3.setEnabled(false);
+            jButton4.setEnabled(false);
+            jButton5.setEnabled(false);
+        }
+        for (int i = 0; i < bilgisayarObjeleri.size(); i++) {
+            logger.info("kalan nesneler:"+bilgisayarObjeleri.get(i).getClass().getName());
+        }
+
     }
     void yeniDuzen() {
         saydir=deneme.size()-dayaniklilikSayac;
         sayac = 0;
-
        // Collections.shuffle(bilgisayarObjeleri);
         System.out.println(bilgisayarObjeleri);
 
