@@ -1,22 +1,378 @@
-Kas 20, 2022 10:43:59 ÖS Oyun.Oyun init
+Kas 23, 2022 2:39:41 ÖÖ Oyun.Oyun init
 INFO: Logger Initialized
-Kas 20, 2022 10:44:00 ÖS Oyun.Oyun main
+Kas 23, 2022 2:39:41 ÖÖ Oyun.Oyun main
+INFO: BILGISAYAR2 tas nesnesi oluşturdu
+Kas 23, 2022 2:39:41 ÖÖ Oyun.Oyun main
 INFO: BILGISAYAR2 kagit nesnesi oluşturdu
-Kas 20, 2022 10:44:00 ÖS Oyun.Oyun main
-INFO: BILGISAYAR2 tas nesnesi oluşturdu
-Kas 20, 2022 10:44:00 ÖS Oyun.Oyun main
+Kas 23, 2022 2:39:41 ÖÖ Oyun.Oyun main
 INFO: BILGISAYAR2 makas nesnesi oluşturdu
-Kas 20, 2022 10:44:00 ÖS Oyun.Oyun main
-INFO: BILGISAYAR2 tas nesnesi oluşturdu
-Kas 20, 2022 10:44:00 ÖS Oyun.Oyun main
+Kas 23, 2022 2:39:41 ÖÖ Oyun.Oyun main
 INFO: BILGISAYAR2 makas nesnesi oluşturdu
-Kas 20, 2022 10:44:01 ÖS Oyun.BilgisayarFrame islemler
-INFO: BILGISAYAR1 makas nesnesi oluşturdu.
-Kas 20, 2022 10:44:01 ÖS Oyun.BilgisayarFrame islemler
-INFO: BILGISAYAR1 kagit nesnesi oluşturdu.
-Kas 20, 2022 10:44:01 ÖS Oyun.BilgisayarFrame islemler
-INFO: BILGISAYAR1 kagit nesnesi oluşturdu.
-Kas 20, 2022 10:44:01 ÖS Oyun.BilgisayarFrame islemler
-INFO: BILGISAYAR1 kagit nesnesi oluşturdu.
-Kas 20, 2022 10:44:01 ÖS Oyun.BilgisayarFrame islemler
-INFO: BILGISAYAR1 makas nesnesi oluşturdu.
+Kas 23, 2022 2:39:41 ÖÖ Oyun.Oyun main
+INFO: BILGISAYAR2 makas nesnesi oluşturdu
+Kas 23, 2022 2:39:44 ÖÖ Oyun.KullaniciJFrame kontrol
+INFO: KULLANICI taş nesnesi oluşturdu.
+Kas 23, 2022 2:39:44 ÖÖ Oyun.KullaniciJFrame kontrol
+INFO: KULLANICI kağıt nesnesi oluşturdu.
+Kas 23, 2022 2:39:44 ÖÖ Oyun.KullaniciJFrame kontrol
+INFO: KULLANICI makas nesnesi oluşturdu.
+Kas 23, 2022 2:39:44 ÖÖ Oyun.KullaniciJFrame kontrol
+INFO: KULLANICI kağıt nesnesi oluşturdu.
+Kas 23, 2022 2:39:45 ÖÖ Oyun.KullaniciJFrame kontrol
+INFO: KULLANICI taş nesnesi oluşturdu.
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Tas
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Kagit
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Oyun kontrol
+INFO: ///////////////////////El BAŞI//////////////////////////
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Oyun kontrol
+INFO: 1.oyuncunun etkisi:5.0
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Oyun kontrol
+INFO: 2.oyuncunun etki puanı:5.0
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Oyun kontrol
+INFO: Bu el berabere.
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Oyun kontrol
+INFO: 1.oyuncunun tas nesnesinin dayanıklılığı: 15.0
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Oyun kontrol
+INFO: 2.oyuncunun tas nesnesinin dayanıklılığı: 15.0
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Oyun kontrol
+INFO: ///////////////////////El SONU//////////////////////////
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Tas
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Kagit
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Tas
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Kagit
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Oyun kontrol
+INFO: ///////////////////////El BAŞI//////////////////////////
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Oyun kontrol
+INFO: 1.oyuncunun etkisi:5.0
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Oyun kontrol
+INFO: 2.oyuncunun etki puanı:5.0
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Oyun kontrol
+INFO: Bu el berabere.
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Oyun kontrol
+INFO: 1.oyuncunun kagit nesnesinin dayanıklılığı: 15.0
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Oyun kontrol
+INFO: 2.oyuncunun kagit nesnesinin dayanıklılığı: 15.0
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Oyun kontrol
+INFO: ///////////////////////El SONU//////////////////////////
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Tas
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Kagit
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:57 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Tas
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Kagit
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Oyun kontrol
+INFO: ///////////////////////El BAŞI//////////////////////////
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Oyun kontrol
+INFO: 1.oyuncunun etkisi:5.0
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Oyun kontrol
+INFO: 2.oyuncunun etki puanı:5.0
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Oyun kontrol
+INFO: Bu el berabere.
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Oyun kontrol
+INFO: 1.oyuncunun makas nesnesinin dayanıklılığı: 15.0
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Oyun kontrol
+INFO: 2.oyuncunun makas nesnesinin dayanıklılığı: 15.0
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Oyun kontrol
+INFO: ///////////////////////El SONU//////////////////////////
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Tas
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Kagit
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Tas
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Kagit
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Oyun kontrol
+INFO: ///////////////////////El BAŞI//////////////////////////
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Oyun kontrol
+INFO: 1.oyuncunun etkisi:1.25
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Oyun kontrol
+INFO: 2.oyuncunun etki puanı:5.0
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Oyun kontrol
+INFO: Bu eli 2.oyuncu kazandı.
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Oyun kontrol
+INFO: makas nesnesinin seviye puanı:0
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Oyun kontrol
+INFO: 1.oyuncunun kagit nesnesinin dayanıklılığı: 15.0
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Oyun kontrol
+INFO: 2.oyuncunun makas nesnesinin dayanıklılığı: 18.75
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Oyun kontrol
+INFO: ///////////////////////El SONU//////////////////////////
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Tas
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Kagit
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Tas
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Kagit
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Oyun kontrol
+INFO: ///////////////////////El BAŞI//////////////////////////
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Oyun kontrol
+INFO: 1.oyuncunun etkisi:5.0
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Oyun kontrol
+INFO: 2.oyuncunun etki puanı:1.25
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Oyun kontrol
+INFO: Bu eli 1.oyuncu kazandı.
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Oyun kontrol
+INFO: tas nesnesinin seviye puanı:20
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Oyun kontrol
+INFO: 1.oyuncunun tas nesnesinin dayanıklılığı: 18.75
+Kas 23, 2022 2:39:58 ÖÖ Oyun.Oyun kontrol
+INFO: 2.oyuncunun makas nesnesinin dayanıklılığı: 15.0
+Kas 23, 2022 2:39:59 ÖÖ Oyun.Oyun kontrol
+INFO: ///////////////////////El SONU//////////////////////////
+Kas 23, 2022 2:39:59 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Kagit
+Kas 23, 2022 2:39:59 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Tas
+Kas 23, 2022 2:39:59 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:59 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:59 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:59 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Kagit
+Kas 23, 2022 2:39:59 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Tas
+Kas 23, 2022 2:39:59 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:59 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:59 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:59 ÖÖ Oyun.Oyun kontrol
+INFO: ///////////////////////El BAŞI//////////////////////////
+Kas 23, 2022 2:39:59 ÖÖ Oyun.Oyun kontrol
+INFO: 1.oyuncunun etkisi:1.25
+Kas 23, 2022 2:39:59 ÖÖ Oyun.Oyun kontrol
+INFO: 2.oyuncunun etki puanı:5.0
+Kas 23, 2022 2:39:59 ÖÖ Oyun.Oyun kontrol
+INFO: Bu eli 2.oyuncu kazandı.
+Kas 23, 2022 2:39:59 ÖÖ Oyun.Oyun kontrol
+INFO: kagit nesnesinin seviye puanı:20
+Kas 23, 2022 2:39:59 ÖÖ Oyun.Oyun kontrol
+INFO: 1.oyuncunun tas nesnesinin dayanıklılığı: 13.75
+Kas 23, 2022 2:39:59 ÖÖ Oyun.Oyun kontrol
+INFO: 2.oyuncunun kagit nesnesinin dayanıklılığı: 13.75
+Kas 23, 2022 2:39:59 ÖÖ Oyun.Oyun kontrol
+INFO: ///////////////////////El SONU//////////////////////////
+Kas 23, 2022 2:39:59 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Kagit
+Kas 23, 2022 2:39:59 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Tas
+Kas 23, 2022 2:39:59 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:59 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:39:59 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Kagit
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Tas
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Oyun kontrol
+INFO: ///////////////////////El BAŞI//////////////////////////
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Oyun kontrol
+INFO: 1.oyuncunun etkisi:5.0
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Oyun kontrol
+INFO: 2.oyuncunun etki puanı:1.25
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Oyun kontrol
+INFO: Bu eli 1.oyuncu kazandı.
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Oyun kontrol
+INFO: kagit nesnesinin seviye puanı:20
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Oyun kontrol
+INFO: 1.oyuncunun kagit nesnesinin dayanıklılığı: 13.75
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Oyun kontrol
+INFO: 2.oyuncunun tas nesnesinin dayanıklılığı: 10.0
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Oyun kontrol
+INFO: ///////////////////////El SONU//////////////////////////
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Kagit
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Tas
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Kagit
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Tas
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Oyun kontrol
+INFO: ///////////////////////El BAŞI//////////////////////////
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Oyun kontrol
+INFO: 1.oyuncunun etkisi:5.0
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Oyun kontrol
+INFO: 2.oyuncunun etki puanı:5.0
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Oyun kontrol
+INFO: Bu el berabere.
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Oyun kontrol
+INFO: 1.oyuncunun makas nesnesinin dayanıklılığı: 10.0
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Oyun kontrol
+INFO: 2.oyuncunun makas nesnesinin dayanıklılığı: 10.0
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Oyun kontrol
+INFO: ///////////////////////El SONU//////////////////////////
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Kagit
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Tas
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:40:00 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:40:01 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Kagit
+Kas 23, 2022 2:40:01 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Tas
+Kas 23, 2022 2:40:01 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:40:01 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:40:01 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:40:01 ÖÖ Oyun.Oyun kontrol
+INFO: ///////////////////////El BAŞI//////////////////////////
+Kas 23, 2022 2:40:01 ÖÖ Oyun.Oyun kontrol
+INFO: 1.oyuncunun etkisi:1.25
+Kas 23, 2022 2:40:01 ÖÖ Oyun.Oyun kontrol
+INFO: 2.oyuncunun etki puanı:5.0
+Kas 23, 2022 2:40:01 ÖÖ Oyun.Oyun kontrol
+INFO: Bu eli 2.oyuncu kazandı.
+Kas 23, 2022 2:40:01 ÖÖ Oyun.Oyun kontrol
+INFO: makas nesnesinin seviye puanı:0
+Kas 23, 2022 2:40:01 ÖÖ Oyun.Oyun kontrol
+INFO: Makas nesnesi Usta Makasa dönüştü.
+Kas 23, 2022 2:40:01 ÖÖ Oyun.Oyun kontrol
+INFO: 1.oyuncunun kagit nesnesinin dayanıklılığı: 10.0
+Kas 23, 2022 2:40:01 ÖÖ Oyun.Oyun kontrol
+INFO: 2.oyuncunun makas nesnesinin dayanıklılığı: 17.5
+Kas 23, 2022 2:40:01 ÖÖ Oyun.Oyun kontrol
+INFO: ///////////////////////El SONU//////////////////////////
+Kas 23, 2022 2:40:01 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Kagit
+Kas 23, 2022 2:40:01 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Tas
+Kas 23, 2022 2:40:01 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:40:01 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.UstaMakas
+Kas 23, 2022 2:40:01 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:40:02 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Kagit
+Kas 23, 2022 2:40:02 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Tas
+Kas 23, 2022 2:40:02 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:40:02 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.UstaMakas
+Kas 23, 2022 2:40:02 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:40:02 ÖÖ Oyun.Oyun kontrol
+INFO: ///////////////////////El BAŞI//////////////////////////
+Kas 23, 2022 2:40:02 ÖÖ Oyun.Oyun kontrol
+INFO: 1.oyuncunun etkisi:5.0
+Kas 23, 2022 2:40:02 ÖÖ Oyun.Oyun kontrol
+INFO: 2.oyuncunun etki puanı:1.25
+Kas 23, 2022 2:40:02 ÖÖ Oyun.Oyun kontrol
+INFO: Bu eli 1.oyuncu kazandı.
+Kas 23, 2022 2:40:02 ÖÖ Oyun.Oyun kontrol
+INFO: tas nesnesinin seviye puanı:20
+Kas 23, 2022 2:40:02 ÖÖ Oyun.Oyun kontrol
+INFO: 1.oyuncunun tas nesnesinin dayanıklılığı: 13.75
+Kas 23, 2022 2:40:02 ÖÖ Oyun.Oyun kontrol
+INFO: 2.oyuncunun makas nesnesinin dayanıklılığı: 10.0
+Kas 23, 2022 2:40:02 ÖÖ Oyun.Oyun kontrol
+INFO: ///////////////////////El SONU//////////////////////////
+Kas 23, 2022 2:40:02 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Tas
+Kas 23, 2022 2:40:02 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:40:02 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Kagit
+Kas 23, 2022 2:40:02 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.UstaMakas
+Kas 23, 2022 2:40:02 ÖÖ Oyun.Karsilasma karistir
+INFO: kalan nesneler:Oyun.Makas
+Kas 23, 2022 2:40:02 ÖÖ Oyun.Karsilasma hamleSonu
+INFO: BERABERE

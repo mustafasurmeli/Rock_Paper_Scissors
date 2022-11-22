@@ -80,18 +80,15 @@ public class Oyun {
     void kontrol() {
         logger.info("///////////////////////El BAŞI//////////////////////////");
         saydir=bilgisayarObjeleri.size()-1;
-        
+        if(bilgisayarObjeleri.size()==0){
+            System.out.println("KAZANAN: OYUNCU1");
+        }if (objects.size()==0){
+            System.out.println("KAZANAN: OYUNCU2");
+        }else{
 
-
-        /*if (bilgisayarObjeleri.get(ran).getDayaniklilik()<=0){
-            sayac++;
-            ran++;
-        }*/
-
-        if (bilgisayarObjeleri.size()!=0||objects.size()!=0) {
-
-
+            if (bilgisayarObjeleri.size()!=0)
             nesne2Etki = bilgisayarObjeleri.get(ran).etkiHesapla();
+            if (objects.size()!=0)
             nesne1Etki = objects.get(index).etkiHesapla();
 
             int seviyeGuncel = 0;
@@ -191,7 +188,7 @@ public class Oyun {
             bilgisayarObjeleri.get(ran).setDayaniklilik(bilgisayarObjeleri.get(ran).getDayaniklilik() - nesne1Etki);
             System.out.println(objects.get(index).howMuch);
             System.out.println(bilgisayarObjeleri.get(ran).howMuch);
-            dayanguı = bilgisayarObjeleri.get(ran).durumGuncelle();
+            dayanguı = bilgisayarObjeleri.get(ran).getDayaniklilik();
 
             classgui = bilgisayarObjeleri.get(ran).getClass().getName();
 

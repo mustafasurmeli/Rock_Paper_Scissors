@@ -13,11 +13,10 @@ import java.util.Collections;
 import javax.swing.JOptionPane;
 
 /**
- *
  * @author mustafa
  */
 public class Karsilasma extends javax.swing.JFrame {
-    int dayaniklilikSayac=0;
+    int dayaniklilikSayac = 0;
     private String ad;
     int hamle;
     int hamleSayac = 0;
@@ -29,6 +28,7 @@ public class Karsilasma extends javax.swing.JFrame {
     public void setAd(String ad) {
         this.ad = ad;
     }
+
     Kullanici kullanici = new Kullanici();
     ArrayList<Nesneler> deneme = new ArrayList<>();
     int saydir;
@@ -41,6 +41,7 @@ public class Karsilasma extends javax.swing.JFrame {
     public void setIcon(String[] icon) {
         this.icon = icon;
     }
+
     private String[] secim = new String[5];
 
     public String[] getSecim() {
@@ -63,6 +64,7 @@ public class Karsilasma extends javax.swing.JFrame {
 
         initComponents();
     }
+
     Oyun oyun = new Oyun();
     // Frame frame = new Frame();
 
@@ -80,27 +82,27 @@ public class Karsilasma extends javax.swing.JFrame {
                 case 1:
                     jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + icon[sayc2] + ".png")));
 
-                    jProgressBar1.setValue((int) deneme.get(0).getDayaniklilik() * 100);
+                    jProgressBar1.setValue((int) deneme.get(0).durumGuncelle() * 100);
                     sayc2++;
                     break;
                 case 2:
                     jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + icon[sayc2] + ".png")));
-                    jProgressBar3.setValue((int) deneme.get(1).getDayaniklilik() * 100);
+                    jProgressBar3.setValue((int) deneme.get(1).durumGuncelle() * 100);
                     sayc2++;
                     break;
                 case 3:
                     jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + icon[sayc2] + ".png")));
-                    jProgressBar5.setValue((int) deneme.get(2).getDayaniklilik() * 100);
+                    jProgressBar5.setValue((int) deneme.get(2).durumGuncelle() * 100);
                     sayc2++;
                     break;
                 case 4:
                     jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + icon[sayc2] + ".png")));
-                    jProgressBar7.setValue((int) deneme.get(3).getDayaniklilik() * 100);
+                    jProgressBar7.setValue((int) deneme.get(3).durumGuncelle() * 100);
                     sayc2++;
                     break;
                 case 5:
                     jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + icon[sayc2] + ".png")));
-                    jProgressBar9.setValue((int) deneme.get(4).getDayaniklilik() * 100);
+                    jProgressBar9.setValue((int) deneme.get(4).durumGuncelle() * 100);
                     sayc2++;
                     jButton1.setBackground(Color.LIGHT_GRAY);
                     jButton2.setBackground(Color.LIGHT_GRAY);
@@ -167,12 +169,12 @@ public class Karsilasma extends javax.swing.JFrame {
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+                jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 100, Short.MAX_VALUE)
         );
         jDesktopPane1Layout.setVerticalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+                jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 100, Short.MAX_VALUE)
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -292,18 +294,18 @@ public class Karsilasma extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
-                .addContainerGap())
+                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
+                                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTextField3)
-                .addContainerGap())
+                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jTextField3)
+                                .addContainerGap())
         );
 
         jLabel18.setFont(new java.awt.Font("Segoe UI Historic", 1, 96));
@@ -320,175 +322,175 @@ public class Karsilasma extends javax.swing.JFrame {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGap(78, 78, 78)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel5)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jProgressBar2, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel7)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGap(41, 41, 41)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel11)
-                                        .addGap(18, 18, Short.MAX_VALUE)
-                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, Short.MAX_VALUE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(56, 56, 56)
-                        .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jProgressBar3, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jProgressBar5, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
-                                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jProgressBar4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
-                                    .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addGap(18, 18, 18)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jProgressBar6, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                    .addComponent(jLabel10)
-                                    .addGap(59, 59, 59)))))
-                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jProgressBar7, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jProgressBar9, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jProgressBar8, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jProgressBar10, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE))))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jProgressBar5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jProgressBar9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jProgressBar7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jProgressBar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jProgressBar6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jProgressBar8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jProgressBar10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jProgressBar4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jProgressBar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(jLabel3)
+                                                        .addComponent(jLabel2))
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                                                .addGap(78, 78, 78)
+                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                        .addGroup(layout.createSequentialGroup()
+                                                                                .addComponent(jLabel5)
+                                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                                                .addComponent(jProgressBar2, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                        .addGroup(layout.createSequentialGroup()
+                                                                                .addComponent(jLabel7)
+                                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                                                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                                                .addGap(41, 41, 41)
+                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                        .addGroup(layout.createSequentialGroup()
+                                                                                .addComponent(jLabel11)
+                                                                                .addGap(18, 18, Short.MAX_VALUE)
+                                                                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                        .addGroup(layout.createSequentialGroup()
+                                                                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                .addGap(0, 0, Short.MAX_VALUE))
+                                                                        .addGroup(layout.createSequentialGroup()
+                                                                                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                                                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                                                .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(56, 56, 56)
+                                                .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(62, 62, 62)
-                                .addComponent(jLabel10)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel19, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel20, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE))))
-                .addContainerGap())
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                .addGroup(layout.createSequentialGroup()
+                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addComponent(jProgressBar3, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                .addComponent(jProgressBar5, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addGroup(layout.createSequentialGroup()
+                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                                        .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
+                                                                        .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                                        .addComponent(jProgressBar4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
+                                                                        .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                                        .addGap(18, 18, 18)
+                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                .addComponent(jProgressBar6, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                                        .addComponent(jLabel10)
+                                                                        .addGap(59, 59, 59)))))
+                                        .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jProgressBar7, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jProgressBar9, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jProgressBar8, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jProgressBar10, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                        .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE))))
+                                .addContainerGap())
+        );
+        layout.setVerticalGroup(
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(jProgressBar5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(jLabel7)
+                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                                .addComponent(jProgressBar9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addComponent(jProgressBar7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addComponent(jProgressBar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                        .addComponent(jProgressBar6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(jProgressBar8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(jProgressBar10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(jProgressBar4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(jProgressBar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(jLabel5)))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(18, 18, 18)
+                                                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGap(0, 0, Short.MAX_VALUE)))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGap(18, 18, 18)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                .addGap(18, 18, 18)
+                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                        .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addGap(62, 62, 62)
+                                                                .addComponent(jLabel10)))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGap(0, 0, Short.MAX_VALUE))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                        .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(jLabel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(jLabel19, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(jLabel20, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE))))
+                                .addContainerGap())
         );
 
         pack();
@@ -506,17 +508,16 @@ public class Karsilasma extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+
         karistir();
-        System.out.println("++++++++++++++++++++++++++++++");
-        System.out.println(saydir);
-        System.out.println("++++++++++++++++++++++++++++++");
+
         hamleSayac++;
         jLabel18.setText(String.valueOf(hamleSayac));
         sayac++;
         jButton5.setEnabled(false);
-        if(bilgisayarObjeleri.size()==0){
-            logger.info("KAZANAN: "+kullanici.getOyuncuAdi());
-            jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
+        if (bilgisayarObjeleri.size() == 0) {
+            logger.info("KAZANAN: " + kullanici.getOyuncuAdi());
+            jLabel20.setText("KAZANAN: " + kullanici.getOyuncuAdi());
             jButton1.setEnabled(false);
             jButton2.setEnabled(false);
             jButton3.setEnabled(false);
@@ -524,8 +525,10 @@ public class Karsilasma extends javax.swing.JFrame {
             jButton5.setEnabled(false);
 
         }
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + deneme.get(4).getName() + ".png")));
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + bilgisayarObjeleri.get(oyun.ran).getName() + ".png")));
+        if (deneme.size() != 0)
+            jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + deneme.get(4).getName() + ".png")));
+        if (bilgisayarObjeleri.size() != 0)
+            jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + bilgisayarObjeleri.get(oyun.ran).getName() + ".png")));
         oyun.index = 4;
         oyun.nesne1 = icon[4];
 
@@ -535,14 +538,7 @@ public class Karsilasma extends javax.swing.JFrame {
         kazananKontrol(4);
         oyun.kontrol();
 
-        System.out.println(oyun.objects);
-        System.out.println("////////////////////////////");
-        System.out.println(deneme);
-        System.out.println("---------------------");
-        System.out.println(bilgisayar.getKarsilasmaNesnesi());
-        System.out.println("++++++++++++++++++++++");
-        System.out.println(bilgisayar.bilObjects);
-        System.out.println("++++++++++++++++++++++");
+
         int dayan = (int) (deneme.get(4).getDayaniklilik() * 100);
         jProgressBar9.setValue(dayan);
         int progres = deneme.get(4).getSeviyePuani();
@@ -565,29 +561,29 @@ public class Karsilasma extends javax.swing.JFrame {
         oyun.ran++;
 
         karistir();
-        if(bilgisayarObjeleri.size()==0){
-            logger.info("KAZANAN: "+kullanici.getOyuncuAdi());
-            jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
+        if (bilgisayarObjeleri.size() == 0) {
+            logger.info("KAZANAN: " + kullanici.getOyuncuAdi());
+            jLabel20.setText("KAZANAN: " + kullanici.getOyuncuAdi());
             jButton1.setEnabled(false);
             jButton2.setEnabled(false);
             jButton3.setEnabled(false);
             jButton4.setEnabled(false);
             jButton5.setEnabled(false);
         }
-        if(deneme.get(4).getDayaniklilik()<=0){
+        if (deneme.get(4).getDayaniklilik() <= 0) {
             dayaniklilikSayac++;
-            
+
         }
 
         if (sayac == saydir) {
             yeniDuzen();
-            
+
         }
-        if(dayaniklilikSayac==5){
-            logger.info("KAZANAN: "+bilgisayar.getOyuncuAdi());
-            jLabel20.setText("KAZANAN: "+bilgisayar.getOyuncuAdi());
+        if (dayaniklilikSayac == 5) {
+            logger.info("KAZANAN: " + bilgisayar.getOyuncuAdi());
+            jLabel20.setText("KAZANAN: " + bilgisayar.getOyuncuAdi());
         }
-        if(oyun.sayac==5){
+        if (oyun.sayac == 5) {
             jLabel20.setText(oyun.oyunSonu);
             jButton1.setEnabled(false);
             jButton2.setEnabled(false);
@@ -595,24 +591,22 @@ public class Karsilasma extends javax.swing.JFrame {
             jButton4.setEnabled(false);
             jButton5.setEnabled(false);
         }
-        if(hamleSayac==hamle){
+        if (hamleSayac == hamle) {
             hamleSonu();
         }
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         karistir();
-        System.out.println("++++++++++++++++++++++++++++++");
-        System.out.println(saydir);
-        System.out.println("++++++++++++++++++++++++++++++");
+
         hamleSayac++;
         jLabel18.setText(String.valueOf(hamleSayac));
         sayac++;
         System.out.println(sayac + "gr");
         jButton4.setEnabled(false);
-        if(bilgisayarObjeleri.size()==0){
-            logger.info("KAZANAN: "+kullanici.getOyuncuAdi());
-            jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
+        if (bilgisayarObjeleri.size() == 0) {
+            logger.info("KAZANAN: " + kullanici.getOyuncuAdi());
+            jLabel20.setText("KAZANAN: " + kullanici.getOyuncuAdi());
             jButton1.setEnabled(false);
             jButton2.setEnabled(false);
             jButton3.setEnabled(false);
@@ -620,7 +614,9 @@ public class Karsilasma extends javax.swing.JFrame {
             jButton5.setEnabled(false);
 
         }
+        if (deneme.size()!=0)
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + deneme.get(3).getName() + ".png")));
+        if (bilgisayarObjeleri.size()!=0)
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + bilgisayarObjeleri.get(oyun.ran).getName() + ".png")));
         oyun.index = 3;
         oyun.nesne1 = icon[3];
@@ -650,30 +646,30 @@ public class Karsilasma extends javax.swing.JFrame {
         //kazananKontrol(3);
         oyun.ran++;
         karistir();
-        if(bilgisayarObjeleri.size()==0){
-            logger.info("KAZANAN: "+kullanici.getOyuncuAdi());
-            jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
+        if (bilgisayarObjeleri.size() == 0) {
+            logger.info("KAZANAN: " + kullanici.getOyuncuAdi());
+            jLabel20.setText("KAZANAN: " + kullanici.getOyuncuAdi());
             jButton1.setEnabled(false);
             jButton2.setEnabled(false);
             jButton3.setEnabled(false);
             jButton4.setEnabled(false);
             jButton5.setEnabled(false);
         }
-        if(deneme.get(3).getDayaniklilik()<=0){
+        if (deneme.get(3).getDayaniklilik() <= 0) {
             dayaniklilikSayac++;
-           
-            
+
+
         }
 
         if (sayac == saydir) {
             yeniDuzen();
         }
-        if(dayaniklilikSayac==5){
-            logger.info("KAZANAN: "+bilgisayar.getOyuncuAdi());
-            jLabel20.setText("KAZANAN: "+bilgisayar.getOyuncuAdi());
+        if (dayaniklilikSayac == 5) {
+            logger.info("KAZANAN: " + bilgisayar.getOyuncuAdi());
+            jLabel20.setText("KAZANAN: " + bilgisayar.getOyuncuAdi());
 
         }
-        if(oyun.sayac==5){
+        if (oyun.sayac == 5) {
             jLabel20.setText(oyun.oyunSonu);
             jButton1.setEnabled(false);
             jButton2.setEnabled(false);
@@ -681,24 +677,22 @@ public class Karsilasma extends javax.swing.JFrame {
             jButton4.setEnabled(false);
             jButton5.setEnabled(false);
         }
-        if(hamleSayac==hamle){
-           hamleSonu();
+        if (hamleSayac == hamle) {
+            hamleSonu();
         }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         karistir();
-        System.out.println("++++++++++++++++++++++++++++++");
-        System.out.println(saydir);
-        System.out.println("++++++++++++++++++++++++++++++");
+
         hamleSayac++;
         jLabel18.setText(String.valueOf(hamleSayac));
         sayac++;
         System.out.println(sayac + "gr");
         jButton3.setEnabled(false);
-        if(bilgisayarObjeleri.size()==0){
-            logger.info("KAZANAN: "+kullanici.getOyuncuAdi());
-            jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
+        if (bilgisayarObjeleri.size() == 0) {
+            logger.info("KAZANAN: " + kullanici.getOyuncuAdi());
+            jLabel20.setText("KAZANAN: " + kullanici.getOyuncuAdi());
             jButton1.setEnabled(false);
             jButton2.setEnabled(false);
             jButton3.setEnabled(false);
@@ -706,8 +700,10 @@ public class Karsilasma extends javax.swing.JFrame {
             jButton5.setEnabled(false);
 
         }
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + deneme.get(2).getName() + ".png")));
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + bilgisayarObjeleri.get(oyun.ran).getName() + ".png")));
+        if (deneme.size() != 0)
+            jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + deneme.get(2).getName() + ".png")));
+        if (bilgisayarObjeleri.size() != 0)
+            jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + bilgisayarObjeleri.get(oyun.ran).getName() + ".png")));
         oyun.index = 2;
         oyun.nesne1 = icon[2];
         oyun.objects = deneme;
@@ -742,31 +738,31 @@ public class Karsilasma extends javax.swing.JFrame {
         //kazananKontrol(2);
         oyun.ran++;
         karistir();
-        if(bilgisayarObjeleri.size()==0){
-            logger.info("KAZANAN: "+kullanici.getOyuncuAdi());
-            jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
+        if (bilgisayarObjeleri.size() == 0) {
+            logger.info("KAZANAN: " + kullanici.getOyuncuAdi());
+            jLabel20.setText("KAZANAN: " + kullanici.getOyuncuAdi());
             jButton1.setEnabled(false);
             jButton2.setEnabled(false);
             jButton3.setEnabled(false);
             jButton4.setEnabled(false);
             jButton5.setEnabled(false);
         }
-        if(deneme.get(2).getDayaniklilik()<=0){
+        if (deneme.get(2).getDayaniklilik() <= 0) {
             dayaniklilikSayac++;
-            
-            
+
+
         }
-        
+
 
         if (sayac == saydir) {
             yeniDuzen();
         }
-        if(dayaniklilikSayac==5){
-            logger.info("KAZANAN: "+bilgisayar.getOyuncuAdi());
-            jLabel20.setText("KAZANAN: "+bilgisayar.getOyuncuAdi());
+        if (dayaniklilikSayac == 5) {
+            logger.info("KAZANAN: " + bilgisayar.getOyuncuAdi());
+            jLabel20.setText("KAZANAN: " + bilgisayar.getOyuncuAdi());
 
         }
-        if(oyun.sayac==5){
+        if (oyun.sayac == 5) {
             jLabel20.setText(oyun.oyunSonu);
             jButton1.setEnabled(false);
             jButton2.setEnabled(false);
@@ -774,16 +770,14 @@ public class Karsilasma extends javax.swing.JFrame {
             jButton4.setEnabled(false);
             jButton5.setEnabled(false);
         }
-        if(hamleSayac==hamle){
-           hamleSonu();
+        if (hamleSayac == hamle) {
+            hamleSonu();
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         karistir();
-        System.out.println("++++++++++++++++++++++++++++++");
-        System.out.println(saydir);
-        System.out.println("++++++++++++++++++++++++++++++");
+
         hamleSayac++;
         jLabel18.setText(String.valueOf(hamleSayac));
         sayac++;
@@ -791,9 +785,9 @@ public class Karsilasma extends javax.swing.JFrame {
         jButton2.setEnabled(false);
 
         System.out.println();
-        if(bilgisayarObjeleri.size()==0){
-            logger.info("KAZANAN: "+kullanici.getOyuncuAdi());
-            jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
+        if (bilgisayarObjeleri.size() == 0) {
+            logger.info("KAZANAN: " + kullanici.getOyuncuAdi());
+            jLabel20.setText("KAZANAN: " + kullanici.getOyuncuAdi());
             jButton1.setEnabled(false);
             jButton2.setEnabled(false);
             jButton3.setEnabled(false);
@@ -801,9 +795,10 @@ public class Karsilasma extends javax.swing.JFrame {
             jButton5.setEnabled(false);
 
         }
-
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + deneme.get(1).getName() + ".png")));
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + bilgisayarObjeleri.get(oyun.ran).getName() + ".png")));
+        if (deneme.size() != 0)
+            jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + deneme.get(1).getName() + ".png")));
+        if (bilgisayarObjeleri.size() != 0)
+            jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + bilgisayarObjeleri.get(oyun.ran).getName() + ".png")));
 
         oyun.index = 1;
         oyun.nesne1 = icon[1];
@@ -811,14 +806,7 @@ public class Karsilasma extends javax.swing.JFrame {
         oyun.check();
         kazananKontrol(1);
         oyun.kontrol();
-        System.out.println(oyun.objects);
-        System.out.println("////////////////////////////");
-        System.out.println(deneme);
-        System.out.println("---------------------");
-        System.out.println("unal" + bilgisayar.getKarsilasmaNesnesi());
-        System.out.println("++++++++++++++++++++++");
-        System.out.println(bilgisayar.bilObjects);
-        System.out.println("++++++++++++++++++++++");
+
         int dayan = (int) (deneme.get(1).getDayaniklilik() * 100);
         jProgressBar3.setValue(dayan);
         int progres = deneme.get(1).getSeviyePuani();
@@ -839,31 +827,31 @@ public class Karsilasma extends javax.swing.JFrame {
         //kazananKontrol(1);
         oyun.ran++;
         karistir();
-        if(bilgisayarObjeleri.size()==0){
-            logger.info("KAZANAN: "+kullanici.getOyuncuAdi());
-            jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
+        if (bilgisayarObjeleri.size() == 0) {
+            logger.info("KAZANAN: " + kullanici.getOyuncuAdi());
+            jLabel20.setText("KAZANAN: " + kullanici.getOyuncuAdi());
             jButton1.setEnabled(false);
             jButton2.setEnabled(false);
             jButton3.setEnabled(false);
             jButton4.setEnabled(false);
             jButton5.setEnabled(false);
         }
-        if(deneme.get(1).getDayaniklilik()<=0){
+        if (deneme.get(1).getDayaniklilik() <= 0) {
             dayaniklilikSayac++;
-            
-           
+
+
         }
 
         if (sayac == saydir) {
             yeniDuzen();
 
         }
-        if(dayaniklilikSayac==5){
-            logger.info("KAZANAN: "+bilgisayar.getOyuncuAdi());
-            jLabel20.setText("KAZANAN: "+bilgisayar.getOyuncuAdi());
+        if (dayaniklilikSayac == 5) {
+            logger.info("KAZANAN: " + bilgisayar.getOyuncuAdi());
+            jLabel20.setText("KAZANAN: " + bilgisayar.getOyuncuAdi());
 
         }
-        if(oyun.sayac==5){
+        if (oyun.sayac == 5) {
             jLabel20.setText(oyun.oyunSonu);
             jButton1.setEnabled(false);
             jButton2.setEnabled(false);
@@ -871,48 +859,42 @@ public class Karsilasma extends javax.swing.JFrame {
             jButton4.setEnabled(false);
             jButton5.setEnabled(false);
         }
-        if(hamleSayac==hamle){
+        if (hamleSayac == hamle) {
             hamleSonu();
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         karistir();
-        System.out.println("++++++++++++++++++++++++++++++");
-        System.out.println(saydir);
-        System.out.println("++++++++++++++++++++++++++++++");
+
         hamleSayac++;
         jLabel18.setText(String.valueOf(hamleSayac));
         sayac++;
 
         System.out.println(sayac + "gr");
         jButton1.setEnabled(false);
-        if(bilgisayarObjeleri.size()==0){
-            logger.info("KAZANAN: "+kullanici.getOyuncuAdi());
-            jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
+        if (bilgisayarObjeleri.size() == 0) {
+            logger.info("KAZANAN: " + kullanici.getOyuncuAdi());
+            jLabel20.setText("KAZANAN: " + kullanici.getOyuncuAdi());
             jButton1.setEnabled(false);
             jButton2.setEnabled(false);
             jButton3.setEnabled(false);
             jButton4.setEnabled(false);
             jButton5.setEnabled(false);
 
+
         }
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + deneme.get(0).getName() + ".png")));
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + bilgisayarObjeleri.get(oyun.ran).getName() + ".png")));
+        if (deneme.size() != 0)
+            jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + deneme.get(0).getName() + ".png")));
+        if (bilgisayarObjeleri.size() != 0)
+            jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Oyun/" + bilgisayarObjeleri.get(oyun.ran).getName() + ".png")));
         oyun.index = 0;
         oyun.nesne1 = icon[0];
         oyun.objects = deneme;
         oyun.check();
         kazananKontrol(0);
         oyun.kontrol();
-        System.out.println(oyun.objects);
-        System.out.println("////////////////////////////");
-        System.out.println(deneme);
-        System.out.println("---------------------");
-        System.out.println(bilgisayar.getKarsilasmaNesnesi());
-        System.out.println("++++++++++++++++++++++");
-        System.out.println(bilgisayar.bilObjects);
-        System.out.println("++++++++++++++++++++++");
+
         int dayan = (int) (deneme.get(0).getDayaniklilik() * 100);
         jProgressBar1.setValue(dayan);
         int progres = deneme.get(0).getSeviyePuani();
@@ -936,33 +918,38 @@ public class Karsilasma extends javax.swing.JFrame {
         karistir();
 
 
-        if(deneme.get(0).getDayaniklilik()<=0){
+        if (deneme.get(0).getDayaniklilik() <= 0) {
             dayaniklilikSayac++;
-            
+
         }
-        
-        if(dayaniklilikSayac==5){
-            logger.info("KAZANAN: "+bilgisayar.getOyuncuAdi());
-            jLabel20.setText("KAZANAN: "+bilgisayar.getOyuncuAdi());
+
+        if (dayaniklilikSayac == 5) {
+            logger.info("KAZANAN: " + bilgisayar.getOyuncuAdi());
+            jLabel20.setText("KAZANAN: " + bilgisayar.getOyuncuAdi());
         }
         if (sayac == saydir) {
             yeniDuzen();
 
         }
-        if(bilgisayarObjeleri.size()==0){
-            logger.info("KAZANAN: "+kullanici.getOyuncuAdi());
-            jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
+        if (bilgisayarObjeleri.size() == 0) {
+            logger.info("KAZANAN: " + kullanici.getOyuncuAdi());
+            jLabel20.setText("KAZANAN: " + kullanici.getOyuncuAdi());
+            jButton1.setEnabled(false);
+            jButton2.setEnabled(false);
+            jButton3.setEnabled(false);
+            jButton4.setEnabled(false);
+            jButton5.setEnabled(false);
 
         }
-        if(oyun.sayac==5){
+        /*if(oyun.sayac==5){
             jLabel20.setText(oyun.oyunSonu);
             jButton1.setEnabled(false);
             jButton2.setEnabled(false);
             jButton3.setEnabled(false);
             jButton4.setEnabled(false);
             jButton5.setEnabled(false);
-        }
-        if(hamleSayac==hamle){
+        }*/
+        if (hamleSayac == hamle) {
             hamleSonu();
         }
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -978,7 +965,7 @@ public class Karsilasma extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -1008,77 +995,79 @@ public class Karsilasma extends javax.swing.JFrame {
     }
 
     void kazananKontrol(int a) {
-        if ((deneme.get(a).getName() == "tas" && bilgisayarObjeleri.get(oyun.ran).getName() == "makas") || (deneme.get(a).getName() == "kagit" && bilgisayarObjeleri.get(oyun.ran).getName() == "tas") || (deneme.get(a).getName() == "makas" && bilgisayarObjeleri.get(oyun.ran).getName() == "kagit")) {
-            jLabel16.setVisible(false);
-            jLabel17.setVisible(true);
-        } else if ((deneme.get(a).getName() == "tas" && bilgisayarObjeleri.get(oyun.ran).getName() == "kagit") || (deneme.get(a).getName() == "kagit" && bilgisayarObjeleri.get(oyun.ran).getName() == "makas") || (deneme.get(a).getName() == "makas" && bilgisayarObjeleri.get(oyun.ran).getName() == "tas")) {
-            jLabel17.setVisible(false);
-            jLabel16.setVisible(true);
-        } else {
-            jLabel17.setVisible(false);
-            jLabel16.setVisible(false);
-        }
-    }
-    void hamleSonu(){
-        oyun.skorhesapla();
-            jLabel21.setText(Double.toString(oyun.skor));
-            jLabel22.setText(Double.toString(oyun.bilgisayarskor));
-            jLabel21.setVisible(true);
-            jLabel22.setVisible(true);
-            if(oyun.skor>oyun.bilgisayarskor){
-                logger.info("KAZANAN: "+kullanici.getOyuncuAdi());
-                jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
-                jButton1.setEnabled(false);
-                jButton2.setEnabled(false);
-                jButton3.setEnabled(false);
-                jButton4.setEnabled(false);
-                jButton5.setEnabled(false);
-
-            }else if(oyun.skor<oyun.bilgisayarskor){
-                logger.info("KAZANAN: "+bilgisayar.getOyuncuAdi());
-                jLabel20.setText("KAZANAN: "+bilgisayar.getOyuncuAdi());
-                jButton1.setEnabled(false);
-                jButton2.setEnabled(false);
-                jButton3.setEnabled(false);
-                jButton4.setEnabled(false);
-                jButton5.setEnabled(false);
-            }else{
-                logger.info("BERABERE");
-                jLabel20.setText("BERABERE");
-                jButton1.setEnabled(false);
-                jButton2.setEnabled(false);
-                jButton3.setEnabled(false);
-                jButton4.setEnabled(false);
-                jButton5.setEnabled(false);
+        if (deneme.size() != 0 && bilgisayarObjeleri.size() != 0) {
+            if ((deneme.get(a).getName() == "tas" && bilgisayarObjeleri.get(oyun.ran).getName() == "makas") || (deneme.get(a).getName() == "kagit" && bilgisayarObjeleri.get(oyun.ran).getName() == "tas") || (deneme.get(a).getName() == "makas" && bilgisayarObjeleri.get(oyun.ran).getName() == "kagit")) {
+                jLabel16.setVisible(false);
+                jLabel17.setVisible(true);
+            } else if ((deneme.get(a).getName() == "tas" && bilgisayarObjeleri.get(oyun.ran).getName() == "kagit") || (deneme.get(a).getName() == "kagit" && bilgisayarObjeleri.get(oyun.ran).getName() == "makas") || (deneme.get(a).getName() == "makas" && bilgisayarObjeleri.get(oyun.ran).getName() == "tas")) {
+                jLabel17.setVisible(false);
+                jLabel16.setVisible(true);
+            } else {
+                jLabel17.setVisible(false);
+                jLabel16.setVisible(false);
             }
-    }
-    void karistir(){
-        if (oyun.ran >= bilgisayarObjeleri.size()&&bilgisayarObjeleri.size()!=0) {
-
-            Collections.shuffle(bilgisayarObjeleri);
-            //sayac=0;
-            oyun.ran = 0;
-
         }
-        if(bilgisayarObjeleri.size()==0){
-            logger.info("KAZANAN: "+kullanici.getOyuncuAdi());
-            jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
+    }
+
+    void hamleSonu() {
+        oyun.skorhesapla();
+        jLabel21.setText(Double.toString(oyun.skor));
+        jLabel22.setText(Double.toString(oyun.bilgisayarskor));
+        jLabel21.setVisible(true);
+        jLabel22.setVisible(true);
+        if (oyun.skor > oyun.bilgisayarskor) {
+            logger.info("KAZANAN: " + kullanici.getOyuncuAdi());
+            jLabel20.setText("KAZANAN: " + kullanici.getOyuncuAdi());
+            jButton1.setEnabled(false);
+            jButton2.setEnabled(false);
+            jButton3.setEnabled(false);
+            jButton4.setEnabled(false);
+            jButton5.setEnabled(false);
+
+        } else if (oyun.skor < oyun.bilgisayarskor) {
+            logger.info("KAZANAN: " + bilgisayar.getOyuncuAdi());
+            jLabel20.setText("KAZANAN: " + bilgisayar.getOyuncuAdi());
+            jButton1.setEnabled(false);
+            jButton2.setEnabled(false);
+            jButton3.setEnabled(false);
+            jButton4.setEnabled(false);
+            jButton5.setEnabled(false);
+        } else {
+            logger.info("BERABERE");
+            jLabel20.setText("BERABERE");
             jButton1.setEnabled(false);
             jButton2.setEnabled(false);
             jButton3.setEnabled(false);
             jButton4.setEnabled(false);
             jButton5.setEnabled(false);
         }
+    }
 
-        else if (bilgisayarObjeleri.get(oyun.ran).getDayaniklilik()<=0){
+    void karistir() {
+        if (oyun.ran == bilgisayarObjeleri.size() && bilgisayarObjeleri.size() != 0) {
+
+            Collections.shuffle(bilgisayarObjeleri);
+            //sayac=0;
+            oyun.ran = 0;
+
+        }
+        if (bilgisayarObjeleri.size() == 0) {
+            logger.info("KAZANAN: " + kullanici.getOyuncuAdi());
+            jLabel20.setText("KAZANAN: " + kullanici.getOyuncuAdi());
+            jButton1.setEnabled(false);
+            jButton2.setEnabled(false);
+            jButton3.setEnabled(false);
+            jButton4.setEnabled(false);
+            jButton5.setEnabled(false);
+        } else if (bilgisayarObjeleri.get(oyun.ran).getDayaniklilik() <= 0) {
             //sayac++;
-            logger.info(bilgisayarObjeleri.get(oyun.ran).getName()+" nesnesi silindi.("+bilgisayar.getOyuncuAdi()+")");
+            logger.info(bilgisayarObjeleri.get(oyun.ran).getName() + " nesnesi silindi.(" + bilgisayar.getOyuncuAdi() + ")");
             bilgisayarObjeleri.remove(oyun.ran);
 
         }
-        if(bilgisayarObjeleri.size()==0){
-            logger.info("KAZANAN: "+kullanici.getOyuncuAdi());
-            jLabel20.setText("KAZANAN: "+kullanici.getOyuncuAdi());
+        if (bilgisayarObjeleri.size() == 0) {
+            logger.info("KAZANAN: " + kullanici.getOyuncuAdi());
+            jLabel20.setText("KAZANAN: " + kullanici.getOyuncuAdi());
             jButton1.setEnabled(false);
             jButton2.setEnabled(false);
             jButton3.setEnabled(false);
@@ -1086,14 +1075,15 @@ public class Karsilasma extends javax.swing.JFrame {
             jButton5.setEnabled(false);
         }
         for (int i = 0; i < bilgisayarObjeleri.size(); i++) {
-            logger.info("kalan nesneler:"+bilgisayarObjeleri.get(i).getClass().getName());
+            logger.info("kalan nesneler:" + bilgisayarObjeleri.get(i).getClass().getName());
         }
 
     }
+
     void yeniDuzen() {
-        saydir=deneme.size()-dayaniklilikSayac;
+        saydir = deneme.size() - dayaniklilikSayac;
         sayac = 0;
-       // Collections.shuffle(bilgisayarObjeleri);
+        // Collections.shuffle(bilgisayarObjeleri);
         System.out.println(bilgisayarObjeleri);
 
         jButton1.setEnabled(true);
@@ -1101,21 +1091,25 @@ public class Karsilasma extends javax.swing.JFrame {
         jButton3.setEnabled(true);
         jButton4.setEnabled(true);
         jButton5.setEnabled(true);
-        if(deneme.get(0).getDayaniklilik()<=0){
+        if (deneme.get(0).getDayaniklilik() <= 0) {
             jButton1.setEnabled(false);
-            logger.info(deneme.get(0).getName()+" nesnesi silindi.("+kullanici.getOyuncuAdi()+")");
-        }if(deneme.get(1).getDayaniklilik()<=0){
+            logger.info(deneme.get(0).getName() + " nesnesi silindi.(" + kullanici.getOyuncuAdi() + ")");
+        }
+        if (deneme.get(1).getDayaniklilik() <= 0) {
             jButton2.setEnabled(false);
-            logger.info(deneme.get(1).getName()+" nesnesi silindi.("+kullanici.getOyuncuAdi()+")");
-        }if(deneme.get(2).getDayaniklilik()<=0){
+            logger.info(deneme.get(1).getName() + " nesnesi silindi.(" + kullanici.getOyuncuAdi() + ")");
+        }
+        if (deneme.get(2).getDayaniklilik() <= 0) {
             jButton3.setEnabled(false);
-            logger.info(deneme.get(2).getName()+" nesnesi silindi.("+kullanici.getOyuncuAdi()+")");
-        }if(deneme.get(3).getDayaniklilik()<=0){
+            logger.info(deneme.get(2).getName() + " nesnesi silindi.(" + kullanici.getOyuncuAdi() + ")");
+        }
+        if (deneme.get(3).getDayaniklilik() <= 0) {
             jButton4.setEnabled(false);
-            logger.info(deneme.get(3).getName()+" nesnesi silindi.("+kullanici.getOyuncuAdi()+")");
-        }if(deneme.get(4).getDayaniklilik()<=0){
+            logger.info(deneme.get(3).getName() + " nesnesi silindi.(" + kullanici.getOyuncuAdi() + ")");
+        }
+        if (deneme.get(4).getDayaniklilik() <= 0) {
             jButton5.setEnabled(false);
-            logger.info(deneme.get(4).getName()+" nesnesi silindi.("+kullanici.getOyuncuAdi()+")");
+            logger.info(deneme.get(4).getName() + " nesnesi silindi.(" + kullanici.getOyuncuAdi() + ")");
         }
 
 

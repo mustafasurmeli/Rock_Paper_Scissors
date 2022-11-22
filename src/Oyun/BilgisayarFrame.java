@@ -367,8 +367,8 @@ public class BilgisayarFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if(bilgisayarObjeleri.size()!=0||pc1objeler.size()!=0){
-            if (sayac >= pc1objeler.size()) {
+        if(bilgisayarObjeleri.size()!=0&&pc1objeler.size()!=0){
+            if (sayac == pc1objeler.size()) {
                 sayac = 0;
                 Collections.shuffle(pc1objeler);
                 //Collections.shuffle(bilgisayarObjeleri);
@@ -380,6 +380,7 @@ public class BilgisayarFrame extends javax.swing.JFrame {
                 Collections.shuffle(bilgisayarObjeleri);
                 sayac=0;
                 oyun.ran = 0;
+                goruntuler();
 
             }
         hamle = Integer.parseInt(jTextField1.getText());
@@ -393,36 +394,58 @@ public class BilgisayarFrame extends javax.swing.JFrame {
         oyun.nesne1 = pc1objeler.get(sayac).getName();
         oyun.objects = pc1objeler;
         oyun.kontrol();
-        
+            if(bilgisayarObjeleri.size()==0){
+                jLabel21.setText("KAZANAN: BİLGİSAYAR 1");
+                jButton1.setEnabled(false);
+
+            } if(pc1objeler.size()==0){
+                jLabel21.setText("KAZANAN: BİLGİSAYAR 2");
+                jButton1.setEnabled(false);
+            } if (bilgisayarObjeleri.get(oyun.ran).getDayaniklilik()<=0){
+
+                logger.info(bilgisayarObjeleri.get(oyun.ran).getName()+" nesnesi silindi.(BILGISAYAR2)");
+                bilgisayarObjeleri.remove(oyun.ran);
+            }if (pc1objeler.get(sayac).getDayaniklilik()<=0){
+                logger.info(pc1objeler.get(sayac).getName()+" nesnesi silindi.("+bilgisayar.getOyuncuAdi()+")");
+                pc1objeler.remove(sayac);
+            }
         oyun.check();
         String label;
+            if (pc1objeler.size()!=0){
+                label = "Dayanıklılık:" + Double.toString(pc1objeler.get(sayac).durumGuncelle());
 
-             label = "Dayanıklılık:" + Double.toString(pc1objeler.get(sayac).durumGuncelle());
+                jLabel4.setText(label);
+                label = "Seviye Puanı:" + (int) pc1objeler.get(sayac).getSeviyePuani();
+                jLabel15.setText(label);
+                label = pc1objeler.get(sayac).getClass().getName();
+                jLabel16.setText(label);
+            }else{
+                jLabel4.setText("");
+                jLabel15.setText("");
+                jLabel16.setText("");
+            }
 
-            jLabel4.setText(label);
-            label = "Seviye Puanı:" + (int) pc1objeler.get(sayac).getSeviyePuani();
-            jLabel15.setText(label);
-            label = pc1objeler.get(sayac).getClass().getName();
-            jLabel16.setText(label);
-
-//            jLabel4.setText("");
-//            jLabel15.setText("");
-//            jLabel16.setText("");
 
 
-            System.out.println("TTTTTTTTTTTTTTTTTTT"+oyun.ran);
 
-                label = "Dayanıklılık:" + Double.toString(bilgisayarObjeleri.get(oyun.ran).durumGuncelle());
-                jLabel17.setText(label);
-                label = "Seviye Puanı:" + (int) bilgisayarObjeleri.get(oyun.ran).getSeviyePuani();
-                jLabel18.setText(label);
-                label = bilgisayarObjeleri.get(oyun.ran).getClass().getName();
-                jLabel19.setText(label);
-                bilgisayar2sayac++;
 
-//                jLabel17.setText("");
-//                jLabel18.setText("");
-//                jLabel19.setText("");
+
+                if (bilgisayarObjeleri.size()!=0){
+                    label = "Dayanıklılık:" + Double.toString(bilgisayarObjeleri.get(oyun.ran).durumGuncelle());
+                    jLabel17.setText(label);
+                    label = "Seviye Puanı:" + (int) bilgisayarObjeleri.get(oyun.ran).getSeviyePuani();
+                    jLabel18.setText(label);
+                    label = bilgisayarObjeleri.get(oyun.ran).getClass().getName();
+                    jLabel19.setText(label);
+                    bilgisayar2sayac++;
+
+                }else{
+                    jLabel17.setText("");
+                    jLabel18.setText("");
+                    jLabel19.setText("");
+                }
+
+
 
 
        
